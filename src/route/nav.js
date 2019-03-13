@@ -20,17 +20,17 @@ c = window.location.hash.substr(2)
      if (c == "about") {
                      abouts = <li><a className="active">&nbsp;&nbsp;About &nbsp;&nbsp;: </a></li>
                         }else{
-                        abouts = <li><a href="/#/about" >&nbsp;&nbsp;About &nbsp;&nbsp;: </a></li>
+                        abouts = <li><a href="/larvaseven/#/about" >&nbsp;&nbsp;About &nbsp;&nbsp;: </a></li>
                         }
     if (c == "portfolio") {
                      works = <li><a className="active">&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
                         }else{
-                        works = <li><a href="/#/portfolio" >&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
+                        works = <li><a href="/larvaseven/#/portfolio" >&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
                         }
                   if (c == "shop") {
                      shops = <li><a className="active">&nbsp;&nbsp;Shop &nbsp;&nbsp;: </a></li>
                         }else{
-                        shops = <li><a href="/#/shop" >&nbsp;&nbsp;Shop &nbsp;&nbsp;: </a></li>
+                        shops = <li><a href="/larvaseven/#/shop" >&nbsp;&nbsp;Shop &nbsp;&nbsp;: </a></li>
                         }                               
 
         return (
