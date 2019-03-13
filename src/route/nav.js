@@ -9,12 +9,43 @@ class navigasi extends Component {
 
 
     render() {
-var divStyle = {
+    let c, homes, abouts, works, shops;
+c = window.location.hash.substr(2)
 
-}
+      if (c == "") {
+                     homes = <li><a className="active">&nbsp;&nbsp;Home &nbsp;&nbsp;: </a></li>
+                        }else{
+                        homes = <li><a href="/" >&nbsp;&nbsp;Home &nbsp;&nbsp;: </a></li>
+                        }
+     if (c == "about") {
+                     abouts = <li><a className="active">&nbsp;&nbsp;About &nbsp;&nbsp;: </a></li>
+                        }else{
+                        abouts = <li><a href="/#/about" >&nbsp;&nbsp;About &nbsp;&nbsp;: </a></li>
+                        }
+    if (c == "portfolio") {
+                     works = <li><a className="active">&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
+                        }else{
+                        works = <li><a href="/#/portfolio" >&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
+                        }
+                  if (c == "shop") {
+                     shops = <li><a className="active">&nbsp;&nbsp;Shop &nbsp;&nbsp;: </a></li>
+                        }else{
+                        shops = <li><a href="/#/shop" >&nbsp;&nbsp;Shop &nbsp;&nbsp;: </a></li>
+                        }                               
+
         return (
 <div classNameName="tengahx">
   <style dangerouslySetInnerHTML={{__html: `
+ a:hover{
+       text-decoration: none;
+ } 
+ .active{
+    font-weight: bold;
+ }  
+  .active:hover{
+       color: #2A4CF9;
+
+ } 
 a {
     color: #2A4CF9;
 }
@@ -118,15 +149,19 @@ position: relative; top: 3px;
             <div className="col-12 col-md-10 d-none d-xl-block">
                 <nav className="site-navigation position-relative text-right" role="navigation">
                     <ul className="site-menu mr-auto d-none d-lg-block">
-                        <li><a href="/">&nbsp;&nbsp;Home &nbsp;&nbsp;: </a></li>
-                        <li><a href="/about">&nbsp;&nbsp;About &nbsp;&nbsp;: </a></li>
-                        <li><a href="/portfolio">&nbsp;&nbsp;Work &nbsp;&nbsp;: </a></li>
-                        <li><a href="/shop">&nbsp;&nbsp;Shop &nbsp;&nbsp;: </a></li>
-                        <li><a href="/blog">&nbsp;&nbsp;Blog &nbsp;&nbsp;: </a></li>
+                   
+
+                        {homes}
+
+                        {abouts}
+                        {works}
+                         {shops}
+                         <li><a href="/blog">&nbsp;&nbsp;Blog &nbsp;&nbsp;: </a></li>
                         <li><a href="/contact">&nbsp;&nbsp;Contact &nbsp;&nbsp;: </a></li>
 
                     </ul>
  				<ul id="lb" className="site-menu js-clone-nav mr-auto d-none">
+
                         <li><a href="/">Home</a></li>
                         <li><a href="/about">About</a></li>
                         <li><a href="/portfolio">Work</a></li>

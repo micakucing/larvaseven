@@ -91,8 +91,7 @@ font-family: Mor;
         </div>
       </div>
     </footer>
-    </div> );
-    }
+    </div> )}
 }
 
 export default translate(foot);
