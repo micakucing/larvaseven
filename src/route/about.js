@@ -17,7 +17,7 @@ class about extends Component {
     render() {
          
         return (
-            <div classNameName="tengahx">
+            <div className="tengahx">
 
   <style dangerouslySetInnerHTML={{__html: `
 

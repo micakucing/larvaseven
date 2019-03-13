@@ -6,82 +6,102 @@ import $ from "jquery";
 const history = createHashHistory()
 
 class navigasi extends Component {
-
+    constructor(props) {
+        super(props);
+    }
     componentDidMount() {
 
     }
 
-hm = () => {
-    $('body').removeClass('offcanvas-menu')
-    
-     setTimeout(() => {
-    history.push('/larvaseven/')
-     }, 100)
-}
-ab = () => {
-    $('body').removeClass('offcanvas-menu')
-    
-     setTimeout(() => {
-    history.push('/larvaseven/#/about')
-     }, 100)
-}
-pr = () => {
-    $('body').removeClass('offcanvas-menu')
-    
-     setTimeout(() => {
-    history.push('/larvaseven/#/portfolio')
-     }, 100)
-}
+    hm = () => {
 
-sh = () => {
-    $('body').removeClass('offcanvas-menu')
-    
-     setTimeout(() => {
-    history.push('/larvaseven/#/shop')
-     }, 100)
-}
 
-bl = () => {
-    $('body').removeClass('offcanvas-menu')
-    
-     setTimeout(() => {
-    history.push('/larvaseven/#/blog')
-     }, 100)
-}
-ct = () => {
-    $('body').removeClass('offcanvas-menu')
-    
-     setTimeout(() => {
-    history.push('/larvaseven/#/contact')
-     }, 100)
-}
+    }
+    ab = () => {
+ 
+       
+
+    }
+    pr = () => {
+        
+
+    }
+
+    sh = () => {
+     
+    }
+
+    bl = () => {
+      
+
+    }
+    ct = () => {
+        $('body').removeClass('offcanvas-menu')
+
+
+        history.push('/larvaseven/#/contact')
+
+    }
     render() {
-    let c, homes, abouts, works, shops;
-c = window.location.hash.substr(2)
+        $(document).on("click", "#hm", function(e) {
 
-      if (c == "") {
-                     homes = <li><a className="active">&nbsp;&nbsp;Home &nbsp;&nbsp;: </a></li>
-                        }else{
-                        homes = <li><a href="/larvaseven" >&nbsp;&nbsp;Home &nbsp;&nbsp;: </a></li>
-                        }
-     if (c == "about") {
-                     abouts = <li><a className="active">&nbsp;&nbsp;About &nbsp;&nbsp;: </a></li>
-                        }else{
-                        abouts = <li><a href="/larvaseven/#/about" >&nbsp;&nbsp;About &nbsp;&nbsp;: </a></li>
-                        }
-    if (c == "portfolio") {
-                     works = <li><a className="active">&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
-                        }else{
-                        works = <li><a href="/larvaseven/#/portfolio" >&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
-                        }
-                  if (c == "shop") {
-                     shops = <li><a className="active">&nbsp;&nbsp;Shop &nbsp;&nbsp;: </a></li>
-                        }else{
-                        shops = <li><a href="/larvaseven/#/shop" >&nbsp;&nbsp;Shop &nbsp;&nbsp;: </a></li>
-                        }                               
+            $('body').removeClass('offcanvas-menu')
+            history.push('/larvaseven/')
+
+        })
+        $(document).on("click", "#ab", function(e) {
+
+            $('body').removeClass('offcanvas-menu')
+ history.push('/larvaseven/#/about')
+        })
+        $(document).on("click", "#pr", function(e) {
+
+            $('body').removeClass('offcanvas-menu')
+ history.push('/larvaseven/#/portfolio')
+        })
+        $(document).on("click", "#sh", function(e) {
+
+            $('body').removeClass('offcanvas-menu')
+            history.push('/larvaseven/#/shop')
+
+        })
+         $(document).on("click", "#bl", function(e) {
+
+            $('body').removeClass('offcanvas-menu')
+            history.push('/larvaseven/#/blog')
+
+        })
+             $(document).on("click", "#ch", function(e) {
+
+            $('body').removeClass('offcanvas-menu')
+            history.push('/larvaseven/#/contact')
+})
+        let c, homes, abouts, works, shops;
+        c = window.location.hash.substr(2)
+
+        if (c == "") {
+            homes = <li><a className="active">&nbsp;&nbsp;Home &nbsp;&nbsp;: </a></li>
+        } else {
+            homes = <li><a href="/larvaseven" >&nbsp;&nbsp;Home &nbsp;&nbsp;: </a></li>
+        }
+        if (c == "about") {
+            abouts = <li><a className="active">&nbsp;&nbsp;About &nbsp;&nbsp;: </a></li>
+        } else {
+            abouts = <li><a href="/larvaseven/#/about" >&nbsp;&nbsp;About &nbsp;&nbsp;: </a></li>
+        }
+        if (c == "portfolio") {
+            works = <li><a className="active">&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
+        } else {
+            works = <li><a href="/larvaseven/#/portfolio" >&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
+        }
+        if (c == "shop") {
+            shops = <li><a className="active">&nbsp;&nbsp;Shop &nbsp;&nbsp;: </a></li>
+        } else {
+            shops = <li><a href="/larvaseven/#/shop" >&nbsp;&nbsp;Shop &nbsp;&nbsp;: </a></li>
+        }
 
         return (
-<div classNameName="tengahx">
+            <div className="tengahx">
   <style dangerouslySetInnerHTML={{__html: `
  a:hover{
        text-decoration: none;
@@ -93,6 +113,9 @@ c = window.location.hash.substr(2)
        color: #2A4CF9;
 
  } 
+ #lb li div{
+    color: #fff;
+ }
 a {
     color: #2A4CF9;
 }
@@ -134,25 +157,25 @@ background-color: #2d44b9;
    color: #2A4CF9;
 }
 #sps{
-	position: relative;
+    position: relative;
     width: 100px;
         color: #fff;
     border-radius: 5px;
     border: 1px solid #6d6161;
 }
 .site-mobile-menu{
-	width: 100%;  background-color: #2A4CF9;  
+    width: 100%;  background-color: #2A4CF9;  
 }
 .xsc{
-	font-size: 13px!important;
-	position: absolute; top: 8px;
-	font-family: Mor;
-	right: 10px;
+    font-size: 13px!important;
+    position: absolute; top: 8px;
+    font-family: Mor;
+    right: 10px;
     text-transform: uppercase;
 }
 
 .site-mobile-menu-body{
-	padding-top: 100px;
+    padding-top: 100px;
 }
 .py-3{
 position: relative; top: 3px;
@@ -207,14 +230,14 @@ position: relative; top: 3px;
                         <li><a href="/contact">&nbsp;&nbsp;Contact &nbsp;&nbsp;: </a></li>
 
                     </ul>
- 				<ul id="lb" className="site-menu js-clone-nav mr-auto d-none">
+                <ul id="lb" className="site-menu js-clone-nav mr-auto d-none">
 
-                        <li><div id="hm" onClick={this.hm}>Home</div></li>
-                        <li><div id="ab" onClick={this.ab} >About</div></li>
-                        <li><div id="pr"  onClick={this.pr} >Work</div></li>
-                        <li><div id="sh"   onClick={this.sh}>Shop</div></li>
-                        <li><div id="bl"   onClick={this.bl}>Blog</div></li>
-                        <li><div id="ct"   onClick={this.ct}>Contact</div></li>
+                        <li onClick={this.hm}><div id="hm" >Home</div></li>
+                        <li onClick={this.ab}><div id="ab"  >About</div></li>
+                        <li  onClick={this.pr} ><div id="pr"  >Work</div></li>
+                        <li  onClick={this.sh}><div id="sh"  >Shop</div></li>
+                        <li  onClick={this.bl}><div id="bl"  >Blog</div></li>
+                        <li   onClick={this.ct}><div id="ct" >Contact</div></li>
 
                     </ul>
                 </nav>
