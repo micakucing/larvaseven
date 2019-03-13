@@ -1,13 +1,60 @@
 import React, { Component } from "react";
 import { translate } from '../translations/trs';
+import { createHashHistory } from 'history'
+
 import $ from "jquery";
+const history = createHashHistory()
+
 class navigasi extends Component {
 
     componentDidMount() {
 
     }
 
+hm = () => {
+    $('body').removeClass('offcanvas-menu')
+    
+     setTimeout(() => {
+    history.push('/larvaseven/')
+     }, 100)
+}
+ab = () => {
+    $('body').removeClass('offcanvas-menu')
+    
+     setTimeout(() => {
+    history.push('/larvaseven/#/about')
+     }, 100)
+}
+pr = () => {
+    $('body').removeClass('offcanvas-menu')
+    
+     setTimeout(() => {
+    history.push('/larvaseven/#/portfolio')
+     }, 100)
+}
 
+sh = () => {
+    $('body').removeClass('offcanvas-menu')
+    
+     setTimeout(() => {
+    history.push('/larvaseven/#/shop')
+     }, 100)
+}
+
+bl = () => {
+    $('body').removeClass('offcanvas-menu')
+    
+     setTimeout(() => {
+    history.push('/larvaseven/#/blog')
+     }, 100)
+}
+ct = () => {
+    $('body').removeClass('offcanvas-menu')
+    
+     setTimeout(() => {
+    history.push('/larvaseven/#/contact')
+     }, 100)
+}
     render() {
     let c, homes, abouts, works, shops;
 c = window.location.hash.substr(2)
@@ -162,12 +209,12 @@ position: relative; top: 3px;
                     </ul>
  				<ul id="lb" className="site-menu js-clone-nav mr-auto d-none">
 
-                        <li><a href="/larvaseven">Home</a></li>
-                        <li><a href="/larvaseven/#/about">About</a></li>
-                        <li><a href="/larvaseven/#/portfolio">Work</a></li>
-                        <li><a href="/larvaseven/#/shop">Shop</a></li>
-                        <li><a href="/larvaseven/#/blog">Blog</a></li>
-                        <li><a href="/larvaseven/#/contact">Contact</a></li>
+                        <li><div id="hm" onClick={this.hm}>Home</div></li>
+                        <li><div id="ab" onClick={this.ab} >About</div></li>
+                        <li><div id="pr"  onClick={this.pr} >Work</div></li>
+                        <li><div id="sh"   onClick={this.sh}>Shop</div></li>
+                        <li><div id="bl"   onClick={this.bl}>Blog</div></li>
+                        <li><div id="ct"   onClick={this.ct}>Contact</div></li>
 
                     </ul>
                 </nav>
