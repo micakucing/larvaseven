@@ -1,28 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Switch, HashRouter, DelayLink, Link, BrowserRouter as Router, Route } from "react-router-dom";
+import { setDefaultTranslations, setDefaultLanguage, translate, setLanguage }  from './translations/trs';
+import 'bootstrap/dist/css/bootstrap.css';
+import Headnav from "./route/home";
+
 
 class App extends Component {
   render() {
     return (
+    	  <HashRouter>
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+
+            
+ <Switch>
+			<Route exact path="/" component={Headnav}/>
+		</Switch>
         </header>
+
       </div>
+        </HashRouter>
     );
   }
 }
 
-export default App;
+export default  translate(App);
