@@ -205,10 +205,16 @@ position: relative; top: 3px;
 <div className="site-mobile-menu"> 
     <div className="site-mobile-menu-header">
         <div className="site-mobile-menu-close mt-3">
+
+
             <span id="sps" className="icon-close2 js-menu-toggle"> <span className="xsc">Close</span></span>
         </div>
     </div>
-    <div className="site-mobile-menu-body"></div>   
+    <div className="site-mobile-menu-body">
+
+<ul id="lb" class="site-nav-wrap"><li><div id="hm">Home</div></li><li><div id="ab">About</div></li><li><div id="pr">Work</div></li><li><div id="sh">Shop</div></li><li><div id="bl">Blog</div></li><li><div id="ct">Contact</div></li></ul>
+
+    </div>   
 </div>
 <div className="site-navbar py-4 bg-white" role="banner">
     <div className="container">
