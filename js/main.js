@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
 
 	var siteMenuClone = function() {
 
-		$('.js-clone-nav').each(function() {
+		/*$('.js-clone-nav').each(function() {
 			var $this = $(this);
 			$this.clone().attr('class', 'site-nav-wrap').appendTo('.site-mobile-menu-body');
 		});
@@ -40,7 +40,7 @@ jQuery(document).ready(function($) {
 
       });
 
-    }, 1000);
+    }, 1000);*/
 
 		$('body').on('click', '.arrow-collapse', function(e) {
       var $this = $(this);
