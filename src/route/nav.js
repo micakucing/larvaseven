@@ -52,29 +52,29 @@ class navigasi extends Component {
         $(document).on("click", "#ab", function(e) {
 
             $('body').removeClass('offcanvas-menu')
- history.push('/larvaseven/#/about')
+ history.push('/about')
         })
         $(document).on("click", "#pr", function(e) {
 
             $('body').removeClass('offcanvas-menu')
- history.push('/larvaseven/#/portfolio')
+ history.push('/portfolio')
         })
         $(document).on("click", "#sh", function(e) {
 
             $('body').removeClass('offcanvas-menu')
-            history.push('/larvaseven/#/shop')
+            history.push('/shop')
 
         })
          $(document).on("click", "#bl", function(e) {
 
             $('body').removeClass('offcanvas-menu')
-            history.push('/larvaseven/#/blog')
+            history.push('/blog')
 
         })
              $(document).on("click", "#ch", function(e) {
 
             $('body').removeClass('offcanvas-menu')
-            history.push('/larvaseven/#/contact')
+            history.push('/contact')
 })
         let c, homes, abouts, works, shops;
         c = window.location.hash.substr(2)
