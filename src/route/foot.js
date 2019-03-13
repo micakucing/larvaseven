@@ -49,10 +49,10 @@ font-family: Mor;
               <div className="col-md-3 ml-auto" id="subcrib">
                 <h2 className="footer-heading mb-4" >Features</h2>
                 <ul className="list-unstyled">
-                        <li><a href="/">Home Page</a></li>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/portfolio">Our Work</a></li>
-                        <li><a href="/shop">Our Product</a></li>
+                        <li><a href="/larvaseven">Home Page</a></li>
+                        <li><a href="/larvaseven/#/about">About Us</a></li>
+                        <li><a href="/larvaseven/#/portfolio">Our Work</a></li>
+                        <li><a href="/larvaseven/#/shop">Our Product</a></li>
                         <li><a href="/blog">Articles</a></li>
                         <li><a href="/contact">Contact Us</a></li>
                 </ul>
