@@ -9,7 +9,7 @@ import notfound from "./route/NotFound";
 class App extends Component {
   render() {
     return (
-    	  <BrowserRouter basename={process.env.PUBLIC_URL}>
+    	  <BrowserRouter>
       <div className="App">
         <header className="App-header">
 
