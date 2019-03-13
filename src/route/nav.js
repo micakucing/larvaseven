@@ -46,7 +46,7 @@ class navigasi extends Component {
         $(document).on("click", "#hm", function(e) {
 
             $('body').removeClass('offcanvas-menu')
-            history.push('/larvaseven/')
+            history.push('/larvaseven')
 
         })
         $(document).on("click", "#ab", function(e) {
