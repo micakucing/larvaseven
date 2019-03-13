@@ -7,7 +7,7 @@ import Typed from 'react-typed';
 import Midone from "./midelone";
 import Midtwo from "./mideltwo";
 import Midtree from "./midletree";
-
+import Testi from "./testi";
 import Nav from "./nav";
 
 class home extends Component {
@@ -82,6 +82,7 @@ class home extends Component {
     <Midone />
      <Midtwo />
         <Midtree />
+         <Testi />
  </div>
         );
     }
