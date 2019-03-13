@@ -2,9 +2,12 @@
   "name": "larvaseven",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://micakucing.github.io/larvaseven/",
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "gh-pages": "^2.0.1",
     "install": "^0.12.2",
+    "jquery": "^3.3.1",
     "react": "^16.8.4",
     "react-device-orientation": "^0.0.2",
     "react-dom": "^16.8.4",
