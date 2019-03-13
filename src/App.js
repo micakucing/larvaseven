@@ -3,6 +3,7 @@ import {  BrowserRouter, Switch, Route } from "react-router-dom";
 import { setDefaultTranslations, setDefaultLanguage, translate, setLanguage }  from './translations/trs';
 import 'bootstrap/dist/css/bootstrap.css';
 import Headnav from "./route/home";
+import notfound from "./route/NotFound";
 
 
 class App extends Component {
@@ -15,6 +16,8 @@ class App extends Component {
             
  <Switch>
 			<Route exact path="/" component={Headnav}/>
+              <Route component={notfound} />
+
 		</Switch>
         </header>
 
