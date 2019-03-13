@@ -8,7 +8,7 @@ import Headnav from "./route/home";
 class App extends Component {
   render() {
     return (
-    	  <BrowserRouter basename="/">
+    	  <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         <header className="App-header">
 
