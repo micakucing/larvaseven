@@ -8,6 +8,8 @@ import Midone from "./midelone";
 import Midtwo from "./mideltwo";
 import Midtree from "./midletree";
 import Testi from "./testi";
+import Foot from "./foot";
+
 import Nav from "./nav";
 
 class home extends Component {
@@ -83,6 +85,7 @@ class home extends Component {
      <Midtwo />
         <Midtree />
          <Testi />
+           <Foot />
  </div>
         );
     }
