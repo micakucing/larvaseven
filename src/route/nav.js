@@ -163,11 +163,11 @@ position: relative; top: 3px;
  				<ul id="lb" className="site-menu js-clone-nav mr-auto d-none">
 
                         <li><a href="/larvaseven">Home</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/portfolio">Work</a></li>
-                        <li><a href="/shop">Shop</a></li>
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/larvaseven/#/about">About</a></li>
+                        <li><a href="/larvaseven/#/portfolio">Work</a></li>
+                        <li><a href="/larvaseven/#/shop">Shop</a></li>
+                        <li><a href="/larvaseven/#/blog">Blog</a></li>
+                        <li><a href="/larvaseven/#/contact">Contact</a></li>
 
                     </ul>
                 </nav>
