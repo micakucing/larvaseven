@@ -16,7 +16,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">  
  <Switch>
-			<Route path="/" exact component={Headnav}/>
+			<Route path="/larvaseven" exact component={Headnav}/>
         <Route path="/about" component={About}/>
          <Route component={not}/>
 		</Switch>

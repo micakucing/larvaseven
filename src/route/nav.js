@@ -15,7 +15,7 @@ c = window.location.hash.substr(2)
       if (c == "") {
                      homes = <li><a className="active">&nbsp;&nbsp;Home &nbsp;&nbsp;: </a></li>
                         }else{
-                        homes = <li><a href="/" >&nbsp;&nbsp;Home &nbsp;&nbsp;: </a></li>
+                        homes = <li><a href="/larvaseven" >&nbsp;&nbsp;Home &nbsp;&nbsp;: </a></li>
                         }
      if (c == "about") {
                      abouts = <li><a className="active">&nbsp;&nbsp;About &nbsp;&nbsp;: </a></li>
@@ -162,7 +162,7 @@ position: relative; top: 3px;
                     </ul>
  				<ul id="lb" className="site-menu js-clone-nav mr-auto d-none">
 
-                        <li><a href="/">Home</a></li>
+                        <li><a href="/larvaseven">Home</a></li>
                         <li><a href="/about">About</a></li>
                         <li><a href="/portfolio">Work</a></li>
                         <li><a href="/shop">Shop</a></li>
