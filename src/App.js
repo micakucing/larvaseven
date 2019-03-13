@@ -3,8 +3,12 @@ import {  BrowserRouter, Switch, Route } from "react-router-dom";
 import { setDefaultTranslations, setDefaultLanguage, translate, setLanguage }  from './translations/trs';
 import 'bootstrap/dist/css/bootstrap.css';
 import Headnav from "./route/home";
-import notfound from "./route/NotFound";
 
+const Page404 = ({ location }) => (
+  <div>
+    <h2>No match found for <code>{location.pathname}</code></h2>
+  </div>
+);
 
 class App extends Component {
   render() {
@@ -16,7 +20,7 @@ class App extends Component {
             
  <Switch>
 			<Route exact path="/" component={Headnav}/>
-              <Route component={notfound} />
+              <Route component={Page404} />
 
 		</Switch>
         </header>
