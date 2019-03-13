@@ -15,12 +15,10 @@ class App extends Component {
     return (
     	  <BrowserRouter>
       <div className="App">
-        <header className="App-header">
-
-            
+        <header className="App-header">  
  <Switch>
-			<Route exact path="/" component={Headnav}/>
-              <Route component={Page404} />
+			<Route path="/" exact component={Headnav}/>
+              <Route path="*" component={Page404} />
 
 		</Switch>
         </header>
