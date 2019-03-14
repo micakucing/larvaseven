@@ -251,7 +251,7 @@ position: relative; top: 3px;
                         <li  onClick={this.pr} ><div id="pr"  >Work</div></li>
                         <li  onClick={this.sh}><div id="sh"  >Shop</div></li>
                         <li  onClick={this.bl}><div id="bl"  >Blog</div></li>
-                        <li   onClick={this.ct}><div id="ct" >Contact</div></li>
+                        <li   onClick={this.ct}><div id="ch" >Contact</div></li>
 
                     </ul>
                 </nav>
