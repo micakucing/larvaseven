@@ -4,7 +4,7 @@ import { setDefaultTranslations, setDefaultLanguage, translate, setLanguage }  f
 import 'bootstrap/dist/css/bootstrap.css';
 import Headnav from "./route/home";
 import About from "./route/about";
-
+import Port from "./route/portfolio";
 import not from "./route/NotFound";
 
 
@@ -18,6 +18,8 @@ class App extends Component {
  <Switch>
 			<Route path="/" exact component={Headnav}/>
         <Route path="/about" component={About}/>
+                <Route path="/work" component={Port}/>
+
          <Route component={not}/>
 		</Switch>
         </header>

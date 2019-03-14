@@ -57,7 +57,7 @@ class navigasi extends Component {
         $(document).on("click", "#pr", function(e) {
 
             $('body').removeClass('offcanvas-menu')
- history.push('/portfolio')
+ history.push('/work')
         })
         $(document).on("click", "#sh", function(e) {
 
@@ -92,7 +92,7 @@ class navigasi extends Component {
         if (c == "portfolio") {
             works = <li><a className="active">&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
         } else {
-            works = <li><a href="/larvaseven/#/portfolio" >&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
+            works = <li><a href="/larvaseven/#/work" >&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
         }
         if (c == "shop") {
             shops = <li><a className="active">&nbsp;&nbsp;Shop &nbsp;&nbsp;: </a></li>
