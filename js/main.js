@@ -206,7 +206,7 @@ jQuery(document).ready(function($) {
 	};
 	siteStellar();
 
-	var siteCountDown = function() {
+	/*var siteCountDown = function() {
 
 		$('#date-countdown').countdown('2020/10/10', function(event) {
 		  var $this = $(this).html(event.strftime(''
@@ -218,15 +218,15 @@ jQuery(document).ready(function($) {
 		});
 				
 	};
-	siteCountDown();
+	siteCountDown();*/
 
-	var siteDatePicker = function() {
+	/*var siteDatePicker = function() {
 
 		if ( $('.datepicker').length > 0 ) {
 			$('.datepicker').datepicker();
 		}
 
 	};
-	siteDatePicker();
+	siteDatePicker();*/
 
 });
