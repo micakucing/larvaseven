@@ -89,7 +89,7 @@ class navigasi extends Component {
         } else {
             abouts = <li><a href="/larvaseven/#/about" >&nbsp;&nbsp;About &nbsp;&nbsp;: </a></li>
         }
-        if (c == "portfolio") {
+        if (c == "work") {
             works = <li><a className="active">&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
         } else {
             works = <li><a href="/larvaseven/#/work" >&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
