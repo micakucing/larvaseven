@@ -220,7 +220,7 @@ position: relative; top: 3px;
     </div>
     <div className="site-mobile-menu-body">
 
-<ul id="lb" class="site-nav-wrap"><li><div id="hm">Home</div></li><li><div id="ab">About</div></li><li><div id="pr">Work</div></li><li><div id="sh">Shop</div></li><li><div id="bl">Blog</div></li><li><div id="ch">Contact</div></li></ul>
+<ul id="lb" class="site-nav-wrap"><li><div id="hm">Home</div></li><li><div id="ab">About</div></li><li><div id="pr">Work</div></li>{/*<li><div id="sh">Shop</div></li><li><div id="bl">Blog</div></li>*/}<li><div id="ch">Contact</div></li></ul>
 
     </div>   
 </div>
@@ -239,8 +239,7 @@ position: relative; top: 3px;
 
                         {abouts}
                         {works}
-                         {shops}
-                         <li><a href="/blog">&nbsp;&nbsp;Blog &nbsp;&nbsp;: </a></li>
+                        
                                       
                                       {kontak}
                     </ul>
@@ -249,8 +248,7 @@ position: relative; top: 3px;
                         <li onClick={this.hm}><div id="hm" >Home</div></li>
                         <li onClick={this.ab}><div id="ab"  >About</div></li>
                         <li  onClick={this.pr} ><div id="pr"  >Work</div></li>
-                        <li  onClick={this.sh}><div id="sh"  >Shop</div></li>
-                        <li  onClick={this.bl}><div id="bl"  >Blog</div></li>
+                       
                         <li   onClick={this.ct}><div id="ch" >Contact</div></li>
 
                     </ul>
