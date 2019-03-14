@@ -87,116 +87,63 @@ class portfolio extends Component {
       <div className="container">
         <div className="row">
           <div className="col-md-6 col-lg-4 mb-4">
-            <a href="/larvaseven/#/workproduct" className="media-1">
+            <div id="ola" data-uri="/workproduct" data-op="2" className="media-1">
               <img src="https://colorlib.com/preview/theme/chimper/images/img_1.jpg" alt="Image" className="img-fluid"/>
               <div className="media-1-content">
                 <h2>Project Name 1</h2>
                 <span className="category">Web Application</span>
               </div>
-            </a>
+            </div>
           </div>
           <div className="col-md-6 col-lg-4 mb-4">
-            <a href="/larvaseven/#/workproduct" className="media-1">
+            <div id="ola" data-uri="/workproduct" data-op="2" className="media-1">
               <img src="https://colorlib.com/preview/theme/chimper/images/img_2.jpg" alt="Image" className="img-fluid"/>
               <div className="media-1-content">
                 <h2>Project Name 2</h2>
                 <span className="category">Branding</span>
               </div>
-            </a>
+            </div>
           </div>
           <div className="col-md-6 col-lg-4 mb-4">
-            <a href="/larvaseven/#/workproduct" className="media-1">
+            <div id="ola" data-uri="/workproduct" data-op="2" className="media-1">
               <img src="https://colorlib.com/preview/theme/chimper/images/img_1.jpg" alt="Image" className="img-fluid"/>
               <div className="media-1-content">
                 <h2>Project Name 3</h2>
                 <span className="category">Website</span>
               </div>
-            </a>
+            </div>
           </div>
 
           <div className="col-md-6 col-lg-4 mb-4">
-            <a href="/larvaseven/#/workproduct" className="media-1">
+            <div id="ola" data-uri="/workproduct" data-op="2" className="media-1">
               <img src="https://colorlib.com/preview/theme/chimper/images/img_4.jpg" alt="Image" className="img-fluid"/>
               <div className="media-1-content">
                 <h2>Project Name 4</h2>
                 <span className="category">Web Application</span>
               </div>
-            </a>
+            </div>
           </div>
-          <div className="col-md-6 col-lg-4 mb-4">
-            <a href="/larvaseven/#/workproduct" className="media-1">
-              <img src="https://colorlib.com/preview/theme/chimper/images/img_5.jpg" alt="Image" className="img-fluid"/>
-              <div className="media-1-content">
-                <h2>Project Name 5</h2>
-                <span className="category">Branding</span>
-              </div>
-            </a>
-          </div>
-          <div className="col-md-6 col-lg-4 mb-4">
-            <a href="/larvaseven/#/workproduct" className="media-1">
-              <img src="https://colorlib.com/preview/theme/chimper/images/img_6.jpg" alt="Image" className="img-fluid"/>
-              <div className="media-1-content">
-                <h2>Project Name 6</h2>
-                <span className="category">Website</span>
-              </div>
-            </a>
-          </div>
-
-          <div className="col-md-6 col-lg-4 mb-4">
-            <a href="/larvaseven/#/workproduct" className="media-1">
-              <img src="https://colorlib.com/preview/theme/chimper/images/img_1.jpg" alt="Image" className="img-fluid"/>
-              <div className="media-1-content">
-                <h2>Project Name 1</h2>
-                <span className="category">Web Application</span>
-              </div>
-            </a>
-          </div>
-          <div className="col-md-6 col-lg-4 mb-4">
-            <a href="/larvaseven/#/workproduct" className="media-1">
-              <img src="https://colorlib.com/preview/theme/chimper/images/img_3.jpg" alt="Image" className="img-fluid"/>
-              <div className="media-1-content">
-                <h2>Project Name 2</h2>
-                <span className="category">Branding</span>
-              </div>
-            </a>
-          </div>
-          <div className="col-md-6 col-lg-4 mb-4">
-            <a href="/larvaseven/#/workproduct" className="media-1">
+        
+<div className="col-md-6 col-lg-4 mb-4">
+            <div id="ola" data-uri="/workproduct" data-op="2" className="media-1">
               <img src="https://colorlib.com/preview/theme/chimper/images/img_3.jpg" alt="Image" className="img-fluid"/>
               <div className="media-1-content">
                 <h2>Project Name 3</h2>
                 <span className="category">Website</span>
               </div>
-            </a>
+            </div>
           </div>
 
           <div className="col-md-6 col-lg-4 mb-4">
-            <a href="/larvaseven/#/workproduct" className="media-1">
-              <img src="https://colorlib.com/preview/theme/chimper/images/img_3.jpg" alt="Image" className="img-fluid"/>
+            <div id="ola" data-uri="/workproduct" data-op="2" className="media-1">
+              <img src="https://colorlib.com/preview/theme/chimper/images/img_5.jpg" alt="Image" className="img-fluid"/>
               <div className="media-1-content">
                 <h2>Project Name 4</h2>
                 <span className="category">Web Application</span>
               </div>
-            </a>
+            </div>
           </div>
-          <div className="col-md-6 col-lg-4 mb-4">
-            <a href="/larvaseven/#/workproduct" className="media-1">
-              <img src="https://colorlib.com/preview/theme/chimper/images/img_3.jpg" alt="Image" className="img-fluid"/>
-              <div className="media-1-content">
-                <h2>Project Name 5</h2>
-                <span className="category">Branding</span>
-              </div>
-            </a>
-          </div>
-          <div className="col-md-6 col-lg-4 mb-4">
-            <a href="/larvaseven/#/workproduct" className="media-1">
-              <img src="https://colorlib.com/preview/theme/chimper/images/img_6.jpg" alt="Image" className="img-fluid"/>
-              <div className="media-1-content">
-                <h2>Project Name 6</h2>
-                <span className="category">Website</span>
-              </div>
-            </a>
-          </div>
+
 
         </div>
       </div>

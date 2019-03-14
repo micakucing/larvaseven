@@ -85,6 +85,22 @@ $(window).scrollTop(0)
  history.push('/work')
     }, 1000)
         })
+
+
+ $(document).on("click", "#ola", function(e) {
+var o = $(this).attr('data-uri')
+ 
+            $('body').removeClass('offcanvas-menu')
+                 $('.loadmaimage').show()
+$(window).scrollTop(0)
+ setTimeout(() => {
+                    $('.loadmaimage').fadeOut()
+
+ history.push(o)
+    }, 1000)
+        })
+
+
         $(document).on("click", "#sh", function(e) {
 
             $('body').removeClass('offcanvas-menu')
