@@ -127,6 +127,10 @@ const getThumbnailContent = (item) => {
 }
 }
    @media (max-width: 992px) {
+    #lpsa{
+ 
+  text-align: left;
+}
  .text-center h1{
     font-size: 22px;
     line-height: 1.3;
