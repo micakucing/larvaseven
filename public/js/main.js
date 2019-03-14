@@ -123,7 +123,7 @@ jQuery(document).ready(function($) {
 	// siteSliderRange();
 
 
-	var siteMagnificPopup = function() {
+	/*var siteMagnificPopup = function() {
 		$('.image-popup').magnificPopup({
 	    type: 'image',
 	    closeOnContentClick: true,
@@ -156,7 +156,7 @@ jQuery(document).ready(function($) {
 	};
 	siteMagnificPopup();
 
-
+*/
 	var siteCarousel = function () {
 		if ( $('.nonloop-block-13').length > 0 ) {
 			$('.nonloop-block-13').owlCarousel({
