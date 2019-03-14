@@ -17,7 +17,7 @@ class home extends Component {
     componentDidMount() {
     }
     render() {
-         
+    
         return (
             <div className="tengahx">
 

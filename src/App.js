@@ -11,6 +11,7 @@ import DeviceOrientation from 'react-device-orientation';
 import id from './translations/id.json';
 import en from './translations/en.json';
 import not from "./route/NotFound";
+import Pro from "./route/product";
 
 
 var u = localStorage.getItem('myData');
@@ -110,6 +111,7 @@ const isLoggedIn = this.state.land;
         <Route path="/about" component={About}/>
                 <Route path="/work" component={Port}/>
                 <Route path="/contact" component={Kontak}/>
+                <Route path="/workproduct" component={Pro}/>
 
          <Route component={not}/>
 		</Switch>

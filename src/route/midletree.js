@@ -22,7 +22,7 @@ class midltre extends Component {
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-6 col-lg-4">
-            <a href="/product" className="media-1">
+            <a href="/larvaseven/#/workproduct" className="media-1">
               <img src="https://colorlib.com/preview/theme/chimper/images/about_1.jpg" alt="Image" className="img-fluid" />
               <div className="media-1-content">
                 <h2>Project Name 1</h2>
@@ -31,7 +31,7 @@ class midltre extends Component {
             </a>
           </div>
           <div className="col-md-6 col-lg-4">
-            <a href="/product" className="media-1">
+            <a href="/larvaseven/#/workproduct" className="media-1">
               <img src="https://colorlib.com/preview/theme/chimper/images/about_1.jpg" alt="Image" className="img-fluid"/>
               <div className="media-1-content">
                 <h2>Project Name 2</h2>
@@ -40,7 +40,7 @@ class midltre extends Component {
             </a>
           </div>
           <div className="col-md-6 col-lg-4">
-            <a href="/product" className="media-1">
+            <a href="/larvaseven/#/workproduct" className="media-1">
               <img src="https://colorlib.com/preview/theme/chimper/images/about_1.jpg" alt="Image" className="img-fluid"/>
               <div className="media-1-content">
                 <h2>Project Name 3</h2>
