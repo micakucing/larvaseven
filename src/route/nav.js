@@ -99,7 +99,7 @@ class navigasi extends Component {
         } else {
             shops = <li><a href="/larvaseven/#/shop" >&nbsp;&nbsp;Shop &nbsp;&nbsp;: </a></li>
         }
-    if(c =="kontak"){
+    if(c =="contact"){
                            kontak = <li><a className="active">&nbsp;&nbsp;Contact &nbsp;&nbsp;: </a></li>
 
     }else{
@@ -228,7 +228,7 @@ position: relative; top: 3px;
     <div className="container">
         <div className="row align-items-center">
             <div className="col-11 col-xl-2">
-                <h1 className="mb-0 site-logo"><a href="/" className="text-black h2 mb-0">LARVA7<span className="op">STUDIO</span></a></h1>
+                <h1 className="mb-0 site-logo"><a href="/larvaseven" className="text-black h2 mb-0">LARVA7<span className="op">STUDIO</span></a></h1>
             </div>
             <div className="col-12 col-md-10 d-none d-xl-block">
                 <nav className="site-navigation position-relative text-right" role="navigation">
