@@ -52,8 +52,6 @@ font-family: Mor;
                         <li><a href="/larvaseven">Home Page</a></li>
                         <li><a href="/larvaseven/#/about">About Us</a></li>
                         <li><a href="/larvaseven/#/work">Our Work</a></li>
-                        <li><a href="/larvaseven/#/shop">Our Product</a></li>
-                        <li><a href="/blog">Articles</a></li>
                         <li><a href="/larvaseven/#/contact">Contact Us</a></li>
                 </ul>
               </div>
