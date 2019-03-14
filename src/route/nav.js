@@ -98,7 +98,7 @@ $(window).scrollTop(0)
             history.push('/blog')
 
         })
-             $(document).on("click", "#ch", function(e) {
+$(document).on("click", "#ch", function(e) {
     $('.loadmaimage').show()
 $(window).scrollTop(0)
             $('body').removeClass('offcanvas-menu')
@@ -122,6 +122,11 @@ $(window).scrollTop(0)
             abouts = <li><a id="ab" >&nbsp;&nbsp;About &nbsp;&nbsp;: </a></li>
         }
         if (c == "work") {
+            works = <li><a className="active">&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
+        } else {
+            works = <li><a id="pr" >&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
+        }
+        if (c == "workproduct") {
             works = <li><a className="active">&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
         } else {
             works = <li><a id="pr" >&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
