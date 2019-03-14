@@ -220,7 +220,7 @@ position: relative; top: 3px;
     </div>
     <div className="site-mobile-menu-body">
 
-<ul id="lb" class="site-nav-wrap"><li><div id="hm">Home</div></li><li><div id="ab">About</div></li><li><div id="pr">Work</div></li><li><div id="sh">Shop</div></li><li><div id="bl">Blog</div></li><li><div id="ct">Contact</div></li></ul>
+<ul id="lb" class="site-nav-wrap"><li><div id="hm">Home</div></li><li><div id="ab">About</div></li><li><div id="pr">Work</div></li><li><div id="sh">Shop</div></li><li><div id="bl">Blog</div></li><li><div id="ch">Contact</div></li></ul>
 
     </div>   
 </div>
