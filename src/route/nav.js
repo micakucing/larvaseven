@@ -7,10 +7,15 @@ const history = createHashHistory()
 
 class navigasi extends Component {
     constructor(props) {
+
         super(props);
+                     this.timeout = null;
+
     }
     componentDidMount() {
-
+ if (this.timeout) {
+      clearTimeout(this.timeout);
+    }
     }
 
     hm = () => {
@@ -46,22 +51,44 @@ class navigasi extends Component {
         $(document).on("click", "#hm", function(e) {
 
             $('body').removeClass('offcanvas-menu')
+$('.loadmaimage').show()
+$(window).scrollTop(0)
+             setTimeout(() => {
+
+
+$('.loadmaimage').fadeOut()
             history.push('/')
+                 
+
+                 }, 1000)
 
         })
         $(document).on("click", "#ab", function(e) {
 
             $('body').removeClass('offcanvas-menu')
+            $('.loadmaimage').show()
+$(window).scrollTop(0)
+            setTimeout(() => {
+                $('.loadmaimage').fadeOut()
  history.push('/about')
+
+    }, 1000)
         })
         $(document).on("click", "#pr", function(e) {
 
             $('body').removeClass('offcanvas-menu')
+                 $('.loadmaimage').show()
+$(window).scrollTop(0)
+ setTimeout(() => {
+                    $('.loadmaimage').fadeOut()
+
  history.push('/work')
+    }, 1000)
         })
         $(document).on("click", "#sh", function(e) {
 
             $('body').removeClass('offcanvas-menu')
+
             history.push('/shop')
 
         })
@@ -72,9 +99,14 @@ class navigasi extends Component {
 
         })
              $(document).on("click", "#ch", function(e) {
-
+    $('.loadmaimage').show()
+$(window).scrollTop(0)
             $('body').removeClass('offcanvas-menu')
+             setTimeout(() => {
+                                    $('.loadmaimage').fadeOut()
+
             history.push('/contact')
+             }, 1000)
 })
         let c, homes, abouts, works, shops, kontak;
         c = window.location.hash.substr(2)
@@ -82,17 +114,17 @@ class navigasi extends Component {
         if (c == "") {
             homes = <li><a className="active">&nbsp;&nbsp;Home &nbsp;&nbsp;: </a></li>
         } else {
-            homes = <li><a href="/larvaseven" >&nbsp;&nbsp;Home &nbsp;&nbsp;: </a></li>
+            homes = <li><a id="hm">&nbsp;&nbsp;Home &nbsp;&nbsp;: </a></li>
         }
         if (c == "about") {
             abouts = <li><a className="active">&nbsp;&nbsp;About &nbsp;&nbsp;: </a></li>
         } else {
-            abouts = <li><a href="/larvaseven/#/about" >&nbsp;&nbsp;About &nbsp;&nbsp;: </a></li>
+            abouts = <li><a id="ab" >&nbsp;&nbsp;About &nbsp;&nbsp;: </a></li>
         }
         if (c == "work") {
             works = <li><a className="active">&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
         } else {
-            works = <li><a href="/larvaseven/#/work" >&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
+            works = <li><a id="pr" >&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
         }
         if (c == "shop") {
             shops = <li><a className="active">&nbsp;&nbsp;Shop &nbsp;&nbsp;: </a></li>
@@ -103,7 +135,7 @@ class navigasi extends Component {
                            kontak = <li><a className="active">&nbsp;&nbsp;Contact &nbsp;&nbsp;: </a></li>
 
     }else{
-                        kontak = <li><a href="/larvaseven/#/contact">&nbsp;&nbsp;Contact &nbsp;&nbsp;: </a></li>
+                        kontak = <li><a id="ch">&nbsp;&nbsp;Contact &nbsp;&nbsp;: </a></li>
 
 
     }
@@ -121,6 +153,9 @@ class navigasi extends Component {
        color: #2A4CF9;
 
  } 
+ #hm, #ab, #pr, #ch{
+    cursor: pointer;
+ }
  #lb li div{
     color: #fff;
  }

@@ -23,6 +23,11 @@
 #button-addon2{
 font-family: Mor;
 }
+
+
+.list-unstyled > li > a {
+color: #fff!important;
+}
    @media (min-width: 768px){
 .site-footer {
     padding-bottom: 20px;
@@ -49,10 +54,10 @@ font-family: Mor;
               <div className="col-md-3 ml-auto" id="subcrib">
                 <h2 className="footer-heading mb-4" >Features</h2>
                 <ul className="list-unstyled">
-                        <li><a href="/larvaseven">Home Page</a></li>
-                        <li><a href="/larvaseven/#/about">About Us</a></li>
-                        <li><a href="/larvaseven/#/work">Our Work</a></li>
-                        <li><a href="/larvaseven/#/contact">Contact Us</a></li>
+                        <li><a id="hm">Home Page</a></li>
+                        <li><a id="ab">About Us</a></li>
+                        <li><a id="pr">Our Work</a></li>
+                        <li><a id="ch">Contact Us</a></li>
                 </ul>
               </div>
               <div className="col-md-3" id="subcrib">
