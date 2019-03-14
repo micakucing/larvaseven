@@ -76,7 +76,7 @@ class navigasi extends Component {
             $('body').removeClass('offcanvas-menu')
             history.push('/contact')
 })
-        let c, homes, abouts, works, shops;
+        let c, homes, abouts, works, shops, kontak;
         c = window.location.hash.substr(2)
 
         if (c == "") {
@@ -99,6 +99,14 @@ class navigasi extends Component {
         } else {
             shops = <li><a href="/larvaseven/#/shop" >&nbsp;&nbsp;Shop &nbsp;&nbsp;: </a></li>
         }
+    if(c =="kontak"){
+                           kontak = <li><a className="active">&nbsp;&nbsp;Contact &nbsp;&nbsp;: </a></li>
+
+    }else{
+                        kontak = <li><a href="/larvaseven/#/contact">&nbsp;&nbsp;Contact &nbsp;&nbsp;: </a></li>
+
+
+    }
 
         return (
             <div className="tengahx">
@@ -233,8 +241,8 @@ position: relative; top: 3px;
                         {works}
                          {shops}
                          <li><a href="/blog">&nbsp;&nbsp;Blog &nbsp;&nbsp;: </a></li>
-                        <li><a href="/contact">&nbsp;&nbsp;Contact &nbsp;&nbsp;: </a></li>
-
+                                      
+                                      {kontak}
                     </ul>
                 <ul id="lb" className="site-menu js-clone-nav mr-auto d-none">
 

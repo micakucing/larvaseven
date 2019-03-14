@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Headnav from "./route/home";
 import About from "./route/about";
 import Port from "./route/portfolio";
+import Kontak from "./route/contact";
+
 import not from "./route/NotFound";
 
 
@@ -19,6 +21,7 @@ class App extends Component {
 			<Route path="/" exact component={Headnav}/>
         <Route path="/about" component={About}/>
                 <Route path="/work" component={Port}/>
+                <Route path="/contact" component={Kontak}/>
 
          <Route component={not}/>
 		</Switch>

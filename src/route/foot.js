@@ -54,7 +54,7 @@ font-family: Mor;
                         <li><a href="/larvaseven/#/work">Our Work</a></li>
                         <li><a href="/larvaseven/#/shop">Our Product</a></li>
                         <li><a href="/blog">Articles</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="/larvaseven/#/contact">Contact Us</a></li>
                 </ul>
               </div>
               <div className="col-md-3" id="subcrib">
