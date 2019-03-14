@@ -7,9 +7,8 @@ const history = createHashHistory()
 
 class navigasi extends Component {
     constructor(props) {
-
         super(props);
-                     this.timeout = null;
+    this.timeout = null;
 
     }
     componentDidMount() {

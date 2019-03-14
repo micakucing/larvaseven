@@ -15,7 +15,7 @@ class portfolio extends Component {
             <div className="tengahx">
 
   <style dangerouslySetInnerHTML={{__html: `
- .site-blocks-cover.inner-page-cover, .site-blocks-cover.inner-page-cover>.container>.row {
+    .site-blocks-cover.inner-page-cover, .site-blocks-cover.inner-page-cover>.container>.row {
       min-height: 280px;
     }
     .text-center h1{
@@ -143,8 +143,6 @@ class portfolio extends Component {
               </div>
             </div>
           </div>
-
-
         </div>
       </div>
     </section>
