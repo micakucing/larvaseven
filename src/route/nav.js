@@ -121,16 +121,12 @@ $(window).scrollTop(0)
         } else {
             abouts = <li><a id="ab" >&nbsp;&nbsp;About &nbsp;&nbsp;: </a></li>
         }
-        if (c == "work") {
+        if (c == "work" || c == "workproduct") {
             works = <li><a className="active">&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
         } else {
             works = <li><a id="pr" >&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
         }
-        if (c == "workproduct") {
-            works = <li><a className="active">&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
-        } else {
-            works = <li><a id="pr" >&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
-        }
+        
         if (c == "shop") {
             shops = <li><a className="active">&nbsp;&nbsp;Shop &nbsp;&nbsp;: </a></li>
         } else {
