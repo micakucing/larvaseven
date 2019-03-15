@@ -11,8 +11,8 @@ import dt from "./data.json";
 
 const customLabels = {
         
-        previous: <span className="icon-chevron-left"></span>,
-        next: <span className="icon-chevron-right"></span>
+        previous: <svg  xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"   ><path id="curved_bg"  d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z"/></svg>,
+        next: <svg  xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" ><path id="curved_bg" d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/></svg>
     }   
 
 
@@ -65,15 +65,15 @@ constructor(props){
       display: none!important;
     }
     li.previous a {
-      position: absolute;
-      top: 50%;
+      
       font-size: 30px;
     }
        li.next a {
-      position: absolute;
-      top: 50%;
-        right: 0;
+     
         font-size: 30px;
+    }
+    #curved_bg{
+      width: 50px;
     }
     .site-section{
       position: relative;
