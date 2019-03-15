@@ -8,11 +8,9 @@ class testi extends Component {
     }
     render() {
 
-
         return (
             <div>
-              <style dangerouslySetInnerHTML={{__html: `
-
+<style dangerouslySetInnerHTML={{__html: `
 #sec{
   padding: 3em 0 !important;
 }
@@ -39,7 +37,6 @@ display: block;
                 </figure>
             </div>
         </div>
- 
     </div>
 </section></div>
      );

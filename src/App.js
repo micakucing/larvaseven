@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, HashRouter, DelayLink, Link, BrowserRouter as Router, Route } from 'react-router-dom';
-import { setDefaultTranslations, setDefaultLanguage, translate, setLanguage }  from './translations/trs';
+import { setDefaultTranslations, setDefaultLanguage, translate, setLanguage } from './translations/trs';
 import 'bootstrap/dist/css/bootstrap.css';
 import Headnav from "./route/home";
 import About from "./route/about";
@@ -14,24 +14,23 @@ import not from "./route/NotFound";
 import Pro from "./route/product";
 
 
+
 var u = localStorage.getItem('myData');
 var y;
-if (u === null){
+if (u === null) {
     y = 'en';
-}else{
+} else {
     y = localStorage.getItem('myData');
 }
- setDefaultTranslations({id, en})
+setDefaultTranslations({ id, en })
 setDefaultLanguage(y)
 class App extends Component {
-constructor(props) {
-    super(props);
-    this.state = {addClassid: false, addClassen: false, land: false}
-}
-
-
-  rotate = () =>{
-    return(<DeviceOrientation>
+    constructor(props) {
+        super(props);
+        this.state = { addClassid: false, addClassen: false, land: false }
+    }
+    rotate = () => {
+        return (<DeviceOrientation>
     {
     ({ absolute, alpha, beta, gamma }) => {
       if(Math.abs(gamma) === '-90' && Math.abs(beta) === '90' && alpha ==='0') {
@@ -43,7 +42,7 @@ constructor(props) {
         )
       }else if(Math.abs(gamma) === '90' && Math.abs(beta) === '90' && alpha === '0') {
           return (
-            <div id="kum" className="clox_tray"><img src="https://res.cloudinary.com/dsl4hppsk/image/upload/v1533604113/orientation.png" alt="" className="po"/><span className="rotator">{this.props.t('home.rotator')}</span>
+      <div id="kum" className="clox_tray"><img src="https://res.cloudinary.com/dsl4hppsk/image/upload/v1533604113/orientation.png" alt="" className="po"/><span className="rotator">{this.props.t('home.rotator')}</span>
 </div>
         )
       } else {
@@ -53,74 +52,66 @@ constructor(props) {
     }
   }
 }
-  </DeviceOrientation>
-)
-  }
- readDeviceOrientation = () =>{
-    if (Math.abs(window.orientation) === 90) {
-        // Landscape
-     this.setState({
-         land: true
-     })   
-    $('body').css({'position': 'fixed'})
-    } else {
-      // Portrait
-         this.setState({
-         land: false
-     })
-        $('body').css({'position': 'relative'})
-
+  </DeviceOrientation>)
     }
-}
-rots = () => {
-window.onorientationchange = this.readDeviceOrientation;
-}
-  render() {
-
-let  b='idl' ,x='enl', com;
-const isLoggedIn = this.state.land;
-    if(this.state.addClassid) {
-      b = 'idl';
-      x = 'enl';
-}
-    if(this.state.addClassen) {
-      x = 'enl';
-      b = 'idl';
-}
-
-  if(isLoggedIn){
-    com =  <div id="kum" className="clox_tray">
+    readDeviceOrientation = () => {
+        if (Math.abs(window.orientation) === 90) {
+            // Landscape
+            this.setState({
+                land: true
+            })
+            $('body').css({ 'position': 'fixed' })
+        } else {
+            // Portrait
+            this.setState({
+                land: false
+            })
+            $('body').css({ 'position': 'relative' })
+        }
+    }
+    rots = () => {
+        window.onorientationchange = this.readDeviceOrientation;
+    }
+    render() {
+        let b = 'idl',
+            x = 'enl',
+            com;
+        const isLoggedIn = this.state.land;
+        if (this.state.addClassid) {
+            b = 'idl';
+            x = 'enl';
+        }
+        if (this.state.addClassen) {
+            x = 'enl';
+            b = 'idl';
+        }
+        if (isLoggedIn) {
+          com = <div id="kum" className="clox_tray">
           <img src="https://res.cloudinary.com/dsl4hppsk/image/upload/v1533604113/orientation.png" className="po" alt=""/>
           <span className="rotator">{this.props.t('home.rotator')}</span>
           </div>
-  }else{
-    com = ''
-  }
-  
-
-    return (
-    	  <HashRouter>
-
+        } else {
+            com = ''
+        }
+        return (
+<HashRouter>
       <div className="App">
         {this.rots()}
          {com}
-        <header className="App-header">  
-
- <Switch>
-			<Route path="/" exact component={Headnav}/>
+<header className="App-header">  
+    <Switch>
+        <Route path="/" exact component={Headnav}/>
         <Route path="/about" component={About}/>
-                <Route path="/work" component={Port}/>
-                <Route path="/contact" component={Kontak}/>
-                <Route path="/workproduct" component={Pro}/>
-
-         <Route component={not}/>
-		</Switch>
-        </header>
-
+        <Route path="/work" component={Port}/>
+        <Route path="/contact" component={Kontak}/>
+        <Route path="/workproduct" component={Pro}/>
+        <Route component={not}/>
+    </Switch>
+</header>
       </div>
-        </HashRouter>
-    );
-  }
+ </HashRouter>
+        );
+    }
 }
 
-export default  translate(App);
+export default translate(App);

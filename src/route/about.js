@@ -7,20 +7,10 @@ import Typed from 'react-typed';
 import Team from "./team";
 import Testi from "./testi";
 import Foot from "./foot";
-
 import Nav from "./nav";
-
-class about extends Component {
-
-    componentDidMount() {
-    }
-    render() {
-         
-        return (
-            <div className="tengahx">
-
-  <style dangerouslySetInnerHTML={{__html: `
-
+import { default as minifyCssString } from 'minify-css-string'
+const cssString = `
+ 
  @media (min-width: 992px){
 .col-lg-4 {
     -webkit-box-flex: 0;
@@ -64,7 +54,18 @@ class about extends Component {
 }
 }
 
-`}} /> 
+
+`
+class about extends Component {
+
+    componentDidMount() {
+    }
+    render() {
+         
+        return (
+            <div className="tengahx">
+
+  <style dangerouslySetInnerHTML={{__html: minifyCssString(cssString) }} /> 
 
  
 

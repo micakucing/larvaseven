@@ -9,21 +9,10 @@ import Midtwo from "./mideltwo";
 import Midtree from "./midletree";
 import Testi from "./testi";
 import Foot from "./foot";
-
 import Nav from "./nav";
-
-class home extends Component {
-
-    componentDidMount() {
-    }
-    render() {
-    
-        return (
-            <div className="tengahx">
-
-  <style dangerouslySetInnerHTML={{__html: `
-
- .cm-script:before {
+import { default as minifyCssString } from 'minify-css-string'
+const cssString = `
+  .cm-script:before {
     content: url('static/image/imageasset/cm.svg')
 }
 .cm-script.is-medium {
@@ -41,22 +30,28 @@ class home extends Component {
  opacity: 1;
 }
 
-`}} /> 
+`
+
+class home extends Component {
+
+    componentDidMount() {
+    }
+    render() {
+
+
+        return (
+<div className="tengahx">
+  <style dangerouslySetInnerHTML={{__html: minifyCssString(cssString) }} /> 
 
 
 
   <Nav />
-
-
-
-
-    <div className="site-blocks-cover overlay" style={{'background-image': 'url(https://colorlib.com/preview/theme/chimper/images/hero_1.jpg)'}} data-aos="fade" data-stellar-background-ratio="0.5">
+    <div className="site-blocks-cover overlay" style={{'backgroundImage': 'url(https://colorlib.com/preview/theme/chimper/images/hero_1.jpg)'}} data-aos="fade" data-stellar-background-ratio="0.5">
       <div className="container">
         <div className="row align-items-center justify-content-center text-center">
           <div className="col-md-12" data-aos="fade-up" data-aos-delay="400">
             <div className="row justify-content-center mb-4">
               <div className="col-md-8 text-center">
-
 
                 <h1>We Are Expert in <div>
  
@@ -86,6 +81,7 @@ class home extends Component {
         <Midtree />
          <Testi />
            <Foot />
+      
  </div>
         );
     }
