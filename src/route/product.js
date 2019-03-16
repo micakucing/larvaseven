@@ -102,6 +102,16 @@ const getThumbnailContent = (item) => {
   margin-bottom: 3px;
   text-align: right;
 }
+.cp{
+  cursor: pointer;
+
+}
+.cp:hover{
+  color: #0d0cb5;
+}
+.yt{
+      color: #afadab;
+}
 .mb-4{
   cursor: zoom-in;
 }
@@ -109,12 +119,25 @@ const getThumbnailContent = (item) => {
    p { 
     margin-bottom: 2rem;
 }
+.nvt{
+
+  margin-bottom: 30px;
+}
+img.mb-4:hover:after{
+  content: 'Test';
+     position: absolute;
+}
+.col-md-7 {
+  
+    margin-top:30px;
+}
    @media (min-width: 768px){
  
 .col-md-7 {
     -webkit-flex: 0 0 58.333333%;
     flex: 0 0 100%;
     max-width: 100%;
+    margin-top:30px;
 }
 .col-md-7 img{
 
@@ -167,19 +190,20 @@ const getThumbnailContent = (item) => {
     <section className="site-section border-bottom">
       
       <div className="container">
+        <div className="nvt"><span className="cp">Work page</span> / <span className="yt">Product</span></div>
         <div className="row">
-
+     
 <div className="col-md-4">
+
             <h3 className="mb-3">Case Study</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis itaque temporibus qui, est possimus porro in, molestiae consectetur dolores soluta, minima quas rem vel saepe. Dolor quibusdam perferendis officia magni.</p>
              
           </div>
           <div className="col-md-4">
-             <p id="lpsa">Name</p>
-                               <p id="lpsa">Name</p>
-             <p id="lpsa">Name</p>
-             <p id="lpsa">Name</p>
-
+             <p id="lpsa">Client: Jayakarta Anyer Hotel</p>
+              <p id="lpsa">Year: 2014</p>
+             <p id="lpsa">Branding, Grapich Design</p>
+ 
           </div>
 
           <div className="col-md-7">

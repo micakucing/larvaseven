@@ -59,7 +59,7 @@ $('.loadmaimage').fadeOut()
             history.push('/')
                  
 
-                 }, 1000)
+                 }, 0)
 
         })
         $(document).on("click", "#ab", function(e) {
@@ -71,7 +71,18 @@ $(window).scrollTop(0)
                 $('.loadmaimage').fadeOut()
  history.push('/about')
 
-    }, 1000)
+    }, 0)
+        })
+             $(document).on("click", ".cp", function(e) {
+
+            $('body').removeClass('offcanvas-menu')
+            $('.loadmaimage').show()
+$(window).scrollTop(0)
+            setTimeout(() => {
+                $('.loadmaimage').fadeOut()
+ history.push('/work')
+
+    }, 0)
         })
         $(document).on("click", "#pr", function(e) {
 
@@ -82,7 +93,7 @@ $(window).scrollTop(0)
                     $('.loadmaimage').fadeOut()
 
  history.push('/work')
-    }, 1000)
+    }, 0)
         })
 
 
@@ -96,7 +107,7 @@ $(window).scrollTop(0)
                     $('.loadmaimage').fadeOut()
 
  history.push(o)
-    }, 1000)
+    }, 0)
         })
 
 
@@ -121,7 +132,7 @@ $(window).scrollTop(0)
                                     $('.loadmaimage').fadeOut()
 
             history.push('/contact')
-             }, 1000)
+             }, 0)
 })
         let c, homes, abouts, works, shops, kontak;
         c = window.location.hash.substr(2)

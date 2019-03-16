@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import { translate } from '../translations/trs';
 import $ from "jquery";
@@ -8,69 +7,83 @@ import Nav from "./nav";
 import Pagination from 'react-bootstrap/Pagination'
 import JwPagination from 'jw-react-pagination';
 import dt from "./data.json";
-
+import Icon, { FontAwesome, Feather } from 'react-web-vector-icons';
+ import PropTypes from 'prop-types';
+const propTypes = {
+ 
+    initialPage: PropTypes.number
+}
 const customLabels = {
-        
-        previous: <svg  xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"   ><path id="curved_bg"  d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z"/></svg>,
-        next: <svg  xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" ><path id="curved_bg" d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/></svg>
-    }   
+
+    previous: <Icon
+  name='ios-arrow-round-back'
+  font='Ionicons'
+   size={50}
+  // style={{}}
+/> ,
+    next: <Icon
+  name='ios-arrow-round-forward'
+  font='Ionicons'
+   size={50}
+  // style={{}}
+/> 
+}
 
 
 class portfolio extends Component {
 
-constructor(props){
-    super(props);
-
-        // an example array of items to be paged
-       // var exampleItems = [...Array(150).keys()].map(i => ({ id: (i+1), name: 'Item ' + (i+1) }));
-
-        // bind the onChangePage method to this React component
+    constructor(props) {
+        super(props);
+ 
         this.onChangePage = this.onChangePage.bind(this);
-             var exampleItems = dt;
+        var exampleItems = dt;
 
         this.state = {
-              exampleItems,
+            exampleItems,
+            initial: '1',
             pageOfItems: []
         };
     }
-   componentDidMount() {
-          
-     this.setState({ hits: dt })
+    componentDidMount() {
+
+        this.setState({ hits: dt })
        
 
     }
     onChangePage(pageOfItems) {
-        // update local state with new page of items
-        this.setState({ pageOfItems });
+         this.setState({ pageOfItems });
     }
 
-
  
-
-
-
-
     render() {
- 
+
 
 
         return (
             <div className="tengahx">
 
   <style dangerouslySetInnerHTML={{__html: `
+   @font-face{font-family:AntDesign;font-style:normal;font-weight:400;src:url(fonts/AntDesign.ttf) format('truetype')}@font-face{font-family:Entypo;font-style:normal;font-weight:400;src:url(fonts/Entypo.ttf) format('truetype')}@font-face{font-family:EvilIcons;font-style:normal;font-weight:400;src:url(fonts/EvilIcons.ttf) format('truetype')}@font-face{font-family:Feather;font-style:normal;font-weight:400;src:url(fonts/Feather.ttf) format('truetype')}@font-face{font-family:FontAwesome;font-style:normal;font-weight:400;src:url(fonts/FontAwesome.ttf) format('truetype')}@font-face{font-family:FontAwesome5;font-style:normal;font-weight:400;src:url(fonts/FontAwesome5.ttf) format('truetype')}@font-face{font-family:FontAwesome5Brands;font-style:normal;font-weight:400;src:url(fonts/FontAwesome5_Brands.ttf) format('truetype')}@font-face{font-family:Foundation;font-style:normal;font-weight:400;src:url(fonts/Foundation.ttf) format('truetype')}@font-face{font-family:Ionicons;font-style:normal;font-weight:400;src:url(fonts/Ionicons.ttf) format('truetype')}@font-face{font-family:MaterialCommunityIcons;font-style:normal;font-weight:400;src:url(fonts/MaterialCommunityIcons.ttf) format('truetype')}@font-face{font-family:MaterialIcons;font-style:normal;font-weight:400;src:url(fonts/MaterialIcons.ttf) format('truetype')}@font-face{font-family:Octicons;font-style:normal;font-weight:400;src:url(fonts/Octicons.ttf) format('truetype')}@font-face{font-family:SimpleLineIcons;font-style:normal;font-weight:400;src:url(fonts/SimpleLineIcons.ttf) format('truetype')}@font-face{font-family:Zocial;font-style:normal;font-weight:400;src:url(fonts/Zocial.ttf) format('truetype')}
+
     .site-blocks-cover.inner-page-cover, .site-blocks-cover.inner-page-cover>.container>.row {
       min-height: 280px;
+    }
+    .site-section{
+      padding-bottom: 0;
     }
     li.page-number{
       display: none!important;
     }
-    li.previous a {
+    li.previous  {
       
       font-size: 30px;
     }
        li.next a {
      
         font-size: 30px;
+    }
+    .gor {
+      display: none;
     }
     #curved_bg{
       width: 50px;
@@ -84,7 +97,7 @@ constructor(props){
       li.last{
        display: none!important;
     }
-    li.disabled a{
+    li.disabled i{
       color: red!important;
     }
     .text-center h1{
@@ -118,46 +131,31 @@ constructor(props){
     font-size: 22px;
     line-height: 1.3;
 }
-
+ .gor {
+      display: block;
+    }
 }
 `}} /> 
-
-
-
   <Nav />
-
-
-    
-
      <div className="site-blocks-cover inner-page-cover overlay" data-aos="fade" data-stellar-background-ratio="0.5">
       <div className="container">
         <div className="row align-items-center justify-content-center text-center">
-
-          <div className="col-md-12" data-aos="fade-up" data-aos-delay="400">
-                        
+          <div className="col-md-12" data-aos="fade-up" data-aos-delay="400">                    
             <div className="row justify-content-center mb-4">
               <div className="col-md-8 text-center">
                <h1>
       We Create Good Designs <strong>for Visionary Clients.</strong>
-    </h1>
-                
+    </h1>                
               </div>
             </div>
-
           </div>
         </div>
       </div>
-    </div>  
-
-
-    
-    <section className="site-section">
-      
+    </div>   
+    <section className="site-section">      
       <div className="container">
+
         <div className="row">
-
-
-
           {this.state.pageOfItems.map(item =>
           <div className="col-md-6 col-lg-4 mb-4">
             <div id="ola" data-uri="/workproduct" data-op={item.id} className="media-1">
@@ -172,9 +170,10 @@ constructor(props){
          
          
         </div>
+                       <JwPagination  pageSize={6} items={this.state.exampleItems} onChangePage={this.onChangePage}  labels={customLabels}  />
+
       </div>
     
-               <JwPagination  pageSize={6} items={this.state.exampleItems} onChangePage={this.onChangePage}  labels={customLabels}  />
     </section>
 
          <Testi />
