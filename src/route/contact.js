@@ -156,8 +156,7 @@ class kontak extends Component {
             <div className="p-4 mb-3 bg-white">
               <h3 className="h5 text-black mb-3">More Info</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad iure porro mollitia architecto hic consequuntur. Distinctio nisi perferendis dolore, ipsa consectetur? Fugiat quaerat eos qui, libero neque sed nulla.</p>
-              <p><a href="#" className="btn btn-primary btn-md text-white">Learn More</a></p>
-            </div>
+             </div>
 
           </div>
         </div>

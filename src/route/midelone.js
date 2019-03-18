@@ -35,25 +35,21 @@ class midelone extends Component {
                 <div className="mb-5">
                   <h3 className="d-flex align-items-center"><span className="icon icon-phonelink mr-2"></span><span>Web Design</span></h3>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
-                  <p><a href="#">Read More</a></p>
-                </div>
+                 </div>
                 <div>
                   <h3 className="d-flex align-items-center"><span className="icon icon-extension mr-2"></span><span>Branding &amp; Identity</span></h3>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
-                  <p><a href="#">Read More</a></p>
-                </div>
+                 </div>
               </div>
               <div className="col-lg-3">
                 <div className="mb-5">
                   <h3 className="d-flex align-items-center"><span className="icon icon-format_paint mr-2"></span><span>Art Direction</span></h3>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
-                  <p><a href="#">Read More</a></p>
-                </div>
+                 </div>
                 <div>
                   <h3 className="d-flex align-items-center"><span className="icon icon-question_answer mr-2"></span><span>Copywriting</span></h3>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
-                  <p><a href="#">Read More</a></p>
-                </div>
+                 </div>
               </div>
             </div>
           </div>

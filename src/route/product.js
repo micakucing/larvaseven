@@ -18,11 +18,8 @@ constructor(props) {
     componentDidMount() {
     }
 
-
-
-    render() {
+  render() {
    
-
  const items = [
   {
     src: 'https://colorlib.com/preview/theme/chimper/images/img_1.jpg',
@@ -32,10 +29,10 @@ constructor(props) {
     title: 'Image 1'
   },
   {
-    src: 'https://colorlib.com/preview/theme/chimper/images/img_2.jpg',
-    thumbnail: 'https://colorlib.com/preview/theme/chimper/images/img_2.jpg',
-    w: 1200,
-    h: 900,
+    src: 'images/l.jpg',
+    thumbnail: 'images/l.jpg',
+    w: 1400, 
+    h: 2338,
     title: 'Image 2'
   },
   {
@@ -46,15 +43,19 @@ constructor(props) {
     title: 'Image 3'
   }
 ];
-
-const options = {
-  //http://photoswipe.com/documentation/options.html
+const options =  {
+  //http://photoswi
+        bgOpacity: 1,
+        showHideOpacity: true,
+                closeOnScroll: false,
+preloaderEl: true,
 };
 
 const getThumbnailContent = (item) => {
   return (
     <div>
-    <img src={item.thumbnail}   className="img-fluid mb-4"/>
+      <img src={item.thumbnail} isOpen="true"  itemprop="contentUrl"  className="img-fluid mb-4"/> 
+  
   </div>
   );
 }
@@ -67,7 +68,15 @@ const getThumbnailContent = (item) => {
    .site-blocks-cover.inner-page-cover, .site-blocks-cover.inner-page-cover>.container>.row {
       min-height: 280px;
     }
-
+.pswp--animated-in .pswp__bg, .pswp--animated-in .pswp__zoom-wrap {
+    -webkit-transition: none;
+    transition: none!important;
+}
+.pswp--animate_opacity {
+    opacity: 0.001;
+    will-change: opacity;
+    transition: none!important;
+}
     .text-center h1{
       position: absolute;
     top: 12px;
@@ -112,12 +121,15 @@ const getThumbnailContent = (item) => {
 .yt{
       color: #afadab;
 }
-.mb-4{
+img{
   cursor: zoom-in;
 }
    .site-blocks-cover.overlay:before{background-color: #FD1C15}
    p { 
     margin-bottom: 2rem;
+}
+.pswp__top-bar, .pswp__button {
+    opacity:1 !important;
 }
 .nvt{
 
@@ -127,17 +139,35 @@ img.mb-4:hover:after{
   content: 'Test';
      position: absolute;
 }
+.pswp--animate_opacity {
+    opacity: 0.001;
+    will-change: opacity;
+}
 .col-md-7 {
   
     margin-top:30px;
+     flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 30px;
+    padding: 0 7.1%;
+    padding-top: 60px;
+    background-color: #fff;
+    padding-bottom: 60px;
+        border-radius: 5px;
+    border: 1px solid #d8d8d8;
 }
    @media (min-width: 768px){
  
 .col-md-7 {
     -webkit-flex: 0 0 58.333333%;
+  
     flex: 0 0 100%;
     max-width: 100%;
-    margin-top:30px;
+    margin-top: 30px;
+    padding: 0 7.1%;
+    padding-top: 60px;
+    background-color: #fff;
+    padding-bottom: 60px;
 }
 .col-md-7 img{
 
