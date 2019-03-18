@@ -1,68 +1,66 @@
-  
+  import React, { Component } from "react";
+  import { translate } from '../translations/trs';
+  import $ from "jquery";
+  import Testi from "./testi";
+  import Foot from "./foot";
+  import Nav from "./nav";
+  import 'react-photoswipe/lib/photoswipe.css';
+  import { PhotoSwipeGallery } from 'react-photoswipe';
 
-import React, { Component } from "react";
-import { translate } from '../translations/trs';
-import $ from "jquery";
-import Testi from "./testi";
-import Foot from "./foot";
-import Nav from "./nav";
-import 'react-photoswipe/lib/photoswipe.css';
-import {PhotoSwipeGallery} from 'react-photoswipe';
+  class product extends Component {
+      constructor(props) {
+          super(props);
+          this.timeout = null;
 
-class product extends Component {
-constructor(props) {
-        super(props);
-    this.timeout = null;
+      }
+      componentDidMount() {}
 
-    }
-    componentDidMount() {
-    }
+      render() {
 
-  render() {
-   
- const items = [
-  {
-    src: 'https://colorlib.com/preview/theme/chimper/images/img_1.jpg',
-    thumbnail: 'https://colorlib.com/preview/theme/chimper/images/img_1.jpg',
-    w: 1200,
-    h: 900,
-    title: 'Image 1'
-  },
-  {
-    src: 'images/l.jpg',
-    thumbnail: 'images/l.jpg',
-    w: 1400, 
-    h: 2338,
-    title: 'Image 2'
-  },
-  {
-    src: 'https://colorlib.com/preview/theme/chimper/images/img_3.jpg',
-    thumbnail: 'https://colorlib.com/preview/theme/chimper/images/img_3.jpg',
-    w: 1200,
-    h: 900,
-    title: 'Image 3'
-  }
-];
-const options =  {
-  //http://photoswi
-        bgOpacity: 1,
-        showHideOpacity: true,
-                closeOnScroll: false,
-preloaderEl: true,
-};
+          const items = [{
+                  src: 'https://colorlib.com/preview/theme/chimper/images/img_1.jpg',
+                  thumbnail: 'https://colorlib.com/preview/theme/chimper/images/img_1.jpg',
+                  w: 1200,
+                  h: 900,
+                  title: 'Image 1'
+              },
+              {
+                  src: 'images/l.jpg',
+                  thumbnail: 'images/l.jpg',
+                  w: 1400,
+                  h: 2338,
+                  title: 'Image 2'
+              },
+              {
+                  src: 'https://colorlib.com/preview/theme/chimper/images/img_3.jpg',
+                  thumbnail: 'https://colorlib.com/preview/theme/chimper/images/img_3.jpg',
+                  w: 1200,
+                  h: 900,
+                  title: 'Image 3'
+              }
+          ];
+          const options = {
+              //http://photoswi
+              bgOpacity: 1,
+              showHideOpacity: true,
+              closeOnScroll: false,
+              preloaderEl: true,
+              showAnimationDuration: 0,
+              hideAnimationDuration: 0
+          };
 
-const getThumbnailContent = (item) => {
-  return (
-    <div>
+          const getThumbnailContent = (item) => {
+              return (
+                  <div>
       <img src={item.thumbnail} isOpen="true"  itemprop="contentUrl"  className="img-fluid mb-4"/> 
   
   </div>
-  );
-}
-        return (
+              );
+          }
+          return (
 
 
-          <div>
+              <div>
 
 <style dangerouslySetInnerHTML={{__html: `
    .site-blocks-cover.inner-page-cover, .site-blocks-cover.inner-page-cover>.container>.row {
@@ -128,9 +126,7 @@ img{
    p { 
     margin-bottom: 2rem;
 }
-.pswp__top-bar, .pswp__button {
-    opacity:1 !important;
-}
+ 
 .nvt{
 
   margin-bottom: 30px;
@@ -157,18 +153,7 @@ img.mb-4:hover:after{
     border: 1px solid #d8d8d8;
 }
    @media (min-width: 768px){
- 
-.col-md-7 {
-    -webkit-flex: 0 0 58.333333%;
-  
-    flex: 0 0 100%;
-    max-width: 100%;
-    margin-top: 30px;
-    padding: 0 7.1%;
-    padding-top: 60px;
-    background-color: #fff;
-    padding-bottom: 60px;
-}
+
 .col-md-7 img{
 
   width: 100%;
@@ -188,7 +173,21 @@ img.mb-4:hover:after{
     font-size: 22px;
     line-height: 1.3;
 }
+ 
+.col-md-7 {
+    -webkit-flex: 0 0 58.333333%;
+  
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 30px;
+    padding: 0 7.1%;
+    padding-top: 60px;
+    background-color: #F2EBE0;
+    padding-bottom: 60px;
+        border: none;
+        border-top: 1px solid #dee2e6 !important
 
+}
 }
 
 `}} /> 
@@ -247,8 +246,8 @@ img.mb-4:hover:after{
  <Testi />
            <Foot />
   
-  </div> );
-    }
-}
+  </div>);
+      }
+  }
 
-export default translate(product);
+  export default translate(product);
