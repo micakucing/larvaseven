@@ -18,8 +18,8 @@
       render() {
 
           const items = [{
-                  src: 'https://colorlib.com/preview/theme/chimper/images/img_1.jpg',
-                  thumbnail: 'https://colorlib.com/preview/theme/chimper/images/img_1.jpg',
+                  src: 'images/ty.jpg',
+                  thumbnail: 'images/ty.jpg',
                   w: 1200,
                   h: 900,
                   title: 'Image 1'
@@ -51,8 +51,8 @@
 
           const getThumbnailContent = (item) => {
               return (
-                  <div>
-      <img src={item.thumbnail} isOpen="true"  itemprop="contentUrl"  className="img-fluid mb-4"/> 
+                  <div id="kkt">
+       <img src={item.thumbnail} isOpen="true"  itemprop="contentUrl"  className="img-fluid mb-4"/> 
   
   </div>
               );
@@ -69,6 +69,19 @@
 .pswp--animated-in .pswp__bg, .pswp--animated-in .pswp__zoom-wrap {
     -webkit-transition: none;
     transition: none!important;
+}
+#dior{
+      font-size: 50px;
+    background-color: #ffffff75;
+    border-radius: 50%;
+    padding: 5px;
+    color: #00000070;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+#kkt{
+  position: relative;
 }
 .pswp--animate_opacity {
     opacity: 0.001;
@@ -236,6 +249,7 @@ img.mb-4:hover:after{
           </div>
 
           <div className="col-md-7">
+ 
                                  <PhotoSwipeGallery items={items} options={options} thumbnailContent={getThumbnailContent}/>
 
           </div>
