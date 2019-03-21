@@ -19,7 +19,7 @@
       
       componentDidMount() {
 
- fetch('http://larva7studio.herokuapp.com/d/'+this.props.match.params.id)
+ fetch('https://larva7studio.herokuapp.com/d/'+this.props.match.params.id)
     .then(response => {
       return response.json();
     })
@@ -27,7 +27,7 @@
       this.setState({ text: data[0], isLoading: false })
  console.log(data)
       });
- fetch('http://larva7studio.herokuapp.com/i/'+this.props.match.params.id)
+ fetch('https://larva7studio.herokuapp.com/i/'+this.props.match.params.id)
     .then(response => {
       return response.json();
     })

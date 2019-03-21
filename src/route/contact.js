@@ -16,7 +16,7 @@ constructor(props) {
     };
   }
     componentDidMount() {
-       fetch('http://larva7studio.herokuapp.com/infor')
+       fetch('https://larva7studio.herokuapp.com/infor')
     .then(response => {
       return response.json();
     })
