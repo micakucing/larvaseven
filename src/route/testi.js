@@ -15,7 +15,7 @@ constructor(props) {
     componentDidMount() {
           this.setState({ isLoading: true });
 
-     fetch('http://localhost:5000/mdtext')
+     fetch('https://larva7studio.herokuapp.com/mdtext')
     .then(response => {
       return response.json();
     })
