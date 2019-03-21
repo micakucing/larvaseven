@@ -45,13 +45,14 @@ class portfolio extends Component {
         this.state = {
             exampleItems: [],
             initial: '1',
-            pageOfItems: []
+            pageOfItems: [],
+            hits:[]
         };
     }
     componentDidMount() {
 
         //this.setState({ hits: dt })
-       fetch('http://localhost:5000/portls')
+       fetch('http://larva7studio.herokuapp.com/portls')
     .then(response => {
       return response.json();
     })
@@ -206,8 +207,7 @@ class portfolio extends Component {
       </div>
     </div>   
     <section className="site-section">   
-      {
-       this.state.pageOfItems && this.state.pageOfItems.length > 0 ? (
+      { this.state.hits.length > 0 ? (
 
       <div className="container">
 
