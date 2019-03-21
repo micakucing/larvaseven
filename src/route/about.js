@@ -19,7 +19,9 @@ const cssString = `
     max-width: 50%;
     margin-bottom: 50px!important;
 }
-
+#tem {
+    padding: 1em 0;
+}
 }
   .site-blocks-cover.inner-page-cover, .site-blocks-cover.inner-page-cover>.container>.row {
       min-height: 280px;
@@ -102,7 +104,7 @@ class about extends Component {
                   <div>
                     <h3>Web &amp; Mobile Specialties</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis consect.</p>
-                    <p className="mb-0"><a href="#">Learn More</a></p>
+                    
                   </div>
                 </div>
               </div>
@@ -112,7 +114,7 @@ class about extends Component {
                   <div>
                     <h3>Intuitive Thinkers</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis.</p>
-                    <p className="mb-0"><a href="#">Learn More</a></p>
+                    
                   </div>
                 </div>
               </div>

@@ -7,8 +7,12 @@ import Nav from "./nav";
 import Pagination from 'react-bootstrap/Pagination'
 import JwPagination from 'jw-react-pagination';
 import dt from "./data.json";
+import { createHashHistory } from 'history'
+
 import Icon, { FontAwesome, Feather } from 'react-web-vector-icons';
  import PropTypes from 'prop-types';
+ const history = createHashHistory()
+
 const propTypes = {
  
     initialPage: PropTypes.number
@@ -36,18 +40,26 @@ class portfolio extends Component {
         super(props);
  
         this.onChangePage = this.onChangePage.bind(this);
-        var exampleItems = dt;
+        
 
         this.state = {
-            exampleItems,
+            exampleItems: [],
             initial: '1',
             pageOfItems: []
         };
     }
     componentDidMount() {
 
-        this.setState({ hits: dt })
-       
+        //this.setState({ hits: dt })
+       fetch('http://localhost:5000/portls')
+    .then(response => {
+      return response.json();
+    })
+    .then((data) => {
+      this.setState({ hits: data, exampleItems: data, isLoading: false })
+          console.log(data)   
+
+      });
 
     }
     onChangePage(pageOfItems) {
@@ -56,9 +68,19 @@ class portfolio extends Component {
 
  
     render() {
+  const { hits, isLoading, text, exampleItems, pageOfItems } = this.state;
 
+  const divStyle = (src) => ({
+      backgroundImage: 'url(' + src + ')',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center center'
+    })
 
-
+ $(document).on("click", "#ola", function(e) {
+               var t = $(this).attr('data-uri')
+             history.push('/workproduct/'+t)
+           
+        })
         return (
             <div className="tengahx">
 
@@ -68,6 +90,17 @@ class portfolio extends Component {
     .site-blocks-cover.inner-page-cover, .site-blocks-cover.inner-page-cover>.container>.row {
       min-height: 280px;
     }
+     #kkp{
+      max-width: 404px;
+    min-width: 145px;
+ }
+  .media-1{
+    height: 250px;
+    border-radius: 3px;
+  }
+  #pol{
+    margin: 70px;
+  }
     .site-section{
       padding-bottom: 0;
     }
@@ -124,13 +157,33 @@ class portfolio extends Component {
     margin-top: 9px;
     letter-spacing: .5px;
     }
-
+.lost{
+      color: #afaeab !important;
+    font-family: Mor;
+    font-size: 50px;
+  text-align: center;
+  padding-bottom: 50px;
+      border-bottom: 1px solid #dee2e6 !important;
+}
    .site-blocks-cover.overlay:before{background-color: #FD1C15}
    @media (max-width: 992px) {
  .text-center h1{
     font-size: 22px;
     line-height: 1.3;
 }
+
+#kkp {
+    max-width: 100%;
+    min-width: 250px;
+}
+.lost {
+   
+    font-size: 30px;
+    
+}
+  #pol{
+    margin: 30px;
+  }
  .gor {
       display: block;
     }
@@ -152,17 +205,19 @@ class portfolio extends Component {
         </div>
       </div>
     </div>   
-    <section className="site-section">      
+    <section className="site-section">   
+      {
+       this.state.pageOfItems && this.state.pageOfItems.length > 0 ? (
+
       <div className="container">
 
         <div className="row">
           {this.state.pageOfItems.map(item =>
-          <div className="col-md-6 col-lg-4 mb-4">
-            <div id="ola" data-uri="/workproduct" data-op={item.id} className="media-1">
-              <img src={item.image} alt="Image" className="img-fluid"/>
-              <div className="media-1-content">
-                <h2>Project Name 1</h2>
-                <span className="category">Web Application</span>
+            <div id="kkp" className="col-md-6 col-lg-4"  >
+            <div id="ola" data-uri={item.id} className="media-1" style={divStyle(item.thumnail)}>
+               <div className="media-1-content">
+                <h2>{item.title}</h2>
+                <span className="category">{item.kategori_name}</span>
               </div>
             </div>
           </div>
@@ -173,7 +228,7 @@ class portfolio extends Component {
                        <JwPagination  pageSize={6} items={this.state.exampleItems} onChangePage={this.onChangePage}  labels={customLabels}  />
 
       </div>
-    
+    ):(<div className="lost">Sorry no data for now</div>)}
     </section>
 
          <Testi />

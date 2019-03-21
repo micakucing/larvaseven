@@ -11,13 +11,36 @@
       constructor(props) {
           super(props);
           this.timeout = null;
+ this.state = {
+      ddt: [],
+      text: [] 
+    };
+  }
+      
+      componentDidMount() {
+
+ fetch('http://localhost:5000/d/'+this.props.match.params.id)
+    .then(response => {
+      return response.json();
+    })
+    .then((data) => {
+      this.setState({ text: data[0], isLoading: false })
+ console.log(data)
+      });
+ fetch('http://localhost:5000/i/'+this.props.match.params.id)
+    .then(response => {
+      return response.json();
+    })
+    .then((data) => {
+      this.setState({ ddt: data, isLoading: false })
+ 
+      });
 
       }
-      componentDidMount() {}
 
       render() {
-
-          const items = [{
+ 
+          /*const items = [{
                   src: 'images/ty.jpg',
                   thumbnail: 'images/ty.jpg',
                   w: 1200,
@@ -38,7 +61,11 @@
                   h: 900,
                   title: 'Image 3'
               }
-          ];
+          ];*/
+
+  const { text } = this.state;
+ 
+           const items = this.state.ddt
           const options = {
               //http://photoswi
               bgOpacity: 1,
@@ -69,6 +96,12 @@
 .pswp--animated-in .pswp__bg, .pswp--animated-in .pswp__zoom-wrap {
     -webkit-transition: none;
     transition: none!important;
+}
+#jjl{
+     padding-left: 7.1%;
+}
+#ppl{
+    padding-right: 7.1%;
 }
 #dior{
       font-size: 50px;
@@ -141,7 +174,7 @@ img{
 }
  
 .nvt{
-
+    padding-left: 6.1%;
   margin-bottom: 30px;
 }
 img.mb-4:hover:after{
@@ -152,6 +185,12 @@ img.mb-4:hover:after{
     opacity: 0.001;
     will-change: opacity;
 }
+.lost{
+      color: #afaeab !important;
+    font-family: Mor;
+    font-size: 50px;
+  text-align: center;
+}
 .col-md-7 {
   
     margin-top:30px;
@@ -159,11 +198,10 @@ img.mb-4:hover:after{
     max-width: 100%;
     margin-top: 30px;
     padding: 0 7.1%;
-    padding-top: 60px;
-    background-color: #fff;
+    padding-top: 0;
+
     padding-bottom: 60px;
         border-radius: 5px;
-    border: 1px solid #d8d8d8;
 }
    @media (min-width: 768px){
 
@@ -180,7 +218,7 @@ img.mb-4:hover:after{
    @media (max-width: 992px) {
     #lpsa{
  
-  text-align: left;
+  text-align: right;
 }
  .text-center h1{
     font-size: 22px;
@@ -202,7 +240,24 @@ img.mb-4:hover:after{
 
 }
 }
+@media (max-width: 767px){
+.nvt{
+    padding-left: 5.1%;
+ }
+#ppl {
+    padding-left: 7.1%;
+}
 
+.lost {
+   
+    font-size: 30px;
+    
+}
+#lpsa {
+    text-align: left;
+}
+
+}
 `}} /> 
 
             <Nav />
@@ -230,32 +285,30 @@ img.mb-4:hover:after{
 
     
     <section className="site-section border-bottom">
-      
+  {
+       this.state.ddt && this.state.ddt.length > 0 ? (
       <div className="container">
         <div className="nvt"><span className="cp">Work page</span> / <span className="yt">Product</span></div>
         <div className="row">
-     
-<div className="col-md-4">
-
-            <h3 className="mb-3">Case Study</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis itaque temporibus qui, est possimus porro in, molestiae consectetur dolores soluta, minima quas rem vel saepe. Dolor quibusdam perferendis officia magni.</p>
-             
+          <div id="jjl" className="col-md-4">
+            <h3 className="mb-3">{text.title}</h3>
+            <p>{text.deskrip}</p>
           </div>
-          <div className="col-md-4">
-             <p id="lpsa">Client: Jayakarta Anyer Hotel</p>
-              <p id="lpsa">Year: 2014</p>
-             <p id="lpsa">Branding, Grapich Design</p>
- 
+          <div id="ppl" className="col-md-4">
+             <p id="lpsa">Client: {text.client}</p>
+              <p id="lpsa">Year: {text.tahun}</p>
+             <p id="lpsa">{text.kategori_name}</p>
           </div>
-
+      
           <div className="col-md-7">
- 
-                                 <PhotoSwipeGallery items={items} options={options} thumbnailContent={getThumbnailContent}/>
+                  <PhotoSwipeGallery items={items} options={options} thumbnailContent={getThumbnailContent}/>
 
           </div>
-       
-        </div>
+        </div> 
+
       </div>
+
+      ): <div className="lost">We are sorry, data not found</div>}
     </section>
  <Testi />
            <Foot />

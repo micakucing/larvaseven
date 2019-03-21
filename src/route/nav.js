@@ -136,7 +136,7 @@ $(window).scrollTop(0)
 })
         let c, homes, abouts, works, shops, kontak;
         c = window.location.hash.substr(2)
-
+ 
         if (c == "") {
             homes = <li><a className="active">&nbsp;&nbsp;Home &nbsp;&nbsp;: </a></li>
         } else {
@@ -310,20 +310,16 @@ position: relative; top: 3px;
                    
 
                         {homes}
-
                         {abouts}
                         {works}
-                        
-                                      
-                                      {kontak}
+                        {kontak}
                     </ul>
                 <ul id="lb" className="site-menu js-clone-nav mr-auto d-none">
 
                         <li onClick={this.hm}><div id="hm" >Home</div></li>
                         <li onClick={this.ab}><div id="ab"  >About</div></li>
-                        <li  onClick={this.pr} ><div id="pr"  >Work</div></li>
-                       
-                        <li   onClick={this.ct}><div id="ch" >Contact</div></li>
+                        <li onClick={this.pr} ><div id="pr"  >Work</div></li>
+                        <li onClick={this.ct}><div id="ch" >Contact</div></li>
 
                     </ul>
                 </nav>

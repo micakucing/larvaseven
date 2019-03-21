@@ -104,7 +104,7 @@ class App extends Component {
         <Route path="/about" component={About}/>
         <Route path="/work" component={Port}/>
         <Route path="/contact" component={Kontak}/>
-        <Route path="/workproduct" component={Pro}/>
+        <Route path="/workproduct/:id" component={Pro}/>
         <Route component={not}/>
     </Switch>
 </header>

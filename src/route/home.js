@@ -29,7 +29,9 @@ const cssString = `
 #kols:hover{
  opacity: 1;
 }
-
+@media (max-width: 992px) {
+ 
+}
 `
 
 class home extends Component {
