@@ -98,7 +98,7 @@ $(window).scrollTop(0)
 
 
  $(document).on("click", "#ola", function(e) {
-var o = $(this).attr('data-uri')
+ 
  
             $('body').removeClass('offcanvas-menu')
                  $('.loadmaimage').show()
@@ -106,7 +106,7 @@ $(window).scrollTop(0)
  setTimeout(() => {
                     $('.loadmaimage').fadeOut()
 
- history.push(o)
+ 
     }, 0)
         })
 

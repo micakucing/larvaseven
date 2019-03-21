@@ -30,7 +30,7 @@ const cssString = `
     min-width: 250px;
 }
   #pol{
-    margin: 30px;
+    margin: 0;
   }
 }
 

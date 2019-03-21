@@ -207,7 +207,7 @@ class portfolio extends Component {
       </div>
     </div>   
     <section className="site-section">   
-      { this.state.hits.length > 0 ? (
+      { hits.length > 0 ? (
 
       <div className="container">
 
