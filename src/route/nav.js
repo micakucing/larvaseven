@@ -137,7 +137,7 @@ $(window).scrollTop(0)
         let c, homes, abouts, works, shops, kontak;
         c = window.location.hash.substr(2)
    var t = window.location.href
-    var o = t.split("/")[4]
+    var o = t.split("/")[5]
  
 
         if (c == "") {
