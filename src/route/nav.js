@@ -298,7 +298,7 @@ background-color: #2d44b9;
     border: 1px solid #6d6161;
 }
 .site-mobile-menu{
-    width: 100%;  background-color: #2A4CF9;  
+    width: 100%;  background-color: #2C3379;  
 }
 .xsc{
     font-size: 13px!important;
