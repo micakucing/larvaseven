@@ -229,7 +229,7 @@ class portfolio extends Component {
          
          
         </div>
-                       <JwPagination  pageSize={1} items={this.state.exampleItems} onChangePage={this.onChangePage}  labels={customLabels}  />
+                       <JwPagination  pageSize={6} items={this.state.exampleItems} onChangePage={this.onChangePage}  labels={customLabels}  />
 
       </div>
     ):(<div className="lost">Sorry no data for now</div>)}
