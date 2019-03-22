@@ -203,7 +203,6 @@ img.mb-4:hover:after{
     margin-top: 30px;
     padding: 0 7.1%;
     padding-top: 0;
-
     padding-bottom: 60px;
         border-radius: 5px;
 }
