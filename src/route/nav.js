@@ -193,7 +193,7 @@ $(window).scrollTop(0)
    font-weight: bold;
    z-index: -1;
     content: " ";
-    background-image: url(/images/br.png);
+    background-image: url(https://res.cloudinary.com/dsl4hppsk/image/upload/v1553272298/br.png);
     position: absolute;
     left: 0;
     top: 0;
@@ -214,7 +214,7 @@ a li{
        z-index: 1;
  }
   #ppl::before{
-   content:url(/images/br.png);
+   content:url(https://res.cloudinary.com/dsl4hppsk/image/upload/v1553272298/br.png);
   position:fixed;
   z-index:-1;
   top:0;
@@ -229,7 +229,7 @@ a li{
    width: 100%;
    z-index: 0;
     content: " ";
-    background-image: url(/images/br.png);
+    background-image: url(https://res.cloudinary.com/dsl4hppsk/image/upload/v1553272298/br.png);
     position: absolute;
     left: 0;
     top: 0;
@@ -241,7 +241,7 @@ a li{
     color: #fff;
  }
  #logox{
-         background-image: url(/images/logo.jpg);
+         background-image: url(https://res.cloudinary.com/dsl4hppsk/image/upload/v1553272299/logoz.jpg);
     height: 70px;
     width: 70px;
     display: block;

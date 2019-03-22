@@ -225,7 +225,7 @@ img.mb-4:hover:after{
    font-weight: bold;
    z-index: -1;
     content: " ";
-    background-image: url(/images/br.png);
+    background-image: url(https://res.cloudinary.com/dsl4hppsk/image/upload/v1553272298/br.png);
     background-repeat: no-repeat;
     position: absolute;
     left: 0;
