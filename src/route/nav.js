@@ -136,33 +136,36 @@ $(window).scrollTop(0)
 })
         let c, homes, abouts, works, shops, kontak;
         c = window.location.hash.substr(2)
+   var t = window.location.href
+    var o = t.split("/")[4]
  
+
         if (c == "") {
-            homes = <li><a className="active">&nbsp;&nbsp;Home &nbsp;&nbsp;: </a></li>
+            homes = <a className="activex"><li>&nbsp;&nbsp;Home &nbsp;&nbsp;:</li> </a>
         } else {
-            homes = <li><a id="hm">&nbsp;&nbsp;Home &nbsp;&nbsp;: </a></li>
+            homes = <a href="/" id="ppl"><li>&nbsp;&nbsp;Home &nbsp;&nbsp;: </li></a>
         }
         if (c == "about") {
-            abouts = <li><a className="active">&nbsp;&nbsp;About &nbsp;&nbsp;: </a></li>
+            abouts = <a className="activex"><li>&nbsp;&nbsp;About &nbsp;&nbsp;:</li> </a>
         } else {
-            abouts = <li><a id="ab" >&nbsp;&nbsp;About &nbsp;&nbsp;: </a></li>
+            abouts = <a href="#/about" id="ppl"><li>&nbsp;&nbsp;About &nbsp;&nbsp;:</li> </a>
         }
-        if (c == "work" || c == "workproduct") {
-            works = <li><a className="active">&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
+        if (c == "work" || o == "workproduct") {
+            works = <a id="aloy" className="activex"><li>&nbsp;&nbsp;Works &nbsp;&nbsp;:</li> </a>
         } else {
-            works = <li><a id="pr" >&nbsp;&nbsp;Works &nbsp;&nbsp;: </a></li>
+            works = <a href="#/work" id="ppl"><li>&nbsp;&nbsp;Works &nbsp;&nbsp;:</li> </a>
         }
         
         if (c == "shop") {
-            shops = <li><a className="active">&nbsp;&nbsp;Shop &nbsp;&nbsp;: </a></li>
+            shops = <li><a className="activex">&nbsp;&nbsp;Shop &nbsp;&nbsp;: </a></li>
         } else {
             shops = <li><a href="/larvaseven/#/shop" >&nbsp;&nbsp;Shop &nbsp;&nbsp;: </a></li>
         }
     if(c =="contact"){
-                           kontak = <li><a className="active">&nbsp;&nbsp;Contact &nbsp;&nbsp;: </a></li>
+                           kontak = <a className="activex"><li>&nbsp;&nbsp;Contact &nbsp;&nbsp;:</li> </a>
 
     }else{
-                        kontak = <li><a id="ch">&nbsp;&nbsp;Contact &nbsp;&nbsp;: </a></li>
+                        kontak = <a href="#/contact" id="ppl"><li>&nbsp;&nbsp;Contact &nbsp;&nbsp;: </li></a>
 
 
     }
@@ -173,21 +176,82 @@ $(window).scrollTop(0)
  a:hover{
        text-decoration: none;
  } 
- .active{
-    font-weight: bold;
- }  
-  .active:hover{
-       color: #2A4CF9;
+ 
 
- } 
+ .activex{
+    position: relative;
+       z-index: 1;
+ }
+  .activex::before{
+   position:fixed;
+    z-index:-1;
+  }
+
+ .activex::before{
+    color: #000;
+   width: 100%;
+   font-weight: bold;
+   z-index: -1;
+    content: " ";
+    background-image: url(/images/br.png);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height:20px;
+    display: block;
+
+ }
+
  #hm, #ab, #pr, #ch{
     cursor: pointer;
+ }
+a li{
+ list-style: none;
+  position: relative;
+ }
+ #ppl{
+    position: relative;
+       z-index: 1;
+ }
+  #ppl::before{
+   content:url(/images/br.png);
+  position:fixed;
+  z-index:-1;
+  top:0;
+  left:0;
+  display:none;
+  }
+   #ppl:hover{
+    color: #000;
+}
+ #ppl:hover::before{
+    color: #000;
+   width: 100%;
+   z-index: 0;
+    content: " ";
+    background-image: url(/images/br.png);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height:20px;
+    display: block;
+
  }
  #lb li div{
     color: #fff;
  }
+ #logox{
+         background-image: url(/images/logo.jpg);
+    height: 70px;
+    width: 70px;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
 a {
-    color: #2A4CF9;
+    color: #000;
+
 }
 
 svg .iconatas {
@@ -206,13 +270,13 @@ svg .iconatas {
     border-color: #2d44b9;
 }
 .bg-white {
-    background-color:#F2ECE0!important;
+    background-color:#fff!important;
 }
 .bg-light {
-    background-color: #F2ECE0!important;
+    background-color: #fff!important;
 }
 .bg-primary {
-    background-color: #2A4CF9 !important;
+    background-color: #fff !important;
 }
 .box-with-humber .number-behind {
      color: #DDD6C8;
@@ -302,7 +366,7 @@ position: relative; top: 3px;
     <div className="container">
         <div className="row align-items-center">
             <div className="col-11 col-xl-2">
-                <h1 className="mb-0 site-logo"><a href="/larvaseven" className="text-black h2 mb-0">LARVA7<span className="op">STUDIO</span></a></h1>
+                <h1 className="mb-0 site-logo"><a href="/larvaseven" id="logox" className="text-black h2 mb-0"></a></h1>
             </div>
             <div className="col-12 col-md-10 d-none d-xl-block">
                 <nav className="site-navigation position-relative text-right" role="navigation">
@@ -316,10 +380,10 @@ position: relative; top: 3px;
                     </ul>
                 <ul id="lb" className="site-menu js-clone-nav mr-auto d-none">
 
-                        <li onClick={this.hm}><div id="hm" >Home</div></li>
-                        <li onClick={this.ab}><div id="ab"  >About</div></li>
-                        <li onClick={this.pr} ><div id="pr"  >Work</div></li>
-                        <li onClick={this.ct}><div id="ch" >Contact</div></li>
+                        <li><div id="hm" >Home</div></li>
+                        <li><div id="ab"  >About</div></li>
+                        <li><div id="pr"  >Work</div></li>
+                        <li><div id="ch" >Contact</div></li>
 
                     </ul>
                 </nav>

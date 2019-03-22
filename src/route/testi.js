@@ -38,7 +38,16 @@ constructor(props) {
 display: block;
 }
 `}} /> 
+
+
+{
+       this.state.text ? (
+
             <section id="sec" className="site-section testimonial-wrap" >
+
+
+
+
     <div className="container">
         <div className="row justify-content-center">
             <div className="col-md-8 text-center">
@@ -58,7 +67,14 @@ display: block;
             </div>
         </div>
     </div>
-</section></div>
+
+
+
+
+</section>
+):( <section id="sec" className="site-section testimonial-wrap" ></section>)}
+
+</div>
      );
     }
 }

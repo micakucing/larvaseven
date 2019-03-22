@@ -13,12 +13,13 @@
           this.timeout = null;
  this.state = {
       ddt: [],
-      text: [] 
+      text: [],
+      isLoading: false 
     };
   }
       
       componentDidMount() {
-
+this.setState({ isLoading: true })
  fetch('https://larva7studio.herokuapp.com/d/'+this.props.match.params.id)
     .then(response => {
       return response.json();
@@ -63,7 +64,7 @@
               }
           ];*/
 
-  const { text } = this.state;
+  const { text, isLoading } = this.state;
  
            const items = this.state.ddt
           const options = {
@@ -100,7 +101,10 @@
 #jjl{
      padding-left: 7.1%;
 }
-#ppl{
+
+
+
+#pplx{
     padding-right: 7.1%;
 }
 #dior{
@@ -168,7 +172,7 @@
 img{
   cursor: zoom-in;
 }
-   .site-blocks-cover.overlay:before{background-color: #FD1C15}
+   .site-blocks-cover.overlay:before{background-color: #26327c}
    p { 
     margin-bottom: 2rem;
 }
@@ -203,6 +207,33 @@ img.mb-4:hover:after{
     padding-bottom: 60px;
         border-radius: 5px;
 }
+
+
+ .hog{
+    position: relative;
+       z-index: 1;
+       width: 21%;
+ }
+  .hog::before{
+   position:fixed;
+    z-index:-1;
+  }
+
+ .hog::before{
+    color: #000;
+   width: 100%;
+   font-weight: bold;
+   z-index: -1;
+    content: " ";
+    background-image: url(/images/br.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height:20px;
+    display: block;
+
+ }
    @media (min-width: 768px){
 
 .col-md-7 img{
@@ -220,6 +251,11 @@ img.mb-4:hover:after{
  
   text-align: right;
 }
+.hog {
+    position: relative;
+    z-index: 1;
+    width: 50%;
+}
  .text-center h1{
     font-size: 22px;
     line-height: 1.3;
@@ -233,7 +269,7 @@ img.mb-4:hover:after{
     margin-top: 30px;
     padding: 0 7.1%;
     padding-top: 60px;
-    background-color: #F2EBE0;
+    background-color: #fff;
     padding-bottom: 60px;
         border: none;
         border-top: 1px solid #dee2e6 !important
@@ -244,7 +280,7 @@ img.mb-4:hover:after{
 .nvt{
     padding-left: 5.1%;
  }
-#ppl {
+#pplx {
     padding-left: 7.1%;
 }
 
@@ -283,18 +319,48 @@ img.mb-4:hover:after{
     </div>  
 
 
-    
+    {this.state.isLoading && this.state.isLoading ?  (
+
     <section className="site-section border-bottom">
+<div className="container">
+        <div id="tx" className="nvt"><span className="cp"></span></div>
+        <div className="row">
+          <div id="jjl" className="col-md-4">
+            <h3 className="mb-3"></h3>
+            <p></p>
+          </div>
+          <div id="pplx" className="col-md-4">
+             <p id="lpsa"></p>
+              <p id="lpsa"></p>
+             <p id="lpsa"></p>
+          </div>
+      
+          <div className="col-md-7">
+
+          </div>
+        </div> 
+
+      </div>
+
+
+
+   </section>
+      ) :(
+
+    <section className="site-section border-bottom">
+
+
+
   {
        this.state.ddt && this.state.ddt.length > 0 ? (
       <div className="container">
-        <div className="nvt"><span className="cp">Work page</span> / <span className="yt">Product</span></div>
+        <div className="nvt"><div className="hog"><span className="cp">Work page</span> / <span className="yt">Product</span></div></div>
         <div className="row">
           <div id="jjl" className="col-md-4">
             <h3 className="mb-3">{text.title}</h3>
             <p>{text.deskrip}</p>
           </div>
-          <div id="ppl" className="col-md-4">
+          <div id="pplx" className="col-md-4">
              <p id="lpsa">Client: {text.client}</p>
               <p id="lpsa">Year: {text.tahun}</p>
              <p id="lpsa">{text.kategori_name}</p>
@@ -309,7 +375,12 @@ img.mb-4:hover:after{
       </div>
 
       ): <div className="lost">We are sorry, data not found</div>}
+
+
+   
     </section>
+
+    ) }
  <Testi />
            <Foot />
   

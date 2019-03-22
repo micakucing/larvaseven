@@ -65,7 +65,7 @@ constructor(props) {
 .a{
   font-family: Mol;
  }
-   .site-blocks-cover.overlay:before{background-color: #FD1C15}
+   .site-blocks-cover.overlay:before{background-color:  #26327c}
    @media (max-width: 992px) {
  .text-center h1{
     font-size: 22px;

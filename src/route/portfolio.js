@@ -102,6 +102,9 @@ class portfolio extends Component {
   #pol{
     margin: 70px;
   }
+  .site-section {
+    padding: 5em 0;
+}
     .site-section{
       padding-bottom: 0;
     }
@@ -166,7 +169,7 @@ class portfolio extends Component {
   padding-bottom: 50px;
       border-bottom: 1px solid #dee2e6 !important;
 }
-   .site-blocks-cover.overlay:before{background-color: #FD1C15}
+   .site-blocks-cover.overlay:before{background-color:  #26327c}
    @media (max-width: 992px) {
  .text-center h1{
     font-size: 22px;
@@ -226,7 +229,7 @@ class portfolio extends Component {
          
          
         </div>
-                       <JwPagination  pageSize={6} items={this.state.exampleItems} onChangePage={this.onChangePage}  labels={customLabels}  />
+                       <JwPagination  pageSize={1} items={this.state.exampleItems} onChangePage={this.onChangePage}  labels={customLabels}  />
 
       </div>
     ):(<div className="lost">Sorry no data for now</div>)}
