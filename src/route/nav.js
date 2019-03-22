@@ -143,7 +143,7 @@ $(window).scrollTop(0)
         if (c == "") {
             homes = <a className="activex"><li>&nbsp;&nbsp;Home &nbsp;&nbsp;:</li> </a>
         } else {
-            homes = <a href="/" id="ppl"><li>&nbsp;&nbsp;Home &nbsp;&nbsp;: </li></a>
+            homes = <a href="/larvaseven" id="ppl"><li>&nbsp;&nbsp;Home &nbsp;&nbsp;: </li></a>
         }
         if (c == "about") {
             abouts = <a className="activex"><li>&nbsp;&nbsp;About &nbsp;&nbsp;:</li> </a>
