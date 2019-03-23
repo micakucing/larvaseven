@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Headnav from "./route/home";
 import About from "./route/about";
 import Port from "./route/portfolio";
+import Art from "./route/artikel";
 import Kontak from "./route/contact";
 import $ from "jquery";
 import DeviceOrientation from 'react-device-orientation';
@@ -104,6 +105,7 @@ class App extends Component {
         <Route path="/about" component={About}/>
         <Route path="/work" component={Port}/>
         <Route path="/contact" component={Kontak}/>
+        <Route path="/articles" component={Art}/>
         <Route path="/workproduct/:id" component={Pro}/>
         <Route component={not}/>
     </Switch>

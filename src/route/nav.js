@@ -134,7 +134,7 @@ $(window).scrollTop(0)
             history.push('/contact')
              }, 0)
 })
-        let c, homes, abouts, works, shops, kontak;
+        let c, homes, abouts, works, shops, kontak, ati;
         c = window.location.hash.substr(2)
    var t = window.location.href
     var o = t.split("/")[5]
@@ -155,11 +155,11 @@ $(window).scrollTop(0)
         } else {
             works = <a href="#/work" id="ppl"><li>&nbsp;&nbsp;Works &nbsp;&nbsp;:</li> </a>
         }
-        
-        if (c == "shop") {
-            shops = <li><a className="activex">&nbsp;&nbsp;Shop &nbsp;&nbsp;: </a></li>
+    
+        if (c == "articles") {
+            ati = <a className="activex"><li>&nbsp;&nbsp;Articles &nbsp;&nbsp;: </li></a>
         } else {
-            shops = <li><a href="/larvaseven/#/shop" >&nbsp;&nbsp;Shop &nbsp;&nbsp;: </a></li>
+            ati = <a href="#/articles" id="ppl" ><li>&nbsp;&nbsp;Articles &nbsp;&nbsp;:</li></a>
         }
     if(c =="contact"){
                            kontak = <a className="activex"><li>&nbsp;&nbsp;Contact &nbsp;&nbsp;:</li> </a>
@@ -368,6 +368,8 @@ position: relative; top: 3px;
 <ul id="lb" className="site-nav-wrap">
 <li><div id="hm">Home</div>
 </li><li><div id="ab">About</div>
+                        <li><div id="pr"  >Articles</div></li>
+
 </li><li><div id="pr">Work</div></li>{/*<li><div id="sh">Shop</div></li><li><div id="bl">Blog</div></li>*/}
 <li><div id="ch">Contact</div></li></ul>
 
@@ -387,6 +389,7 @@ position: relative; top: 3px;
                         {homes}
                         {abouts}
                         {works}
+                         {ati}
                         {kontak}
                     </ul>
                 <ul id="lb" className="site-menu js-clone-nav mr-auto d-none">
@@ -394,6 +397,7 @@ position: relative; top: 3px;
                         <li><div id="hm" >Home</div></li>
                         <li><div id="ab"  >About</div></li>
                         <li><div id="pr"  >Work</div></li>
+                        <li><div id="pr"  >Articles</div></li>
                         <li><div id="ch" >Contact</div></li>
 
                     </ul>

@@ -53,6 +53,7 @@ class home extends Component {
   <Helmet>
                 <meta charSet="utf-8" />
                 <title>Welcome To LARVA7STUDIO</title>
+                
              </Helmet>
     <div className="site-blocks-cover overlay" style={{'backgroundImage': 'url(https://colorlib.com/preview/theme/chimper/images/hero_1.jpg)'}} data-aos="fade" data-stellar-background-ratio="0.5">
       <div className="container">
