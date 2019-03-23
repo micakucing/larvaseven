@@ -278,6 +278,13 @@ p .hg {
 }
 }
    @media (max-width: 992px) {
+    .llx{
+  width: 100%;
+  background-color: #ebebeb;
+  height: 200px;
+  marginBottom: 20px;
+  marginTop: 30px;
+}
     #lpsa{
  
   text-align: right;
