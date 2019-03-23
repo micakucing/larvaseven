@@ -67,7 +67,7 @@ display: block;
     <div className="container">
         <div className="row justify-content-center">
             <div className="col-md-8 text-center">
-                <h2 className="text-black h1 site-section-heading text-center">{this.state.text[0].title}</h2>
+                <h2 className="text-black h1 site-section-heading text-center">{this.state.text[1].title}</h2>
             </div>
         </div>
     </div>
@@ -75,7 +75,7 @@ display: block;
         <div>
             <div className="testimonial">
                 <blockquote className="mb-5">
-                    <p>&ldquo; {this.state.text[0].textmini} &rdquo;</p>
+                    <p>&ldquo; {this.state.text[1].textmini} &rdquo;</p>
                 </blockquote>
                 <figure className="mb-4 d-flex align-items-center justify-content-center">
                     <div></div>
