@@ -97,6 +97,19 @@ $(window).scrollTop(0)
         })
 
 
+    $(document).on("click", "#ar", function(e) {
+
+            $('body').removeClass('offcanvas-menu')
+                 $('.loadmaimage').show()
+$(window).scrollTop(0)
+ setTimeout(() => {
+                    $('.loadmaimage').fadeOut()
+
+ history.push('/articles')
+    }, 0)
+        })
+ 
+
  $(document).on("click", "#ola", function(e) {
  
  
@@ -397,7 +410,7 @@ position: relative; top: 3px;
                         <li><div id="hm" >Home</div></li>
                         <li><div id="ab"  >About</div></li>
                         <li><div id="pr"  >Work</div></li>
-                        <li><div id="pr"  >Articles</div></li>
+                        <li><div id="ar"  >Articles</div></li>
                         <li><div id="ch" >Contact</div></li>
 
                     </ul>
