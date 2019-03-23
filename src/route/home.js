@@ -10,6 +10,8 @@ import Midtree from "./midletree";
 import Testi from "./testi";
 import Foot from "./foot";
 import Nav from "./nav";
+import {Helmet} from "react-helmet";
+
 import { default as minifyCssString } from 'minify-css-string'
 const cssString = `
   .cm-script:before {
@@ -48,6 +50,10 @@ class home extends Component {
 
 
   <Nav />
+  <Helmet>
+                <meta charSet="utf-8" />
+                <title>Welcome To LARVA7STUDIO</title>
+             </Helmet>
     <div className="site-blocks-cover overlay" style={{'backgroundImage': 'url(https://colorlib.com/preview/theme/chimper/images/hero_1.jpg)'}} data-aos="fade" data-stellar-background-ratio="0.5">
       <div className="container">
         <div className="row align-items-center justify-content-center text-center">

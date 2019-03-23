@@ -29,7 +29,12 @@
 `
    class team extends Component {
 
-       componentDidMount() {}
+       componentDidMount() {
+
+
+
+        
+       }
        render() {
 
 

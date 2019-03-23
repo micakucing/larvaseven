@@ -8,6 +8,7 @@ import Team from "./team";
 import Testi from "./testi";
 import Foot from "./foot";
 import Bout from "./boot";
+import {Helmet} from "react-helmet";
 
 import Nav from "./nav";
 import { default as minifyCssString } from 'minify-css-string'
@@ -74,6 +75,10 @@ class about extends Component {
  
 
   <Nav />
+  <Helmet>
+      <meta charSet="utf-8" />
+                <title>About us</title>
+             </Helmet>
   <div className="site-blocks-cover inner-page-cover overlay"  data-aos="fade" data-stellar-background-ratio="0.5">
       <div className="container">
         <div className="row align-items-center justify-content-center text-center">

@@ -11,6 +11,7 @@ import { createHashHistory } from 'history'
 import Icon, { FontAwesome, Feather } from 'react-web-vector-icons';
 import PropTypes from 'prop-types';
 import ContentLoader, { Facebook } from "react-content-loader";
+import {Helmet} from "react-helmet";
 
 
 const history = createHashHistory()
@@ -199,6 +200,10 @@ class portfolio extends Component {
 }
 `}} /> 
   <Nav />
+     <Helmet>
+                <meta charSet="utf-8" />
+                <title> Our portofolio</title>
+             </Helmet>
      <div className="site-blocks-cover inner-page-cover overlay" data-aos="fade" data-stellar-background-ratio="0.5">
       <div className="container">
         <div className="row align-items-center justify-content-center text-center">

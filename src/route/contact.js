@@ -4,6 +4,7 @@ import $ from "jquery";
 import Typed from 'react-typed';
 import Foot from "./foot";
 import Nav from "./nav";
+import {Helmet} from "react-helmet";
 
 class kontak extends Component {
 constructor(props) {
@@ -32,7 +33,10 @@ constructor(props) {
 
         return ( 
             <div className="tengahx">
-
+  <Helmet>
+      <meta charSet="utf-8" />
+                <title>Contact us</title>
+             </Helmet>
  <style dangerouslySetInnerHTML={{__html: `
      .site-blocks-cover.inner-page-cover, .site-blocks-cover.inner-page-cover>.container>.row {
       min-height: 280px;

@@ -336,11 +336,7 @@ p .hg {
 `}} /> 
 
             <Nav />
-<Helmet>
-                <meta charSet="utf-8" />
-                <title>Product portofolio - {`text.title`}</title>
-                <link rel="canonical" href="http://mysite.com/example" />
-            </Helmet>
+
   <div className="site-blocks-cover inner-page-cover overlay" data-aos="fade" data-stellar-background-ratio="0.5">
       <div className="container">
         <div className="row align-items-center justify-content-center text-center">
@@ -369,6 +365,10 @@ p .hg {
   {
        this.state.ddt && this.state.ddt.length > 0 ? (
       <div className="container">
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>Product portofolio - {text.title}</title>
+             </Helmet>
         <div className="nvt"><div className="hog"><span className="cp">Work page</span> / <span className="yt">Product</span></div></div>
         <div className="row">
           <div id="jjl" className="col-md-4">
