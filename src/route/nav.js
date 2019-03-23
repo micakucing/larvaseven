@@ -381,8 +381,7 @@ position: relative; top: 3px;
 <ul id="lb" className="site-nav-wrap">
 <li><div id="hm">Home</div>
 </li><li><div id="ab">About</div>
-                        <li><div id="pr"  >Articles</div></li>
-
+<li><div id="ar">Articles</div></li>
 </li><li><div id="pr">Work</div></li>{/*<li><div id="sh">Shop</div></li><li><div id="bl">Blog</div></li>*/}
 <li><div id="ch">Contact</div></li></ul>
 
