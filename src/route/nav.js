@@ -189,15 +189,17 @@ $(window).scrollTop(0)
 
  .activex::before{
     color: #000;
-   width: 100%;
-   font-weight: bold;
-   z-index: -1;
+    width: 100%;
+    font-weight: bold;
+    z-index: -1;
     content: " ";
     background-image: url(https://res.cloudinary.com/dsl4hppsk/image/upload/v1553272298/br.png);
     position: absolute;
+    background-size: contain;
+    background-position: top center;
     left: 0;
     top: 0;
-    height:20px;
+    height: 20px;
     display: block;
 
  }
