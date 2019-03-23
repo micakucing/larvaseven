@@ -6,6 +6,7 @@
   import Nav from "./nav";
   import 'react-photoswipe/lib/photoswipe.css';
   import { PhotoSwipeGallery } from 'react-photoswipe';
+import {Helmet} from "react-helmet";
 
   class product extends Component {
       constructor(props) {
@@ -335,7 +336,11 @@ p .hg {
 `}} /> 
 
             <Nav />
-
+<Helmet>
+                <meta charSet="utf-8" />
+                <title>Product portofolio - {`text.title`}</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
   <div className="site-blocks-cover inner-page-cover overlay" data-aos="fade" data-stellar-background-ratio="0.5">
       <div className="container">
         <div className="row align-items-center justify-content-center text-center">

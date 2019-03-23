@@ -4,8 +4,15 @@
    import { default as minifyCssString } from 'minify-css-string'
 
    const cssString = `
- 
- 
+ .site-section {
+    
+    padding-bottom: 0;
+}
+ #tem {
+    padding: 3em 0;
+
+    border-top: 1px solid #dee2e6 !important;
+}
 @media (max-width: 992px) {
  .text-center h1{
     font-size: 22px;
@@ -13,6 +20,8 @@
 }
 #tem {
     padding: 1em 0;
+
+    border-top: 1px solid #dee2e6 !important;
 }
 }
 
