@@ -17,6 +17,22 @@ const cssString = `
   #pol{
     margin: 70px;
   }
+  #jir{
+  width: 100%;
+  height: 20px;
+  borderRadius: 3px;
+  background: #ebebeb;
+}
+#jirs{
+  width: 50%;
+  height: 20px;
+  borderRadius: 3px;
+  background: #ebebeb;
+      margin: 0 auto;
+}
+#jir:after{
+   background: none;
+}
 @media (max-width: 992px) {
  .text-center h1{
     font-size: 22px;
@@ -74,7 +90,10 @@ constructor(props) {
       backgroundSize: 'cover',
       backgroundPosition: 'center center'
     })
+  const divStyleload = ({
+             backgroundColor: '#ebebeb'
 
+        })
 
 
 $(document).on("click", "#ola", function(e) {
@@ -125,7 +144,38 @@ $(document).on("click", "#ola", function(e) {
         </div>
       </div>
     </section>
-    ):(<div></div>)}
+    ):(
+     <section className="site-section">
+      <div className="container">
+        <div className="row mb-5 justify-content-center">
+          <div className="col-md-8 text-center">
+             <div><h2 id="jir" className="text-black h1 site-section-heading text-center"></h2>
+            <p id="jirs" className="lead"></p></div> 
+          </div>
+        </div>
+      </div>
+  <div className="container">
+        <div className="row">
+            <div id="kkp" className="col-md-6 col-lg-4"  >
+            <div id="ola"  className="media-1" style={divStyleload} >
+               
+            </div>
+          </div>    
+            <div id="kkp" className="col-md-6 col-lg-4"  >
+            <div id="ola"  className="media-1" style={divStyleload} >
+                
+            </div>
+          </div> 
+ <div id="kkp" className="col-md-6 col-lg-4"  >
+            <div id="ola"  className="media-1" style={divStyleload} >
+                
+            </div>
+          </div> 
+        </div>  
+      </div>
+
+ </section>
+    )}
 </div>
      );
     }

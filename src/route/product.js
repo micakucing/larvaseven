@@ -117,6 +117,9 @@ this.setState({ isLoading: true })
     z-index: 1;
     top: 0;
 }
+#kkts{
+   marginBottom: 30px;
+}
 #kkt{
   position: relative;
 }
@@ -189,6 +192,13 @@ img.mb-4:hover:after{
     opacity: 0.001;
     will-change: opacity;
 }
+.llx{
+  width: 100%;
+  background-color: #ebebeb;
+  height: 300px;
+  marginBottom: 20px;
+  marginTop: 30px;
+}
 .lost{
       color: #afaeab !important;
     font-family: Mor;
@@ -206,8 +216,25 @@ img.mb-4:hover:after{
     padding-bottom: 60px;
         border-radius: 5px;
 }
-
-
+    #kokoms{
+  width: 10%;
+  height: 20px;
+  borderRadius: 3px;
+  background: #ebebeb;
+}
+    #kokom{
+  width: 50%;
+  height: 20px;
+  borderRadius: 3px;
+  background: #ebebeb;
+}
+ 
+#kikim{
+  width: 100%;
+  height: 20px;
+  borderRadius: 3px;
+  background: #ebebeb;
+}
  .hog{
     position: relative;
        z-index: 1;
@@ -217,7 +244,12 @@ img.mb-4:hover:after{
    position:fixed;
     z-index:-1;
   }
-
+p .hg {
+  display: inline;
+  background: #ebebeb;
+  color: #ebebeb;
+  padding: 0;
+}
  .hog::before{
     color: #000;
    width: 100%;
@@ -316,35 +348,7 @@ img.mb-4:hover:after{
         </div>
       </div>
     </div>  
-
-
-    {this.state.isLoading && this.state.isLoading ?  (
-
-    <section className="site-section border-bottom">
-<div className="container">
-        <div id="tx" className="nvt"><span className="cp"></span></div>
-        <div className="row">
-          <div id="jjl" className="col-md-4">
-            <h3 className="mb-3"></h3>
-            <p></p>
-          </div>
-          <div id="pplx" className="col-md-4">
-             <p id="lpsa"></p>
-              <p id="lpsa"></p>
-             <p id="lpsa"></p>
-          </div>
-      
-          <div className="col-md-7">
-
-          </div>
-        </div> 
-
-      </div>
-
-
-
-   </section>
-      ) :(
+ 
 
     <section className="site-section border-bottom">
 
@@ -373,13 +377,54 @@ img.mb-4:hover:after{
 
       </div>
 
-      ): <div className="lost">We are sorry, data not found</div>}
+      ): (
+
+
+
+ <div className="container">
+        <div className="nvt"><div id="kokoms"><span  className="cp"></span></div></div>
+        <div className="row">
+          <div id="jjl" className="col-md-4">
+        
+            <h3 id="kokom" className="mb-3"></h3>
+            <p id="kikim"></p>
+          </div>
+          <div id="pplx" className="col-md-4">
+             <p id="lpsa" className="kokom"><span className="hg">fgfghhgfhgf</span></p>
+              <p id="lpsa" className="kokom"><span className="hg">fgfghhgffdfffgfggfghhghhhgf</span></p>
+             <p id="lpsa" className="kokom"><span className="hg">fgfghhgfhhjhjgf</span></p>
+          </div>
+      
+          <div className="col-md-7">
+                  
+ <div id="kkts">
+       <div className="llx"></div>
+   
+  </div>
+   <div id="kkts">
+       <div className="llx"></div>
+   
+  </div>
+   <div id="kkts">
+       <div className="llx"></div>
+   
+  </div>
+          </div>
+        </div> 
+
+      </div>
+
+
+
+
+
+
+      )}
 
 
    
     </section>
-
-    ) }
+ 
  <Testi />
            <Foot />
   

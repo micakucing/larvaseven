@@ -8,13 +8,14 @@ import Pagination from 'react-bootstrap/Pagination'
 import JwPagination from 'jw-react-pagination';
 import dt from "./data.json";
 import { createHashHistory } from 'history'
-
 import Icon, { FontAwesome, Feather } from 'react-web-vector-icons';
- import PropTypes from 'prop-types';
- const history = createHashHistory()
+import PropTypes from 'prop-types';
+import ContentLoader, { Facebook } from "react-content-loader";
 
+
+const history = createHashHistory()
 const propTypes = {
- 
+
     initialPage: PropTypes.number
 }
 const customLabels = {
@@ -24,13 +25,13 @@ const customLabels = {
   font='Ionicons'
    size={50}
   // style={{}}
-/> ,
+/>,
     next: <Icon
   name='ios-arrow-round-forward'
   font='Ionicons'
    size={50}
   // style={{}}
-/> 
+/>
 }
 
 
@@ -38,49 +39,50 @@ class portfolio extends Component {
 
     constructor(props) {
         super(props);
- 
         this.onChangePage = this.onChangePage.bind(this);
-        
-
         this.state = {
             exampleItems: [],
             initial: '1',
             pageOfItems: [],
-            hits:[]
+            hits: []
         };
     }
     componentDidMount() {
 
         //this.setState({ hits: dt })
-       fetch('https://larva7studio.herokuapp.com/portls')
-    .then(response => {
-      return response.json();
-    })
-    .then((data) => {
-      this.setState({ hits: data, exampleItems: data, isLoading: false })
-          console.log(data)   
+        fetch('https://larva7studio.herokuapp.com/portls')
+            .then(response => {
+                return response.json();
+            })
+            .then((data) => {
+                this.setState({ hits: data, exampleItems: data, isLoading: false })
+                console.log(data)
 
-      });
+            });
 
     }
     onChangePage(pageOfItems) {
-         this.setState({ pageOfItems });
+        this.setState({ pageOfItems });
     }
 
- 
+
     render() {
-  const { hits, isLoading, text, exampleItems, pageOfItems } = this.state;
+        const { hits, isLoading, text, exampleItems, pageOfItems } = this.state;
+        const divStyleload = ({
+             backgroundColor: '#ebebeb'
 
-  const divStyle = (src) => ({
-      backgroundImage: 'url(' + src + ')',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center center'
-    })
+        })
 
- $(document).on("click", "#ola", function(e) {
-               var t = $(this).attr('data-uri')
-             history.push('/workproduct/'+t)
-           
+        const divStyle = (src) => ({
+            backgroundImage: 'url(' + src + ')',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center'
+        })
+
+        $(document).on("click", "#ola", function(e) {
+            var t = $(this).attr('data-uri')
+            history.push('/workproduct/' + t)
+
         })
         return (
             <div className="tengahx">
@@ -161,6 +163,9 @@ class portfolio extends Component {
     margin-top: 9px;
     letter-spacing: .5px;
     }
+    .lik{
+          max-width: 1140px;
+    }
 .lost{
       color: #afaeab !important;
     font-family: Mor;
@@ -212,9 +217,7 @@ class portfolio extends Component {
     <section className="site-section">   
      {
        this.state.hits && this.state.hits.length > 0 ? (
-
       <div className="container">
-
         <div className="row">
           {this.state.pageOfItems.map(item =>
             <div id="kkp" className="col-md-6 col-lg-4"  >
@@ -226,13 +229,47 @@ class portfolio extends Component {
             </div>
           </div>
                 )}
-         
-         
-        </div>
-                       <JwPagination  pageSize={6} items={this.state.exampleItems} onChangePage={this.onChangePage}  labels={customLabels}  />
-
+        </div> <JwPagination  pageSize={6} items={this.state.exampleItems} onChangePage={this.onChangePage}  labels={customLabels}  />
       </div>
-    ):(<div className="lost">Sorry no data for now</div>)}
+    ):(
+    
+  <div className="container">
+        <div className="row">
+            <div id="kkp" className="col-md-6 col-lg-4"  >
+            <div id="ola"  className="media-1" style={divStyleload} >
+               
+            </div>
+          </div>    
+            <div id="kkp" className="col-md-6 col-lg-4"  >
+            <div id="ola"  className="media-1" style={divStyleload} >
+                
+            </div>
+          </div> 
+ <div id="kkp" className="col-md-6 col-lg-4"  >
+            <div id="ola"  className="media-1" style={divStyleload} >
+                
+            </div>
+          </div>
+           <div id="kkp" className="col-md-6 col-lg-4"  >
+            <div id="ola"  className="media-1" style={divStyleload} >
+                
+            </div>
+          </div>
+           <div id="kkp" className="col-md-6 col-lg-4"  >
+            <div id="ola"  className="media-1" style={divStyleload} >
+                
+            </div>
+          </div>
+           <div id="kkp" className="col-md-6 col-lg-4"  >
+            <div id="ola"  className="media-1" style={divStyleload} >
+                
+            </div>
+          </div>
+        </div>  
+      </div>
+   
+     
+    )}
     </section>
 
          <Testi />
