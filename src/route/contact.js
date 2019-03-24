@@ -46,7 +46,7 @@ constructor(props) {
      $('.fai').hide() 
          $('.lds-spinner').html('<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>')
         $.ajax({
-            url: 'http://127.0.0.1:5000/emailpost',
+            url: 'https://larva7studio.herokuapp.com/emailpost',
             data: $('#kontakfr').serialize(),
             type: 'POST',
             success: function(response) {
