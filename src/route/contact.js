@@ -55,42 +55,42 @@ constructor(props) {
                               $('.lds-spinner').html('')
 
                  $('.fai').show()         
-                 $('.fai').html('<i class="fa fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i> Sorry, the email you submitted is invalid or the input is still empty')
+                 $('.fai').html('<i class="fas fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i> Sorry, the email you submitted is invalid or the input is still empty')
                  return
                  }else if(response == 'eror'){
                      $('.lds-spinner').html('')
                  $('.fai').show()         
-                 $('.fai').html('<i class="fa fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 2px;margin-bottom: 20px;display:  block;top: 8px;"></i>Format email salah')
+                 $('.fai').html('<i class="fas fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 2px;margin-bottom: 20px;display:  block;top: 8px;"></i>Format email salah')
                  return
                  }else if(response == 'ok'){
                      $('.lds-spinner').html('')
                  $('.fai').show() 
-                 $('.fai').html('<i class="fa fa-check-square-o" style="position: absolute;left: 10px;font-size:20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Terima kasih telah mengirim pesan kepada kami')
+                 $('.fai').html('<i class="fas fa-check-circle" style="position: absolute;left: 10px;font-size:20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Thank you for sending us a message')
                                 
                  return
                  }else if(response == 'dns eror'){
                      $('.lds-spinner').html('')
                  $('.fai').show() 
-                 $('.fai').html('<i class="fa fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Maaf email yang anda submit tidak valid')
+                 $('.fai').html('<i class="fas fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Maaf email yang anda submit tidak valid')
                  return
             
                  }else if(response == 'no'){
                      $('.lds-spinner').html('')
                  $('.fai').show() 
-                 $('.fai').html('<i class="fa fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Maaf email anda sudah terdaftar sebelumnya')
+                 $('.fai').html('<i class="fas fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Maaf email anda sudah terdaftar sebelumnya')
                    
                  return
                  }else if(response == 'nama'){
                      $('.lds-spinner').html('')
                  $('.fai').show() 
-                 $('.fai').html('<i class="fa fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Sorry, enter your name is still empty')
+                 $('.fai').html('<i class="fas fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Sorry, enter your name is still empty')
               
                  return
                  }else if(response == 'noisi'){
                      $('.lds-spinner').html('')
                  $('.fai').show() 
 
-                 $('.fai').html('<i class="fa fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Sorry, your message input fields are still empty')
+                 $('.fai').html('<i class="fas fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Sorry, your message input fields are still empty')
                 
                  
                  return
