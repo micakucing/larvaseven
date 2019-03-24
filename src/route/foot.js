@@ -56,6 +56,8 @@ color: #fff!important;
                 <ul className="list-unstyled">
                         <li><a id="hm">Home Page</a></li>
                         <li><a id="ab">About Us</a></li>
+                                                <li><a id="ar">Articles</a></li>
+
                         <li><a id="pr">Our Work</a></li>
                         <li><a id="ch">Contact Us</a></li>
                 </ul>

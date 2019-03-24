@@ -12,83 +12,10 @@ import PropTypes from 'prop-types';
 import ContentLoader, { Facebook } from "react-content-loader";
 import {Helmet} from "react-helmet";
 import TextTruncate from 'react-text-truncate';
+import { default as minifyCssString } from 'minify-css-string'
+const cssString = `
 
-const history = createHashHistory()
-const propTypes = {
-
-    initialPage: PropTypes.number
-}
-const customLabels = {
-
-    previous: <Icon
-  name='ios-arrow-round-back'
-  font='Ionicons'
-   size={50}
-  // style={{}}
-/>,
-    next: <Icon
-  name='ios-arrow-round-forward'
-  font='Ionicons'
-   size={50}
-  // style={{}}
-/>
-}
-
-
-class artikel extends Component {
-
-    constructor(props) {
-        super(props);
-        this.onChangePage = this.onChangePage.bind(this);
-        this.state = {
-            exampleItems: [],
-            initial: '1',
-            pageOfItems: [],
-            hits: []
-        };
-    }
-    componentDidMount() {
-
-        //this.setState({ hits: dt })
-        fetch('https://larva7studio.herokuapp.com/artikel')
-            .then(response => {
-                return response.json();
-            })
-            .then((data) => {
-                this.setState({ hits: data, exampleItems: data, isLoading: false })
-                console.log(data)
-
-            });
-
-    }
-    onChangePage(pageOfItems) {
-        this.setState({ pageOfItems });
-    }
-
-
-    render() {
-        const { hits, isLoading, text, exampleItems, pageOfItems } = this.state;
-        const divStyleload = ({
-             backgroundColor: '#ebebeb'
-
-        })
-
-        const divStyle = (src) => ({
-            backgroundImage: 'url(' + src + ')',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center center'
-        })
-
-        $(document).on("click", "#ola", function(e) {
-            var t = $(this).attr('data-uri')
-            //history.push('/workproduct/' + t)
-
-        })
-        return (
-            <div className="tengahx">
-
-  <style dangerouslySetInnerHTML={{__html: `
-   @font-face{font-family:AntDesign;font-style:normal;font-weight:400;src:url(fonts/AntDesign.ttf) format('truetype')}@font-face{font-family:Entypo;font-style:normal;font-weight:400;src:url(fonts/Entypo.ttf) format('truetype')}@font-face{font-family:EvilIcons;font-style:normal;font-weight:400;src:url(fonts/EvilIcons.ttf) format('truetype')}@font-face{font-family:Feather;font-style:normal;font-weight:400;src:url(fonts/Feather.ttf) format('truetype')}@font-face{font-family:FontAwesome;font-style:normal;font-weight:400;src:url(fonts/FontAwesome.ttf) format('truetype')}@font-face{font-family:FontAwesome5;font-style:normal;font-weight:400;src:url(fonts/FontAwesome5.ttf) format('truetype')}@font-face{font-family:FontAwesome5Brands;font-style:normal;font-weight:400;src:url(fonts/FontAwesome5_Brands.ttf) format('truetype')}@font-face{font-family:Foundation;font-style:normal;font-weight:400;src:url(fonts/Foundation.ttf) format('truetype')}@font-face{font-family:Ionicons;font-style:normal;font-weight:400;src:url(fonts/Ionicons.ttf) format('truetype')}@font-face{font-family:MaterialCommunityIcons;font-style:normal;font-weight:400;src:url(fonts/MaterialCommunityIcons.ttf) format('truetype')}@font-face{font-family:MaterialIcons;font-style:normal;font-weight:400;src:url(fonts/MaterialIcons.ttf) format('truetype')}@font-face{font-family:Octicons;font-style:normal;font-weight:400;src:url(fonts/Octicons.ttf) format('truetype')}@font-face{font-family:SimpleLineIcons;font-style:normal;font-weight:400;src:url(fonts/SimpleLineIcons.ttf) format('truetype')}@font-face{font-family:Zocial;font-style:normal;font-weight:400;src:url(fonts/Zocial.ttf) format('truetype')}
+ @font-face{font-family:AntDesign;font-style:normal;font-weight:400;src:url(fonts/AntDesign.ttf) format('truetype')}@font-face{font-family:Entypo;font-style:normal;font-weight:400;src:url(fonts/Entypo.ttf) format('truetype')}@font-face{font-family:EvilIcons;font-style:normal;font-weight:400;src:url(fonts/EvilIcons.ttf) format('truetype')}@font-face{font-family:Feather;font-style:normal;font-weight:400;src:url(fonts/Feather.ttf) format('truetype')}@font-face{font-family:FontAwesome;font-style:normal;font-weight:400;src:url(fonts/FontAwesome.ttf) format('truetype')}@font-face{font-family:FontAwesome5;font-style:normal;font-weight:400;src:url(fonts/FontAwesome5.ttf) format('truetype')}@font-face{font-family:FontAwesome5Brands;font-style:normal;font-weight:400;src:url(fonts/FontAwesome5_Brands.ttf) format('truetype')}@font-face{font-family:Foundation;font-style:normal;font-weight:400;src:url(fonts/Foundation.ttf) format('truetype')}@font-face{font-family:Ionicons;font-style:normal;font-weight:400;src:url(fonts/Ionicons.ttf) format('truetype')}@font-face{font-family:MaterialCommunityIcons;font-style:normal;font-weight:400;src:url(fonts/MaterialCommunityIcons.ttf) format('truetype')}@font-face{font-family:MaterialIcons;font-style:normal;font-weight:400;src:url(fonts/MaterialIcons.ttf) format('truetype')}@font-face{font-family:Octicons;font-style:normal;font-weight:400;src:url(fonts/Octicons.ttf) format('truetype')}@font-face{font-family:SimpleLineIcons;font-style:normal;font-weight:400;src:url(fonts/SimpleLineIcons.ttf) format('truetype')}@font-face{font-family:Zocial;font-style:normal;font-weight:400;src:url(fonts/Zocial.ttf) format('truetype')}
 
 
 .site-section{
@@ -211,9 +138,9 @@ class artikel extends Component {
     max-width: 100%;
 }
 .col-lg-6 {
-    -webkit-flex: 0 0 30%;
-    flex: 0 0 30%;
-    max-width: 30%;
+    -webkit-flex: 0 0 33%;
+    flex: 0 0 33%;
+    max-width: 33%;
 }
    .site-blocks-cover.overlay:before{background-color:  #26327c}
    @media (max-width: 992px) {
@@ -242,7 +169,85 @@ class artikel extends Component {
       display: block;
     }
 }
-`}} /> 
+
+
+
+`
+const history = createHashHistory()
+const propTypes = {
+
+    initialPage: PropTypes.number
+}
+const customLabels = {
+
+    previous: <Icon
+  name='ios-arrow-round-back'
+  font='Ionicons'
+   size={50}
+  // style={{}}
+/>,
+    next: <Icon
+  name='ios-arrow-round-forward'
+  font='Ionicons'
+   size={50}
+  // style={{}}
+/>
+}
+
+
+class artikel extends Component {
+
+    constructor(props) {
+        super(props);
+        this.onChangePage = this.onChangePage.bind(this);
+        this.state = {
+            exampleItems: [],
+            initial: '1',
+            pageOfItems: [],
+            hits: []
+        };
+    }
+    componentDidMount() {
+
+        //this.setState({ hits: dt })
+        fetch('https://larva7studio.herokuapp.com/artikel')
+            .then(response => {
+                return response.json();
+            })
+            .then((data) => {
+                this.setState({ hits: data, exampleItems: data, isLoading: false })
+                console.log(data)
+
+            });
+
+    }
+    onChangePage(pageOfItems) {
+        this.setState({ pageOfItems });
+    }
+
+
+    render() {
+        const { hits, isLoading, text, exampleItems, pageOfItems } = this.state;
+        const divStyleload = ({
+             backgroundColor: '#ebebeb'
+
+        })
+
+        const divStyle = (src) => ({
+            backgroundImage: 'url(' + src + ')',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center'
+        })
+
+        $(document).on("click", "#ola", function(e) {
+            var t = $(this).attr('data-uri')
+            //history.push('/workproduct/' + t)
+
+        })
+        return (
+            <div className="tengahx">
+  <style dangerouslySetInnerHTML={{__html: minifyCssString(cssString) }} /> 
+
   <Nav />
      <Helmet>
                 <meta charSet="utf-8" />
@@ -286,6 +291,9 @@ class artikel extends Component {
                 </div> 
               </div>
                 )}
+
+
+
                   
           </div>
           </div>
