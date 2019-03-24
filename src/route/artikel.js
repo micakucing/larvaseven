@@ -323,8 +323,7 @@ class artikel extends Component {
                   <h2 className="font-size-regular"><a href="#" id="kikim">fddfsfsf</a></h2>
                   <div id="kikim" className="meta mb-4">Theresa Winston <span className="mx-2" id="kikim"></span> Jan 18, 2019<span className="mx-2"></span> <a href="#" id="kikim">News</a></div>
                   <p id="kikim">fdfdfdfgdfggdfggfgggfghhjj
-                  hghgjhjghjgj
-                  gfhghg</p>
+                  hghgjhjghjgj</p>
                 </div> 
               </div>
                <div className="col-md-6 col-lg-6 mb-4 mb-lg-4">
@@ -333,8 +332,7 @@ class artikel extends Component {
                   <h2 className="font-size-regular"><a href="#" id="kikim">fddfsfsf</a></h2>
                   <div id="kikim" className="meta mb-4">Theresa Winston <span className="mx-2" id="kikim"></span> Jan 18, 2019<span className="mx-2"></span> <a href="#" id="kikim">News</a></div>
                   <p id="kikim">fdfdfdfgdfggdfggfgggfghhjj
-                  hghgjhjghjgj
-                  gfhghg</p>
+                  hghgjhjghjgj</p>
                 </div> 
               </div>
                <div className="col-md-6 col-lg-6 mb-4 mb-lg-4">
@@ -343,8 +341,7 @@ class artikel extends Component {
                   <h2 className="font-size-regular"><a href="#" id="kikim">fddfsfsf</a></h2>
                   <div id="kikim" className="meta mb-4">Theresa Winston <span className="mx-2" id="kikim"></span> Jan 18, 2019<span className="mx-2"></span> <a href="#" id="kikim">News</a></div>
                   <p id="kikim">fdfdfdfgdfggdfggfgggfghhjj
-                  hghgjhjghjgj
-                  gfhghg</p>
+                  hghgjhjghjgj</p>
                 </div> 
               </div>
                <div className="col-md-6 col-lg-6 mb-4 mb-lg-4">
@@ -353,8 +350,7 @@ class artikel extends Component {
                   <h2 className="font-size-regular"><a href="#" id="kikim">fddfsfsf</a></h2>
                   <div id="kikim" className="meta mb-4">Theresa Winston <span className="mx-2" id="kikim"></span> Jan 18, 2019<span className="mx-2"></span> <a href="#" id="kikim">News</a></div>
                   <p id="kikim">fdfdfdfgdfggdfggfgggfghhjj
-                  hghgjhjghjgj
-                  gfhghg</p>
+                  hghgjhjghjgj</p>
                 </div> 
               </div>
                <div className="col-md-6 col-lg-6 mb-4 mb-lg-4">
@@ -363,8 +359,7 @@ class artikel extends Component {
                   <h2 className="font-size-regular"><a href="#" id="kikim">fddfsfsf</a></h2>
                   <div id="kikim" className="meta mb-4">Theresa Winston <span className="mx-2" id="kikim"></span> Jan 18, 2019<span className="mx-2"></span> <a href="#" id="kikim">News</a></div>
                   <p id="kikim">fdfdfdfgdfggdfggfgggfghhjj
-                  hghgjhjghjgj
-                  gfhghg</p>
+                  hghgjhjghjgj</p>
                 </div> 
               </div>
 </div>
