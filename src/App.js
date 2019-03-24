@@ -55,6 +55,7 @@ class App extends Component {
 }
   </DeviceOrientation>)
     }
+
     readDeviceOrientation = () => {
         if (Math.abs(window.orientation) === 90) {
             // Landscape
@@ -94,6 +95,9 @@ class App extends Component {
         } else {
             com = ''
         }
+
+
+ 
         return (
 <HashRouter>
       <div className="App">
@@ -111,6 +115,7 @@ class App extends Component {
     </Switch>
 </header>
       </div>
+
  </HashRouter>
         );
     }

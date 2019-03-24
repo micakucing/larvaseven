@@ -281,7 +281,7 @@ class artikel extends Component {
                 <div className="h-entry">
                   <img src="images/img_6.jpg" alt="Image" className="img-fluid" />
                   <h2 className="font-size-regular"><a href="#">{item.artikel_title}</a></h2>
-                  <div className="meta mb-4">Theresa Winston <span className="mx-2"></span> Jan 18, 2019<span className="mx-2"></span> <a href="#">News</a></div>
+                  <div className="meta mb-4"> Jan 18, 2019<span className="mx-2"></span></div>
                   <p><TextTruncate
     line={3}
     truncateText="…"

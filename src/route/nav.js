@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { translate } from '../translations/trs';
 import { createHashHistory } from 'history'
+import { StickyContainer, Sticky } from 'react-sticky';
 
 import $ from "jquery";
 const history = createHashHistory()
@@ -182,7 +183,7 @@ $(window).scrollTop(0)
 
 
     }
-
+   
         return (
             <div className="tengahx">
   <style dangerouslySetInnerHTML={{__html: `
@@ -387,6 +388,8 @@ position: relative; top: 3px;
 
     </div>   
 </div>
+
+ 
 <div className="site-navbar py-4 bg-white" role="banner">
     <div className="container">
         <div className="row align-items-center">
@@ -423,6 +426,10 @@ position: relative; top: 3px;
         </div>
     </div>
     </div> 
+ 
+
+
+
 </div>
         );
     }

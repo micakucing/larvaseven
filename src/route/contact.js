@@ -28,8 +28,82 @@ constructor(props) {
       });
     
     }
+
+
+ 
+
+  
+ 
+ 
+
+
+
     render() {
            const { hits, isLoading, text } = this.state;
+
+
+ $('#kontakfr').submit(function () {
+     $('.fai').hide() 
+         $('.lds-spinner').html('<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>')
+        $.ajax({
+            url: 'http://127.0.0.1:5000/emailpost',
+            data: $('#kontakfr').serialize(),
+            type: 'POST',
+            success: function(response) {
+                console.log(response);
+                 if(response == 'error'){
+                              $('.lds-spinner').html('')
+
+                 $('.fai').show()         
+                 $('.fai').html('<i class="fa fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i> Sorry, the email you submitted is invalid or the input is still empty')
+                 return
+                 }else if(response == 'eror'){
+                     $('.lds-spinner').html('')
+                 $('.fai').show()         
+                 $('.fai').html('<i class="fa fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 2px;margin-bottom: 20px;display:  block;top: 8px;"></i>Format email salah')
+                 return
+                 }else if(response == 'ok'){
+                     $('.lds-spinner').html('')
+                 $('.fai').show() 
+                 $('.fai').html('<i class="fa fa-check-square-o" style="position: absolute;left: 10px;font-size:20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Terima kasih telah mengirim pesan kepada kami')
+                                
+                 return
+                 }else if(response == 'dns eror'){
+                     $('.lds-spinner').html('')
+                 $('.fai').show() 
+                 $('.fai').html('<i class="fa fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Maaf email yang anda submit tidak valid')
+                 return
+            
+                 }else if(response == 'no'){
+                     $('.lds-spinner').html('')
+                 $('.fai').show() 
+                 $('.fai').html('<i class="fa fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Maaf email anda sudah terdaftar sebelumnya')
+                   
+                 return
+                 }else if(response == 'nama'){
+                     $('.lds-spinner').html('')
+                 $('.fai').show() 
+                 $('.fai').html('<i class="fa fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Sorry, enter your name is still empty')
+              
+                 return
+                 }else if(response == 'noisi'){
+                     $('.lds-spinner').html('')
+                 $('.fai').show() 
+
+                 $('.fai').html('<i class="fa fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Sorry, your message input fields are still empty')
+                
+                 
+                 return
+                 }
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+ return false;
+});
+       
+
 
         return ( 
             <div className="tengahx">
@@ -66,6 +140,17 @@ constructor(props) {
   font-family: Mor!important;
 
 }
+.fai{
+        padding: 10px;
+    border-radius: 5px;
+    background-image: url(https://res.cloudinary.com/dsl4hppsk/image/upload/v1553272298/br.png);
+    display: none;
+    position: relative;
+    padding-left: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 .a{
   font-family: Mol;
  }
@@ -115,26 +200,26 @@ constructor(props) {
 
             
 
-            <form action="#" className="p-5 bg-white">
+            <form className="p-5 bg-white" id="kontakfr">
               
               <h2 className="h4 text-black mb-5">Contact Form</h2> 
 
               <div className="row form-group">
                 <div className="col-md-6 mb-3 mb-md-0">
                   <label className="a" for="fname">First Name</label>
-                  <input type="text" id="fname" className="form-control"/>
+                  <input type="text" id="fname" name="fname" className="form-control"/>
                 </div>
                 <div className="col-md-6">
                   <label className="a" for="lname">Last Name</label>
-                  <input type="text" id="lname" className="form-control"/>
+                  <input type="text" id="lname" name="lname" className="form-control"/>
                 </div>
               </div>
 
               <div className="row form-group">
                 
                 <div className="col-md-12">
-                  <label className="a" for="email">Email</label> 
-                  <input type="email" id="email" className="form-control"/>
+                  <label className="a"  for="email">Email</label> 
+                  <input type="email" name="email" id="email" className="form-control"/>
                 </div>
               </div>
 
@@ -142,25 +227,27 @@ constructor(props) {
                 
                 <div className="col-md-12">
                   <label className="a" for="subject">Subject</label> 
-                  <input type="subject" id="subject" className="form-control" />
+                  <input type="subject" name="subjek" id="subject" className="form-control" />
                 </div>
               </div>
 
               <div className="row form-group">
                 <div className="col-md-12">
                   <label className="a" for="message">Message</label> 
-                  <textarea name="message" id="message" cols="30" rows="7" className="form-control" placeholder="Write your notes or questions here..."></textarea>
+                  <textarea name="message" name="pesan" id="message" cols="30" rows="7" className="form-control" placeholder="Write your notes or questions here..."></textarea>
                 </div>
               </div>
 
               <div className="row form-group">
                 <div className="col-md-12">
-                  <input type="submit" value="Send Message" className="btn btn-primary btn-md text-white" />
+                  <input  type="submit" value="Send Message" className="btn btn-primary btn-md text-white" />
                 </div>
               </div>
-
+   <div className="fai"></div>
   
             </form>
+
+
           </div>
           <div className="col-md-5">
              
