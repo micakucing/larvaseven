@@ -17,82 +17,60 @@ constructor(props) {
     };
   }
     componentDidMount() {
-       fetch('https://larva7studio.herokuapp.com/infor')
+    fetch('https://larva7studio.herokuapp.com/infor')
     .then(response => {
       return response.json();
     })
     .then((data) => {
       this.setState({ text: data[0], isLoading: false })
-          
-
-      });
-    
+      }); 
     }
 
-
- 
-
-  
- 
- 
-
-
-
     render() {
-           const { hits, isLoading, text } = this.state;
-
-
- $('#kontakfr').submit(function () {
+     const { hits, isLoading, text } = this.state;
+     $('#kontakfr').submit(function () {
      $('.fai').hide() 
-         $('.lds-spinner').html('<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>')
-        $.ajax({
+     $('.lds-spinner').html('<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>')
+      $.ajax({
             url: 'https://larva7studio.herokuapp.com/emailpost',
             data: $('#kontakfr').serialize(),
             type: 'POST',
             success: function(response) {
                 console.log(response);
                  if(response == 'error'){
-                              $('.lds-spinner').html('')
-
+                 $('.lds-spinner').html('')
                  $('.fai').show()         
                  $('.fai').html('<i class="fas fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i> Sorry, the email you submitted is invalid or the input is still empty')
                  return
                  }else if(response == 'eror'){
-                     $('.lds-spinner').html('')
+                 $('.lds-spinner').html('')
                  $('.fai').show()         
                  $('.fai').html('<i class="fas fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 2px;margin-bottom: 20px;display:  block;top: 8px;"></i>Format email salah')
                  return
                  }else if(response == 'ok'){
-                     $('.lds-spinner').html('')
+                 $('.lds-spinner').html('')
                  $('.fai').show() 
                  $('.fai').html('<i class="fas fa-check-circle" style="position: absolute;left: 10px;font-size:20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Thank you for sending us a message')
-                                
                  return
                  }else if(response == 'dns eror'){
-                     $('.lds-spinner').html('')
+                 $('.lds-spinner').html('')
                  $('.fai').show() 
                  $('.fai').html('<i class="fas fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Maaf email yang anda submit tidak valid')
                  return
-            
                  }else if(response == 'no'){
-                     $('.lds-spinner').html('')
+                 $('.lds-spinner').html('')
                  $('.fai').show() 
                  $('.fai').html('<i class="fas fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Maaf email anda sudah terdaftar sebelumnya')
-                   
                  return
                  }else if(response == 'nama'){
-                     $('.lds-spinner').html('')
+                 $('.lds-spinner').html('')
                  $('.fai').show() 
                  $('.fai').html('<i class="fas fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Sorry, enter your name is still empty')
-              
                  return
                  }else if(response == 'noisi'){
-                     $('.lds-spinner').html('')
+                 $('.lds-spinner').html('')
                  $('.fai').show() 
-
-                 $('.fai').html('<i class="fas fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Sorry, your message input fields are still empty')
-                
-                 
+                 $('.fai').html('<i class="fas fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Sorry, your message input fields are still empty')                 
                  return
                  }
             },

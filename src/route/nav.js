@@ -191,7 +191,10 @@ $(window).scrollTop(0)
        text-decoration: none;
  } 
  
-
+.pb-4, .py-4 {
+       padding-bottom: 10px !important;
+    padding-top: 10px !important;
+}
  .activex{
     position: relative;
        z-index: 1;
