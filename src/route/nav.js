@@ -6,7 +6,60 @@ import { default as minifyCssString } from 'minify-css-string'
 
 import $ from "jquery";
 
+
+
+
+const history = createHashHistory()
+
+class navigasi extends Component {
+    constructor(props) {
+        super(props);
+    this.timeout = null;
+
+    }
+    componentDidMount() {
+ if (this.timeout) {
+      clearTimeout(this.timeout);
+    }
+    }
+
+    hm = () => {
+
+
+    }
+    ab = () => {
+ 
+       
+
+    }
+    pr = () => {
+        
+
+    }
+
+    sh = () => {
+     
+    }
+
+    bl = () => {
+      
+
+    }
+    ct = () => {
+        $('body').removeClass('offcanvas-menu')
+
+
+        history.push('/larvaseven/#/contact')
+
+    }
+    render() {
+
+
 const cs = `
+body{
+          font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
  a:hover{
        text-decoration: none;
  } 
@@ -48,7 +101,6 @@ const cs = `
 a li{
  list-style: none;
   position: relative;
-      font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
  }
  #ppl{
     position: relative;
@@ -196,50 +248,8 @@ position: relative; top: 3px;
 
 
 
-const history = createHashHistory()
 
-class navigasi extends Component {
-    constructor(props) {
-        super(props);
-    this.timeout = null;
-
-    }
-    componentDidMount() {
- if (this.timeout) {
-      clearTimeout(this.timeout);
-    }
-    }
-
-    hm = () => {
-
-
-    }
-    ab = () => {
- 
-       
-
-    }
-    pr = () => {
         
-
-    }
-
-    sh = () => {
-     
-    }
-
-    bl = () => {
-      
-
-    }
-    ct = () => {
-        $('body').removeClass('offcanvas-menu')
-
-
-        history.push('/larvaseven/#/contact')
-
-    }
-    render() {
         $(document).on("click", "#hm", function(e) {
 
             $('body').removeClass('offcanvas-menu')

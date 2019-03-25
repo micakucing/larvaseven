@@ -4,22 +4,7 @@ import { translate } from '../translations/trs';
 import $ from "jquery";
 import { default as minifyCssString } from 'minify-css-string'
 
-const cssString = `
 
-    #kokom{
-  width: 100%;
-  height: 20px;
-  borderRadius: 3px;
-  background: #ebebeb;
-}
-#kikim{
-  width: 50%;
-  height: 20px;
-  borderRadius: 3px;
-  background: #ebebeb;
-}
-
-`
 class midelteo extends Component {
 constructor(props) {
     super(props);
@@ -45,7 +30,22 @@ constructor(props) {
     }
 
     render() {
+const cssString = `
 
+    #kokom{
+  width: 100%;
+  height: 20px;
+  borderRadius: 3px;
+  background: #ebebeb;
+}
+#kikim{
+  width: 50%;
+  height: 20px;
+  borderRadius: 3px;
+  background: #ebebeb;
+}
+ 
+`
   const { hitss, isLoading } = this.state;
 
         return (
