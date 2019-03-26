@@ -37,7 +37,7 @@ constructor(props) {
             type: 'POST',
             success: function(response) {
                 console.log(response);
-                 if(response == 'error'){
+                 if(response == 'email'){
                  $('.lds-spinner').html('')
                  $('.fai').show()         
                  $('.fai').html('<i class="fas fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i> Sorry, the email you submitted is invalid or the input is still empty')

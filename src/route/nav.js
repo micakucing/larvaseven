@@ -14,13 +14,13 @@ const history = createHashHistory()
 class navigasi extends Component {
     constructor(props) {
         super(props);
-    this.timeout = null;
+        this.timeout = null;
 
     }
     componentDidMount() {
- if (this.timeout) {
-      clearTimeout(this.timeout);
-    }
+        if (this.timeout) {
+            clearTimeout(this.timeout);
+        }
     }
 
     hm = () => {
@@ -28,21 +28,21 @@ class navigasi extends Component {
 
     }
     ab = () => {
- 
-       
+
+
 
     }
     pr = () => {
-        
+
 
     }
 
     sh = () => {
-     
+
     }
 
     bl = () => {
-      
+
 
     }
     ct = () => {
@@ -55,7 +55,7 @@ class navigasi extends Component {
     render() {
 
 
-const cs = `
+        const cs = `
 body{
           font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
@@ -249,81 +249,81 @@ position: relative; top: 3px;
 
 
 
-        
+
         $(document).on("click", "#hm", function(e) {
 
             $('body').removeClass('offcanvas-menu')
-$('.loadmaimage').show()
-$(window).scrollTop(0)
-             setTimeout(() => {
+            $('.loadmaimage').show()
+            $(window).scrollTop(0)
+            setTimeout(() => {
 
 
-$('.loadmaimage').fadeOut()
-            history.push('/')
-                 
+                $('.loadmaimage').fadeOut()
+                history.push('/')
 
-                 }, 0)
+
+            }, 0)
 
         })
         $(document).on("click", "#ab", function(e) {
 
             $('body').removeClass('offcanvas-menu')
             $('.loadmaimage').show()
-$(window).scrollTop(0)
+            $(window).scrollTop(0)
             setTimeout(() => {
                 $('.loadmaimage').fadeOut()
- history.push('/about')
+                history.push('/about')
 
-    }, 0)
+            }, 0)
         })
-             $(document).on("click", ".cp", function(e) {
+        $(document).on("click", ".cp", function(e) {
 
             $('body').removeClass('offcanvas-menu')
             $('.loadmaimage').show()
-$(window).scrollTop(0)
+            $(window).scrollTop(0)
             setTimeout(() => {
                 $('.loadmaimage').fadeOut()
- history.push('/work')
+                history.push('/work')
 
-    }, 0)
+            }, 0)
         })
         $(document).on("click", "#pr", function(e) {
 
             $('body').removeClass('offcanvas-menu')
-                 $('.loadmaimage').show()
-$(window).scrollTop(0)
- setTimeout(() => {
-                    $('.loadmaimage').fadeOut()
+            $('.loadmaimage').show()
+            $(window).scrollTop(0)
+            setTimeout(() => {
+                $('.loadmaimage').fadeOut()
 
- history.push('/work')
-    }, 0)
+                history.push('/work')
+            }, 0)
         })
 
 
-    $(document).on("click", "#ar", function(e) {
+        $(document).on("click", "#ar", function(e) {
 
             $('body').removeClass('offcanvas-menu')
-                 $('.loadmaimage').show()
-$(window).scrollTop(0)
- setTimeout(() => {
-                    $('.loadmaimage').fadeOut()
+            $('.loadmaimage').show()
+            $(window).scrollTop(0)
+            setTimeout(() => {
+                $('.loadmaimage').fadeOut()
 
- history.push('/articles')
-    }, 0)
+                history.push('/articles')
+            }, 0)
         })
- 
 
- $(document).on("click", "#ola", function(e) {
- 
- 
+
+        $(document).on("click", "#ola", function(e) {
+
+
             $('body').removeClass('offcanvas-menu')
-                 $('.loadmaimage').show()
-$(window).scrollTop(0)
- setTimeout(() => {
-                    $('.loadmaimage').fadeOut()
+            $('.loadmaimage').show()
+            $(window).scrollTop(0)
+            setTimeout(() => {
+                $('.loadmaimage').fadeOut()
 
- 
-    }, 0)
+
+            }, 0)
         })
 
 
@@ -334,58 +334,58 @@ $(window).scrollTop(0)
             history.push('/shop')
 
         })
-         $(document).on("click", "#bl", function(e) {
+        $(document).on("click", "#bl", function(e) {
 
             $('body').removeClass('offcanvas-menu')
             history.push('/blog')
 
         })
-$(document).on("click", "#ch", function(e) {
-    $('.loadmaimage').show()
-$(window).scrollTop(0)
+        $(document).on("click", "#ch", function(e) {
+            $('.loadmaimage').show()
+            $(window).scrollTop(0)
             $('body').removeClass('offcanvas-menu')
-             setTimeout(() => {
-                                    $('.loadmaimage').fadeOut()
+            setTimeout(() => {
+                $('.loadmaimage').fadeOut()
 
-            history.push('/contact')
-             }, 0)
-})
+                history.push('/contact')
+            }, 0)
+        })
         let c, homes, abouts, works, shops, kontak, ati;
         c = window.location.hash.substr(2)
-   var t = window.location.href
-    var o = t.split("/")[5]
- 
+        var t = window.location.href
+        var o = t.split("/")[5]
+
 
         if (c == "") {
-            homes = <a className="activex"><li>&nbsp;&nbsp;Home &nbsp;&nbsp;:</li> </a>
+            homes = <a className="activex"><li>&nbsp;&nbsp;Home &nbsp;&nbsp;</li> </a>
         } else {
-            homes = <a href="/larvaseven" id="ppl"><li>&nbsp;&nbsp;Home &nbsp;&nbsp;: </li></a>
+            homes = <a href="/larvaseven" id="ppl"><li>&nbsp;&nbsp;Home &nbsp;&nbsp;</li></a>
         }
         if (c == "about") {
-            abouts = <a className="activex"><li>&nbsp;&nbsp;About &nbsp;&nbsp;:</li> </a>
+            abouts = <a className="activex"><li>&nbsp;&nbsp;About &nbsp;&nbsp;</li> </a>
         } else {
-            abouts = <a href="#/about" id="ppl"><li>&nbsp;&nbsp;About &nbsp;&nbsp;:</li> </a>
+            abouts = <a href="#/about" id="ppl"><li>&nbsp;&nbsp;About &nbsp;&nbsp;</li> </a>
         }
         if (c == "work" || o == "workproduct") {
-            works = <a id="aloy" className="activex"><li>&nbsp;&nbsp;Works &nbsp;&nbsp;:</li> </a>
+            works = <a id="aloy" className="activex"><li>&nbsp;&nbsp;Works &nbsp;&nbsp;</li> </a>
         } else {
-            works = <a href="#/work" id="ppl"><li>&nbsp;&nbsp;Works &nbsp;&nbsp;:</li> </a>
+            works = <a href="#/work" id="ppl"><li>&nbsp;&nbsp;Works &nbsp;&nbsp;</li> </a>
         }
-    
+
         if (c == "articles") {
-            ati = <a className="activex"><li>&nbsp;&nbsp;Articles &nbsp;&nbsp;: </li></a>
+            ati = <a className="activex"><li>&nbsp;&nbsp;Articles &nbsp;&nbsp;</li></a>
         } else {
-            ati = <a href="#/articles" id="ppl" ><li>&nbsp;&nbsp;Articles &nbsp;&nbsp;:</li></a>
+            ati = <a href="#/articles" id="ppl" ><li>&nbsp;&nbsp;Articles &nbsp;&nbsp;</li></a>
         }
-    if(c =="contact"){
-                           kontak = <a className="activex"><li>&nbsp;&nbsp;Contact &nbsp;&nbsp;:</li> </a>
+        if (c == "contact") {
+            kontak = <a className="activex"><li>&nbsp;&nbsp;Contact &nbsp;&nbsp;</li> </a>
 
-    }else{
-                        kontak = <a href="#/contact" id="ppl"><li>&nbsp;&nbsp;Contact &nbsp;&nbsp;: </li></a>
+        } else {
+            kontak = <a href="#/contact" id="ppl"><li>&nbsp;&nbsp;Contact &nbsp;&nbsp;</li></a>
 
 
-    }
-   
+        }
+
         return (
             <div className="tengahx">
   <style dangerouslySetInnerHTML={{__html: minifyCssString(cs) }} /> 
