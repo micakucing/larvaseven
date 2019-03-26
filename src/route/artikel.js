@@ -128,6 +128,8 @@ const cssString = `
 }
 #ol{
   margin-bottom: 30px;
+      height: 250px;
+      width: 350px;
 }
 #boxed{
   width: 100%;
@@ -150,6 +152,10 @@ const cssString = `
  .text-center h1{
     font-size: 22px;
     line-height: 1.3;
+}
+#ol{
+  
+      width: 100%;
 }
 .col-lg-6 {
     -webkit-flex: 0 0 100%;
