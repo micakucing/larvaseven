@@ -126,6 +126,9 @@ const cssString = `
   padding-bottom: 50px;
       border-bottom: 1px solid #dee2e6 !important;
 }
+#ol{
+  margin-bottom: 30px;
+}
 #boxed{
   width: 100%;
   height: 150px;
@@ -280,7 +283,7 @@ class artikel extends Component {
               <div className="col-md-6 col-lg-6 mb-4 mb-lg-4">
                 <div className="h-entry">
     
-                   <div id="ola"  className="media-1" style={divStyle(item.image_url)}></div>
+                   <div id="ol"  style={divStyle(item.image_url)}></div>
                   <h2 className="font-size-regular"><a href="#">{item.artikel_title}</a></h2>
                   <div className="meta mb-4">{item.tanggal}<span className="mx-2"></span></div>
                   <p><TextTruncate
