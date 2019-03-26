@@ -33,6 +33,9 @@ const cssString = `
 #jir:after{
    background: none;
 }
+ .category{
+      text-transform: none !important;
+    }
 @media (max-width: 992px) {
  .text-center h1{
     font-size: 22px;
