@@ -126,11 +126,6 @@ const cssString = `
   padding-bottom: 50px;
       border-bottom: 1px solid #dee2e6 !important;
 }
-#ol{
-  margin-bottom: 30px;
-      height: 250px;
-      width: 350px;
-}
 #boxed{
   width: 100%;
   height: 150px;
@@ -152,10 +147,6 @@ const cssString = `
  .text-center h1{
     font-size: 22px;
     line-height: 1.3;
-}
-#ol{
-  
-      width: 100%;
 }
 .col-lg-6 {
     -webkit-flex: 0 0 100%;
@@ -289,7 +280,7 @@ class artikel extends Component {
               <div className="col-md-6 col-lg-6 mb-4 mb-lg-4">
                 <div className="h-entry">
     
-                   <div id="ol"  style={divStyle(item.image_url)}></div>
+                   <div id="ola"  className="media-8" style={divStyle(item.image_url)}></div>
                   <h2 className="font-size-regular"><a href="#">{item.artikel_title}</a></h2>
                   <div className="meta mb-4">{item.tanggal}<span className="mx-2"></span></div>
                   <p><TextTruncate
