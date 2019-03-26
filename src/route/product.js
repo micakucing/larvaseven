@@ -7,6 +7,7 @@
   import 'react-photoswipe/lib/photoswipe.css';
   import { PhotoSwipeGallery } from 'react-photoswipe';
 import {Helmet} from "react-helmet";
+import renderHTML from 'react-render-html';
 
   class product extends Component {
       constructor(props) {
@@ -373,7 +374,7 @@ p .hg {
         <div className="row">
           <div id="jjl" className="col-md-4">
             <h3 className="mb-3">{text.title}</h3>
-            <p>{text.deskrip}</p>
+            <p>{renderHTML(text.deskrip)}</p>
           </div>
           <div id="pplx" className="col-md-4">
              <p id="lpsa">Client: {text.client}</p>

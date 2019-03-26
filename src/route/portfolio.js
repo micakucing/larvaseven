@@ -12,6 +12,7 @@ import Icon, { FontAwesome, Feather } from 'react-web-vector-icons';
 import PropTypes from 'prop-types';
 import ContentLoader, { Facebook } from "react-content-loader";
 import {Helmet} from "react-helmet";
+import renderHTML from 'react-render-html';
 
 
 const history = createHashHistory()
@@ -230,7 +231,7 @@ class portfolio extends Component {
             <div id="kkp" className="col-md-6 col-lg-4"  >
             <div id="ola" data-uri={item.id} className="media-1" style={divStyle(item.thumnail)}>
                <div className="media-1-content">
-                <h2>{item.title}</h2>
+                <h2>{renderHTML(item.title)}</h2>
                 <span className="category">{item.kategori_name}</span>
               </div>
             </div>
