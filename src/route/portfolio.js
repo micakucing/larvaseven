@@ -95,6 +95,9 @@ class portfolio extends Component {
     .site-blocks-cover.inner-page-cover, .site-blocks-cover.inner-page-cover>.container>.row {
       min-height: 280px;
     }
+    .category{
+      text-transform: none !important;
+    }
     .site-section{
     border-bottom: 1px solid #dee2e6 !important;
     padding-bottom: 20px;
