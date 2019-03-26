@@ -8,6 +8,7 @@ constructor(props) {
 
     this.state = {
       xts: [],
+       homeles: [],
       satu:[],
       dua:[],
       tiga:[],
@@ -26,6 +27,15 @@ fetch('https://larva7studio.herokuapp.com/mddt')
            
 
       });
+    fetch('https://larva7studio.herokuapp.com/pghome')
+    .then(response => {
+      return response.json();
+    })
+    .then((data) => {
+      this.setState({ homeles: data[0], isLoading: false })
+           
+
+      });
       fetch('https://larva7studio.herokuapp.com/icm')
     .then(response => {
       return response.json();
@@ -41,8 +51,16 @@ fetch('https://larva7studio.herokuapp.com/mddt')
 
     }
     render() {
-  const { xts, isLoading, satu, dua,tiga,empat } = this.state;
+  const { xts, isLoading, satu, dua,tiga,empat, homeles } = this.state;
 
+ const divStyle = (src) => ({
+            backgroundImage: 'url(' + src + ')',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+            height: '433px',
+            width: '509px',
+            backgroundRepeat: 'no-repeat'
+        })
 
         return (
 <div>
@@ -55,6 +73,8 @@ fetch('https://larva7studio.herokuapp.com/mddt')
   padding: 13px;
 }
 
+   
+
 `}} /> 
     <section className="section ft-feature-1">
       <div className="container">
@@ -66,7 +86,7 @@ fetch('https://larva7studio.herokuapp.com/mddt')
                 <div className="h-100">
                   <div className="mb-5 d-flex align-items-center">
                   </div>
-                  <img src="https://colorlib.com/preview/theme/chimper/images/about_1.jpg" alt="Image" className="img-feature img-fluid" />
+                  <div alt="Image" className="img-feature img-fluid" style={divStyle(homeles.image_uri)} />
                 </div>
               </div>
               <div className="col-lg-3 ml-auto">

@@ -37,11 +37,43 @@ const cssString = `
 `
 
 class home extends Component {
+constructor(props) {
+    super(props);
 
+    this.state = {
+      pc: [],
+      isLoading: false,
+    };
+  }
     componentDidMount() {
+
+
+fetch('https://larva7studio.herokuapp.com/randpic')
+    .then(response => {
+      return response.json();
+    })
+    .then((data) => {
+      this.setState({ pc: data[0], isLoading: false })
+           console.log(data.length)
+
+      });
+
+ 
     }
     render() {
 
+
+
+          const { pc, isLoading } = this.state;
+
+
+
+ const divStyle = (src) => ({
+            backgroundImage: 'url(' + src + ')',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+            backgroundRepeat: 'no-repeat'
+        })
 
         return (
 <div className="tengahx">
@@ -55,7 +87,7 @@ class home extends Component {
                 <title>Welcome To LARVA7STUDIO</title>
                 
              </Helmet>
-    <div className="site-blocks-cover overlay" style={{'backgroundImage': 'url(https://colorlib.com/preview/theme/chimper/images/hero_1.jpg)'}} data-aos="fade" data-stellar-background-ratio="0.5">
+    <div className="site-blocks-cover overlay" style={divStyle(pc.image_uri)} data-aos="fade" data-stellar-background-ratio="0.5">
       <div className="container">
         <div className="row align-items-center justify-content-center text-center">
           <div className="col-md-12" data-aos="fade-up" data-aos-delay="400">
