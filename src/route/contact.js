@@ -57,10 +57,10 @@ constructor(props) {
                  $('.fai').show() 
                  $('.fai').html('<i class="fas fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Maaf email yang anda submit tidak valid')
                  return
-                 }else if(response == 'no'){
+                 }else if(response == 'subjek'){
                  $('.lds-spinner').html('')
                  $('.fai').show() 
-                 $('.fai').html('<i class="fas fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Maaf email anda sudah terdaftar sebelumnya')
+                 $('.fai').html('<i class="fas fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i>No, email subject')
                  return
                  }else if(response == 'nama'){
                  $('.lds-spinner').html('')
