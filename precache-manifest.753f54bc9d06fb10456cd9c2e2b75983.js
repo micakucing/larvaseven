@@ -8,15 +8,15 @@ self.__precacheManifest = [
     "url": "/larvaseven/static/js/runtime~main.58d43a49.js"
   },
   {
-    "revision": "a5adf1232fbe76e0267e",
-    "url": "/larvaseven/static/js/main.cfeea8a0.chunk.js"
+    "revision": "369c2f8c56d0fee01162",
+    "url": "/larvaseven/static/js/main.7d8b6917.chunk.js"
   },
   {
     "revision": "a32fc31581428000a3b7",
     "url": "/larvaseven/static/js/2.6de2d683.chunk.js"
   },
   {
-    "revision": "a5adf1232fbe76e0267e",
+    "revision": "369c2f8c56d0fee01162",
     "url": "/larvaseven/static/css/main.9519a473.chunk.css"
   },
   {
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/larvaseven/static/css/2.e5ef24fb.chunk.css"
   },
   {
-    "revision": "0b16b531af81352356b1b1baebdba089",
+    "revision": "d5fdc165fa1de6adce36bfd3eef596ec",
     "url": "/larvaseven/index.html"
   }
 ];
