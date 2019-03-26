@@ -54,7 +54,7 @@ fetch('https://larva7studio.herokuapp.com/randpic')
     })
     .then((data) => {
       this.setState({ pc: data[0], isLoading: false })
-           console.log(data.length)
+            
 
       });
 

@@ -21,7 +21,7 @@ constructor(props) {
     })
     .then((data) => {
       this.setState({ text: data, isLoading: false })
-          console.log(data)   
+          
 
       });
     
