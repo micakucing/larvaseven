@@ -279,9 +279,10 @@ class artikel extends Component {
            
               <div className="col-md-6 col-lg-6 mb-4 mb-lg-4">
                 <div className="h-entry">
-                  <img src="images/img_6.jpg" alt="Image" className="img-fluid" />
+    
+                   <div id="ola"  className="media-1" style={divStyle(item.image_url)}></div>
                   <h2 className="font-size-regular"><a href="#">{item.artikel_title}</a></h2>
-                  <div className="meta mb-4"> Jan 18, 2019<span className="mx-2"></span></div>
+                  <div className="meta mb-4">{item.tanggal}<span className="mx-2"></span></div>
                   <p><TextTruncate
     line={3}
     truncateText="…"
