@@ -38,10 +38,11 @@ const cssString = `
     margin: 70px;
   }
   .col-md-8 img {
-    max-width: 100%;
+    width: 100%;
   }
   .col-md-8 iframe{
-    max-width: 100%;
+    width: 100%;
+    height: 350px;
   }
   .site-section {
     padding: 5em 0;
@@ -276,7 +277,7 @@ class artikelkonten extends Component {
        this.state.hits && this.state.hits.length > 0 ? (
       <div className="container">
      <div class="row no-gutters">
-  <div class="col-12 col-sm-6 col-md-8">{renderHTML(hits[0].artikel_konten)}</div>
+  <div class="col-12 col-sm-6 col-md-8"><div className="ttls">{hits[0].artikel_title}</div>{renderHTML(hits[0].artikel_konten)}</div>
   <div class="col-6 col-md-4">.col-6 .col-md-4</div>
 </div>
       </div>
