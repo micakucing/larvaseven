@@ -38,7 +38,7 @@ const cssString = `
         font-size: 30px;
     font-weight: bold;
     margin-bottom: 20px;
-    margin-top: 5px;
+    margin-top: 20px;
     font-family: Mor;
     border-top: 1px solid #B2A89F;
   }
