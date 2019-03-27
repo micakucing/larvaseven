@@ -10,11 +10,11 @@ import { createHashHistory } from 'history'
 import Icon, { FontAwesome, Feather } from 'react-web-vector-icons';
 import PropTypes from 'prop-types';
 import ContentLoader, { Facebook } from "react-content-loader";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 import TextTruncate from 'react-text-truncate';
 import { default as minifyCssString } from 'minify-css-string'
 import renderHTML from 'react-render-html';
- import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const cssString = `
@@ -130,7 +130,9 @@ const cssString = `
     .lik{
           max-width: 1140px;
     }
-
+.lnk span{
+  color: #B2A89F;
+}
         #kokoms{
   width: 10%;
   height: 20px;
@@ -183,7 +185,7 @@ const cssString = `
     padding-bottom: 20px;
 }
 #kolsa{
-  padding: 40px;
+  padding: 60px;
   padding-top: 0;
 }
    .site-blocks-cover.overlay:before{background-color:  #26327c}
@@ -269,39 +271,39 @@ class artikelkonten extends Component {
             pageOfItems: [],
             hits: [],
             hitss: [],
-                isFlushed: false
+            isFlushed: false
 
         };
     }
     componentDidMount() {
 
         //this.setState({ hits: dt })
-        fetch('https://larva7studio.herokuapp.com/art/'+this.props.match.params.id)
+        fetch('https://larva7studio.herokuapp.com/art/' + this.props.match.params.id)
             .then(response => {
                 return response.json();
             })
             .then((data) => {
-                this.setState({ hits: data,  isLoading: false })
-               
-
-fetch('https://larva7studio.herokuapp.com/catart/'+data[0].cat+'/'+this.props.match.params.id)
-            .then(response => {
+                this.setState({ hits: data, isLoading: false })
 
 
-           return response.json();
-            })
-            .then((datas) => {
-
-this.setState({ hitss: datas})
-console.log(datas)
-
-            })
+                fetch('https://larva7studio.herokuapp.com/catart/' + data[0].cat + '/' + this.props.match.params.id)
+                    .then(response => {
 
 
+                        return response.json();
+                    })
+                    .then((datas) => {
 
- 
+                        this.setState({ hitss: datas })
+                        console.log(datas)
 
- 
+                    })
+
+
+
+
+
+
             });
 
 
@@ -309,38 +311,38 @@ console.log(datas)
     }
 
 
-componentWillReceiveProps()
+    componentWillReceiveProps()
 
-{
+    {
 
 
- //this.setState({ hits: dt })
-        fetch('https://larva7studio.herokuapp.com/art/'+this.props.match.params.id)
+        //this.setState({ hits: dt })
+        fetch('https://larva7studio.herokuapp.com/art/' + this.props.match.params.id)
             .then(response => {
                 return response.json();
             })
             .then((data) => {
-                this.setState({ hits: data,  isLoading: false })
-               
-
-fetch('https://larva7studio.herokuapp.com/catart/'+data[0].cat+'/'+this.props.match.params.id)
-            .then(response => {
+                this.setState({ hits: data, isLoading: false })
 
 
-           return response.json();
-            })
-            .then((datas) => {
-
-this.setState({ hitss: datas})
-console.log(datas)
-
-            })
+                fetch('https://larva7studio.herokuapp.com/catart/' + data[0].cat + '/' + this.props.match.params.id)
+                    .then(response => {
 
 
+                        return response.json();
+                    })
+                    .then((datas) => {
 
- 
+                        this.setState({ hitss: datas })
+                        console.log(datas)
 
- 
+                    })
+
+
+
+
+
+
             });
 
 
@@ -348,7 +350,7 @@ console.log(datas)
 
 
 
-}
+    }
 
     onChangePage(pageOfItems) {
         this.setState({ pageOfItems });
@@ -358,7 +360,7 @@ console.log(datas)
     render() {
         const { hits, hitss, isLoading, text, exampleItems, pageOfItems } = this.state;
         const divStyleload = ({
-             backgroundColor: '#ebebeb'
+            backgroundColor: '#ebebeb'
 
         })
 
@@ -369,10 +371,10 @@ console.log(datas)
         })
 
 
-$(document).on("click", '.lnk', function(e){
-  window.location.reload();
+        $(document).on("click", '.lnk', function(e) {
+            window.location.reload();
 
-})
+        })
         $(document).on("click", "#ola", function(e) {
             var t = $(this).attr('data-uri')
             //history.push('/workproduct/' + t)
@@ -421,14 +423,13 @@ $(document).on("click", '.lnk', function(e){
                 <div className="h-entry">
     
                    <div id="ola"  className="media-8" style={divStyle(item.image_url)}></div>
-                  <h2 className="font-size-regular"><a  className="lnk" href={'#/articles-data/' + item.id}  >{item.artikel_title}</a></h2>
-                  <div className="meta mb-4">{item.tanggal}<span className="mx-2"></span></div>
-                  <p><TextTruncate
-    line={3}
+                  <h2 className="font-size-regular"></h2>
+                  <p><a  className="lnk" href={'#/articles-data/' + item.id}  ><TextTruncate
+    line={2}
     truncateText="…"
     text={item.clean}
    
-/></p>
+/></a></p>
                 </div> 
               </div>
 
