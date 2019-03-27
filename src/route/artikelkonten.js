@@ -187,9 +187,15 @@ const cssString = `
 #kolsa{
   padding: 60px;
   padding-top: 0;
+  padding-left: 80px;
 }
    .site-blocks-cover.overlay:before{background-color:  #26327c}
    @media (max-width: 992px) {
+    .col-md-8 {
+    -webkit-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
     .col-6{
       flex: 0 0 100%;
     max-width: 100%;
