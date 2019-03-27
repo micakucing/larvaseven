@@ -347,7 +347,7 @@ console.log(datas)
 
 
 
-  
+
 }
 
     onChangePage(pageOfItems) {
@@ -368,6 +368,11 @@ console.log(datas)
             backgroundPosition: 'center center'
         })
 
+
+$(document).on("click", '.lnk', function(e){
+  window.location.reload();
+
+})
         $(document).on("click", "#ola", function(e) {
             var t = $(this).attr('data-uri')
             //history.push('/workproduct/' + t)
@@ -416,7 +421,7 @@ console.log(datas)
                 <div className="h-entry">
     
                    <div id="ola"  className="media-8" style={divStyle(item.image_url)}></div>
-                  <h2 className="font-size-regular"><Link  to={{ pathname: '/articles-data/' + item.id, state: 'flushDeal' }}  >{item.artikel_title}</Link></h2>
+                  <h2 className="font-size-regular"><a  className="lnk" href={'#/articles-data/' + item.id}  >{item.artikel_title}</a></h2>
                   <div className="meta mb-4">{item.tanggal}<span className="mx-2"></span></div>
                   <p><TextTruncate
     line={3}
