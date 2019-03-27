@@ -39,6 +39,7 @@ const cssString = `
     font-weight: bold;
     margin-bottom: 20px;
     margin-top: 20px;
+    padding-top: 10px;
     font-family: Mor;
     border-top: 1px solid #B2A89F;
   }
