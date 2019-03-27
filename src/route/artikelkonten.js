@@ -34,6 +34,14 @@ const cssString = `
     height: 250px;
     border-radius: 3px;
   }
+  .ttls{
+        font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    font-family: Mor;
+    border-top: 1px solid #B2A89F;
+  }
   #pol{
     margin: 70px;
   }
@@ -153,6 +161,10 @@ const cssString = `
     font-size: 22px;
     line-height: 1.3;
 }
+ .ttls{
+        font-size: 20px;
+    
+  }
 .col-lg-6 {
     -webkit-flex: 0 0 100%;
     flex: 0 0 100%;
