@@ -14,6 +14,8 @@ import {Helmet} from "react-helmet";
 import TextTruncate from 'react-text-truncate';
 import { default as minifyCssString } from 'minify-css-string'
 import renderHTML from 'react-render-html';
+ import { Link } from 'react-router-dom';
+
 
 const cssString = `
 
@@ -266,7 +268,9 @@ class artikelkonten extends Component {
             initial: '1',
             pageOfItems: [],
             hits: [],
-            hitss: []
+            hitss: [],
+                isFlushed: false
+
         };
     }
     componentDidMount() {
@@ -303,6 +307,49 @@ console.log(datas)
 
 
     }
+
+
+componentWillReceiveProps()
+
+{
+
+
+ //this.setState({ hits: dt })
+        fetch('https://larva7studio.herokuapp.com/art/'+this.props.match.params.id)
+            .then(response => {
+                return response.json();
+            })
+            .then((data) => {
+                this.setState({ hits: data,  isLoading: false })
+               
+
+fetch('https://larva7studio.herokuapp.com/catart/'+data[0].cat+'/'+this.props.match.params.id)
+            .then(response => {
+
+
+           return response.json();
+            })
+            .then((datas) => {
+
+this.setState({ hitss: datas})
+console.log(datas)
+
+            })
+
+
+
+ 
+
+ 
+            });
+
+
+
+
+
+  
+}
+
     onChangePage(pageOfItems) {
         this.setState({ pageOfItems });
     }
@@ -369,7 +416,7 @@ console.log(datas)
                 <div className="h-entry">
     
                    <div id="ola"  className="media-8" style={divStyle(item.image_url)}></div>
-                  <h2 className="font-size-regular"><a href={'https://micakucing.github.io/larvaseven/#/articles-data/' + item.id}>{item.artikel_title}</a></h2>
+                  <h2 className="font-size-regular"><Link  to={{ pathname: '/articles-data/' + item.id, state: 'flushDeal' }}  >{item.artikel_title}</Link></h2>
                   <div className="meta mb-4">{item.tanggal}<span className="mx-2"></span></div>
                   <p><TextTruncate
     line={3}
