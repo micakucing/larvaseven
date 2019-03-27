@@ -216,8 +216,7 @@ class artikel extends Component {
             })
             .then((data) => {
                 this.setState({ hits: data, exampleItems: data, isLoading: false })
-                console.log(data)
-
+ 
             });
 
     }

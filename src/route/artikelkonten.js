@@ -13,6 +13,8 @@ import ContentLoader, { Facebook } from "react-content-loader";
 import {Helmet} from "react-helmet";
 import TextTruncate from 'react-text-truncate';
 import { default as minifyCssString } from 'minify-css-string'
+import renderHTML from 'react-render-html';
+
 const cssString = `
 
  @font-face{font-family:AntDesign;font-style:normal;font-weight:400;src:url(fonts/AntDesign.ttf) format('truetype')}@font-face{font-family:Entypo;font-style:normal;font-weight:400;src:url(fonts/Entypo.ttf) format('truetype')}@font-face{font-family:EvilIcons;font-style:normal;font-weight:400;src:url(fonts/EvilIcons.ttf) format('truetype')}@font-face{font-family:Feather;font-style:normal;font-weight:400;src:url(fonts/Feather.ttf) format('truetype')}@font-face{font-family:FontAwesome;font-style:normal;font-weight:400;src:url(fonts/FontAwesome.ttf) format('truetype')}@font-face{font-family:FontAwesome5;font-style:normal;font-weight:400;src:url(fonts/FontAwesome5.ttf) format('truetype')}@font-face{font-family:FontAwesome5Brands;font-style:normal;font-weight:400;src:url(fonts/FontAwesome5_Brands.ttf) format('truetype')}@font-face{font-family:Foundation;font-style:normal;font-weight:400;src:url(fonts/Foundation.ttf) format('truetype')}@font-face{font-family:Ionicons;font-style:normal;font-weight:400;src:url(fonts/Ionicons.ttf) format('truetype')}@font-face{font-family:MaterialCommunityIcons;font-style:normal;font-weight:400;src:url(fonts/MaterialCommunityIcons.ttf) format('truetype')}@font-face{font-family:MaterialIcons;font-style:normal;font-weight:400;src:url(fonts/MaterialIcons.ttf) format('truetype')}@font-face{font-family:Octicons;font-style:normal;font-weight:400;src:url(fonts/Octicons.ttf) format('truetype')}@font-face{font-family:SimpleLineIcons;font-style:normal;font-weight:400;src:url(fonts/SimpleLineIcons.ttf) format('truetype')}@font-face{font-family:Zocial;font-style:normal;font-weight:400;src:url(fonts/Zocial.ttf) format('truetype')}
@@ -34,6 +36,12 @@ const cssString = `
   }
   #pol{
     margin: 70px;
+  }
+  .col-md-8 img {
+    max-width: 100%;
+  }
+  .col-md-8 iframe{
+    max-width: 100%;
   }
   .site-section {
     padding: 5em 0;
@@ -206,14 +214,13 @@ class artikelkonten extends Component {
     componentDidMount() {
 
         //this.setState({ hits: dt })
-        fetch('https://larva7studio.herokuapp.com/artikel')
+        fetch('https://larva7studio.herokuapp.com/art/'+this.props.match.params.id)
             .then(response => {
                 return response.json();
             })
             .then((data) => {
-                this.setState({ hits: data, exampleItems: data, isLoading: false })
-                console.log(data)
-
+                this.setState({ hits: data,  isLoading: false })
+ 
             });
 
     }
@@ -269,7 +276,7 @@ class artikelkonten extends Component {
        this.state.hits && this.state.hits.length > 0 ? (
       <div className="container">
      <div class="row no-gutters">
-  <div class="col-12 col-sm-6 col-md-8">.col-12 .col-sm-6 .col-md-8</div>
+  <div class="col-12 col-sm-6 col-md-8">{renderHTML(hits[0].artikel_konten)}</div>
   <div class="col-6 col-md-4">.col-6 .col-md-4</div>
 </div>
       </div>
