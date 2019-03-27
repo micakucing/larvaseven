@@ -6,6 +6,8 @@ import Headnav from "./route/home";
 import About from "./route/about";
 import Port from "./route/portfolio";
 import Art from "./route/artikel";
+import Artk from "./route/artikelkonten";
+
 import Kontak from "./route/contact";
 import $ from "jquery";
 import DeviceOrientation from 'react-device-orientation';
@@ -111,6 +113,7 @@ class App extends Component {
         <Route path="/contact" component={Kontak}/>
         <Route path="/articles" component={Art}/>
         <Route path="/workproduct/:id" component={Pro}/>
+        <Route path="/articles-data/:id" component={Artk}/>
         <Route component={not}/>
     </Switch>
 </header>

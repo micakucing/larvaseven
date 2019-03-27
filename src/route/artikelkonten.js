@@ -133,14 +133,10 @@ const cssString = `
   margin-bottom: 20px;
 }
 .col-md-8 {
-    -webkit-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
+ margin-bottom: 30px;
 }
 .col-lg-6 {
-    -webkit-flex: 0 0 33%;
-    flex: 0 0 33%;
-    max-width: 33%;
+    margin-bottom: 30px;
 }
    .site-blocks-cover.overlay:before{background-color:  #26327c}
    @media (max-width: 992px) {
@@ -195,7 +191,7 @@ const customLabels = {
 }
 
 
-class artikel extends Component {
+class artikelkonten extends Component {
 
     constructor(props) {
         super(props);
@@ -272,102 +268,72 @@ class artikel extends Component {
      {
        this.state.hits && this.state.hits.length > 0 ? (
       <div className="container">
-        <div className="row">
-           <div className="col-md-8">
-            <div className="row mb-5">
-          {this.state.pageOfItems.map(item =>
-           
-              <div className="col-md-6 col-lg-6 mb-4 mb-lg-4">
-                <div className="h-entry">
-    
-                   <div id="ola"  className="media-8" style={divStyle(item.image_url)}></div>
-                  <h2 className="font-size-regular"><a href={'http://localhost:3000/#/articles-data/' + item.id}>{item.artikel_title}</a></h2>
-                  <div className="meta mb-4">{item.tanggal}<span className="mx-2"></span></div>
-                  <p><TextTruncate
-    line={3}
-    truncateText="…"
-    text={item.clean}
-   
-/></p>
-                </div> 
-              </div>
-                )}
-
-
-
-                  
-          </div>
-          </div>
-        </div> <JwPagination  pageSize={6} items={this.state.exampleItems} onChangePage={this.onChangePage}  labels={customLabels}  />
+     <div class="row no-gutters">
+  <div class="col-12 col-sm-6 col-md-8">.col-12 .col-sm-6 .col-md-8</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+</div>
       </div>
     ):(
     
   <div className="container">
         <div className="row">
+ 
+ <div className="col-md-9 col-lg-9 mb-4 mb-lg-4">
+                <div className="h-entry">
+                  <div   id="boxed" ></div>
+                   <div id="kikim" className="meta mb-4">Theresa Winston <span className="mx-2" id="kikim"></span> Jan 18, 2019<span className="mx-2"></span> <a href="#" id="kikim">News</a></div>
+                  <p id="kikim">fdfdfdfgdfggdfggfgggfghhjj
+                  hghgjhjghjgj</p>
+                    <p id="kikim">fdfdfdfgdfggdfggfgggfghhjj
+                  hghgjhjghjgj</p>
+                    <p id="kikim">fdfdfdfgdfggdfggfgggfghhjj
+                  hghgjhjghjgj</p>
+                    <p id="kikim">fdfdfdfgdfggdfggfgggfghhjj
+                  hghgjhjghjgj</p>
+                        <p id="kikim">fdfdfdfgdfggdfggfgggfghhjj
+                  hghgjhjghjgj</p>
+                </div> 
 
-          <div className="col-md-8">
-            <div className="row mb-5">
+              </div>
+              
+<div className="col-md-2 col-lg-2 mb-2 mb-lg-2">
+                <div className="h-entry">
+                  <div   id="boxed" ></div>
+                                      <div   id="boxed" ></div>
+          
+         
+         
 
-              <div className="col-md-6 col-lg-6 mb-4 mb-lg-4">
-                <div className="h-entry">
-                  <div   id="boxed" ></div>
-                  <h2 className="font-size-regular"><a href="#" id="kikim">fddfsfsf</a></h2>
-                  <div id="kikim" className="meta mb-4">Theresa Winston <span className="mx-2" id="kikim"></span> Jan 18, 2019<span className="mx-2"></span> <a href="#" id="kikim">News</a></div>
-                  <p id="kikim">fdfdfdfgdfggdfggfgggfghhjj
-                  hghgjhjghjgj
-                  gfhghg</p>
                 </div> 
-              </div>
- <div className="col-md-6 col-lg-6 mb-4 mb-lg-4">
-                <div className="h-entry">
-                  <div   id="boxed" ></div>
-                  <h2 className="font-size-regular"><a href="#" id="kikim">fddfsfsf</a></h2>
-                  <div id="kikim" className="meta mb-4">Theresa Winston <span className="mx-2" id="kikim"></span> Jan 18, 2019<span className="mx-2"></span> <a href="#" id="kikim">News</a></div>
-                  <p id="kikim">fdfdfdfgdfggdfggfgggfghhjj
-                  hghgjhjghjgj</p>
-                </div> 
-              </div>
-               <div className="col-md-6 col-lg-6 mb-4 mb-lg-4">
-                <div className="h-entry">
-                  <div   id="boxed" ></div>
-                  <h2 className="font-size-regular"><a href="#" id="kikim">fddfsfsf</a></h2>
-                  <div id="kikim" className="meta mb-4">Theresa Winston <span className="mx-2" id="kikim"></span> Jan 18, 2019<span className="mx-2"></span> <a href="#" id="kikim">News</a></div>
-                  <p id="kikim">fdfdfdfgdfggdfggfgggfghhjj
-                  hghgjhjghjgj</p>
-                </div> 
-              </div>
-               <div className="col-md-6 col-lg-6 mb-4 mb-lg-4">
-                <div className="h-entry">
-                  <div   id="boxed" ></div>
-                  <h2 className="font-size-regular"><a href="#" id="kikim">fddfsfsf</a></h2>
-                  <div id="kikim" className="meta mb-4">Theresa Winston <span className="mx-2" id="kikim"></span> Jan 18, 2019<span className="mx-2"></span> <a href="#" id="kikim">News</a></div>
-                  <p id="kikim">fdfdfdfgdfggdfggfgggfghhjj
-                  hghgjhjghjgj</p>
-                </div> 
-              </div>
-               <div className="col-md-6 col-lg-6 mb-4 mb-lg-4">
-                <div className="h-entry">
-                  <div   id="boxed" ></div>
-                  <h2 className="font-size-regular"><a href="#" id="kikim">fddfsfsf</a></h2>
-                  <div id="kikim" className="meta mb-4">Theresa Winston <span className="mx-2" id="kikim"></span> Jan 18, 2019<span className="mx-2"></span> <a href="#" id="kikim">News</a></div>
-                  <p id="kikim">fdfdfdfgdfggdfggfgggfghhjj
-                  hghgjhjghjgj</p>
-                </div> 
-              </div>
-               <div className="col-md-6 col-lg-6 mb-4 mb-lg-4">
-                <div className="h-entry">
-                  <div   id="boxed" ></div>
-                  <h2 className="font-size-regular"><a href="#" id="kikim">fddfsfsf</a></h2>
-                  <div id="kikim" className="meta mb-4">Theresa Winston <span className="mx-2" id="kikim"></span> Jan 18, 2019<span className="mx-2"></span> <a href="#" id="kikim">News</a></div>
-                  <p id="kikim">fdfdfdfgdfggdfggfgggfghhjj
-                  hghgjhjghjgj</p>
-                </div> 
-              </div>
-</div>
 
-</div>
+              </div>
+              
+ 
+         
+  
 
+
+
+
+
+
+
+
+
+
+ 
         </div>  
+
+
+
+
+
+
+
+
+
+
+
       </div>
    
      
@@ -381,4 +347,4 @@ class artikel extends Component {
     }
 }
 
-export default translate(artikel);
+export default translate(artikelkonten);
