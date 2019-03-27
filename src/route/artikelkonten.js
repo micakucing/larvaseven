@@ -4,12 +4,9 @@ import $ from "jquery";
 import Testi from "./testi";
 import Foot from "./foot";
 import Nav from "./nav";
-import Pagination from 'react-bootstrap/Pagination'
-import JwPagination from 'jw-react-pagination';
 import { createHashHistory } from 'history'
 import Icon, { FontAwesome, Feather } from 'react-web-vector-icons';
 import PropTypes from 'prop-types';
-import ContentLoader, { Facebook } from "react-content-loader";
 import { Helmet } from "react-helmet";
 import TextTruncate from 'react-text-truncate';
 import { default as minifyCssString } from 'minify-css-string'
@@ -20,8 +17,6 @@ import { Link } from 'react-router-dom';
 const cssString = `
 
  @font-face{font-family:AntDesign;font-style:normal;font-weight:400;src:url(fonts/AntDesign.ttf) format('truetype')}@font-face{font-family:Entypo;font-style:normal;font-weight:400;src:url(fonts/Entypo.ttf) format('truetype')}@font-face{font-family:EvilIcons;font-style:normal;font-weight:400;src:url(fonts/EvilIcons.ttf) format('truetype')}@font-face{font-family:Feather;font-style:normal;font-weight:400;src:url(fonts/Feather.ttf) format('truetype')}@font-face{font-family:FontAwesome;font-style:normal;font-weight:400;src:url(fonts/FontAwesome.ttf) format('truetype')}@font-face{font-family:FontAwesome5;font-style:normal;font-weight:400;src:url(fonts/FontAwesome5.ttf) format('truetype')}@font-face{font-family:FontAwesome5Brands;font-style:normal;font-weight:400;src:url(fonts/FontAwesome5_Brands.ttf) format('truetype')}@font-face{font-family:Foundation;font-style:normal;font-weight:400;src:url(fonts/Foundation.ttf) format('truetype')}@font-face{font-family:Ionicons;font-style:normal;font-weight:400;src:url(fonts/Ionicons.ttf) format('truetype')}@font-face{font-family:MaterialCommunityIcons;font-style:normal;font-weight:400;src:url(fonts/MaterialCommunityIcons.ttf) format('truetype')}@font-face{font-family:MaterialIcons;font-style:normal;font-weight:400;src:url(fonts/MaterialIcons.ttf) format('truetype')}@font-face{font-family:Octicons;font-style:normal;font-weight:400;src:url(fonts/Octicons.ttf) format('truetype')}@font-face{font-family:SimpleLineIcons;font-style:normal;font-weight:400;src:url(fonts/SimpleLineIcons.ttf) format('truetype')}@font-face{font-family:Zocial;font-style:normal;font-weight:400;src:url(fonts/Zocial.ttf) format('truetype')}
-
-
 .site-section{
     border-bottom: 1px solid #dee2e6 !important;
 }
@@ -31,6 +26,10 @@ const cssString = `
      #kkp{
       max-width: 404px;
     min-width: 145px;
+ }
+ .col-md-8 > p a{
+  color: #6bb1ea !important;
+  font-weight: bold;
  }
   .media-1{
     height: 250px;
