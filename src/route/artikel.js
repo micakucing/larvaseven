@@ -281,7 +281,7 @@ class artikel extends Component {
                 <div className="h-entry">
     
                    <div id="ola"  className="media-8" style={divStyle(item.image_url)}></div>
-                  <h2 className="font-size-regular"><a href={'http://localhost:3000/#/articles-data/' + item.id}>{item.artikel_title}</a></h2>
+                  <h2 className="font-size-regular"><a href={'https://micakucing.github.io/larvaseven/#/articles-data/' + item.id}>{item.artikel_title}</a></h2>
                   <div className="meta mb-4">{item.tanggal}<span className="mx-2"></span></div>
                   <p><TextTruncate
     line={3}
