@@ -41,7 +41,7 @@ const cssString = `
     display: block;
     height: 150px;
     overflow: hidden;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
   .ttls{
         font-size: 30px;
