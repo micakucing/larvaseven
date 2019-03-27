@@ -16,7 +16,9 @@ import { default as minifyCssString } from 'minify-css-string'
 const cssString = `
 
  @font-face{font-family:AntDesign;font-style:normal;font-weight:400;src:url(fonts/AntDesign.ttf) format('truetype')}@font-face{font-family:Entypo;font-style:normal;font-weight:400;src:url(fonts/Entypo.ttf) format('truetype')}@font-face{font-family:EvilIcons;font-style:normal;font-weight:400;src:url(fonts/EvilIcons.ttf) format('truetype')}@font-face{font-family:Feather;font-style:normal;font-weight:400;src:url(fonts/Feather.ttf) format('truetype')}@font-face{font-family:FontAwesome;font-style:normal;font-weight:400;src:url(fonts/FontAwesome.ttf) format('truetype')}@font-face{font-family:FontAwesome5;font-style:normal;font-weight:400;src:url(fonts/FontAwesome5.ttf) format('truetype')}@font-face{font-family:FontAwesome5Brands;font-style:normal;font-weight:400;src:url(fonts/FontAwesome5_Brands.ttf) format('truetype')}@font-face{font-family:Foundation;font-style:normal;font-weight:400;src:url(fonts/Foundation.ttf) format('truetype')}@font-face{font-family:Ionicons;font-style:normal;font-weight:400;src:url(fonts/Ionicons.ttf) format('truetype')}@font-face{font-family:MaterialCommunityIcons;font-style:normal;font-weight:400;src:url(fonts/MaterialCommunityIcons.ttf) format('truetype')}@font-face{font-family:MaterialIcons;font-style:normal;font-weight:400;src:url(fonts/MaterialIcons.ttf) format('truetype')}@font-face{font-family:Octicons;font-style:normal;font-weight:400;src:url(fonts/Octicons.ttf) format('truetype')}@font-face{font-family:SimpleLineIcons;font-style:normal;font-weight:400;src:url(fonts/SimpleLineIcons.ttf) format('truetype')}@font-face{font-family:Zocial;font-style:normal;font-weight:400;src:url(fonts/Zocial.ttf) format('truetype')}
-
+.container{
+  margin-bottom: 30px;
+}
 
 .site-section{
     border-bottom: 1px solid #dee2e6 !important;
@@ -27,6 +29,7 @@ const cssString = `
      #kkp{
       max-width: 404px;
     min-width: 145px;
+    margin-bottom: 20px;
  }
   .media-1{
     height: 250px;
@@ -270,15 +273,12 @@ class artikel extends Component {
     <section className="site-section">   
      {
        this.state.hits && this.state.hits.length > 0 ? (
-      <div className="container">
+    <div className="container">
         <div className="row">
-           <div className="col-md-8">
-            <div className="row mb-5">
           {this.state.pageOfItems.map(item =>
            
-              <div className="col-md-6 col-lg-6 mb-4 mb-lg-4">
-                <div className="h-entry">
-    
+              <div id="kkp" className="col-md-6 col-lg-4">
+     
                    <div id="ola"  className="media-8" style={divStyle(item.image_url)}></div>
                   <h2 className="font-size-regular"><a href={'https://micakucing.github.io/larvaseven/#/articles-data/' + item.id}>{item.artikel_title}</a></h2>
                   <div className="meta mb-4">{item.tanggal}<span className="mx-2"></span></div>
@@ -288,15 +288,10 @@ class artikel extends Component {
     text={item.clean}
    
 /></p>
-                </div> 
+           
               </div>
                 )}
-
-
-
-                  
-          </div>
-          </div>
+ 
         </div> <JwPagination  pageSize={6} items={this.state.exampleItems} onChangePage={this.onChangePage}  labels={customLabels}  />
       </div>
     ):(
