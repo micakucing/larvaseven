@@ -372,7 +372,7 @@ position: relative; top: 3px;
             works = <a href="#/work" id="ppl"><li>&nbsp;&nbsp;Works &nbsp;&nbsp;</li> </a>
         }
 
-        if (c == "articles") {
+        if (c == "articles" || o == "articles-data") {
             ati = <a className="activex"><li>&nbsp;&nbsp;Articles &nbsp;&nbsp;</li></a>
         } else {
             ati = <a href="#/articles" id="ppl" ><li>&nbsp;&nbsp;Articles &nbsp;&nbsp;</li></a>
