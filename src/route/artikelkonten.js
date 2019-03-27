@@ -34,6 +34,13 @@ const cssString = `
     height: 250px;
     border-radius: 3px;
   }
+  .media-8 {
+    position: relative;
+    display: block;
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
   .ttls{
         font-size: 30px;
     font-weight: bold;
@@ -162,11 +169,41 @@ const cssString = `
 .col-lg-6 {
     margin-bottom: 30px;
 }
+#kkio{
+     width: 100%;
+     padding: 40px;
+}
+#koriu{
+      font-size: 18px;
+    font-weight: bold;
+    color: #B2A89F;
+    font-family: Mor;
+    padding-bottom: 20px;
+}
+#kolsa{
+  padding: 40px;
+  padding-top: 0;
+}
    .site-blocks-cover.overlay:before{background-color:  #26327c}
    @media (max-width: 992px) {
+    .col-6{
+      flex: 0 0 100%;
+    max-width: 100%;
+    }
+      .media-8 {
+     
+    height: 250px;
+     
+}
  .text-center h1{
     font-size: 22px;
     line-height: 1.3;
+}
+#kolsa{
+  padding: 0;
+  padding-top: 30px;
+  margin-top: 20px;
+      border-top: 1px solid #B2A89F;
 }
  .ttls{
         font-size: 20px;
@@ -228,7 +265,8 @@ class artikelkonten extends Component {
             exampleItems: [],
             initial: '1',
             pageOfItems: [],
-            hits: []
+            hits: [],
+            hitss: []
         };
     }
     componentDidMount() {
@@ -240,8 +278,29 @@ class artikelkonten extends Component {
             })
             .then((data) => {
                 this.setState({ hits: data,  isLoading: false })
+               
+
+fetch('https://larva7studio.herokuapp.com/catart/'+data[0].cat+'/'+this.props.match.params.id)
+            .then(response => {
+
+
+           return response.json();
+            })
+            .then((datas) => {
+
+this.setState({ hitss: datas})
+console.log(datas)
+
+            })
+
+
+
+ 
+
  
             });
+
+
 
     }
     onChangePage(pageOfItems) {
@@ -250,7 +309,7 @@ class artikelkonten extends Component {
 
 
     render() {
-        const { hits, isLoading, text, exampleItems, pageOfItems } = this.state;
+        const { hits, hitss, isLoading, text, exampleItems, pageOfItems } = this.state;
         const divStyleload = ({
              backgroundColor: '#ebebeb'
 
@@ -272,10 +331,7 @@ class artikelkonten extends Component {
   <style dangerouslySetInnerHTML={{__html: minifyCssString(cssString) }} /> 
 
   <Nav />
-     <Helmet>
-                <meta charSet="utf-8" />
-                <title> Our articles</title>
-             </Helmet>
+    
      <div className="site-blocks-cover inner-page-cover overlay" data-aos="fade" data-stellar-background-ratio="0.5">
       <div className="container">
         <div className="row align-items-center justify-content-center text-center">
@@ -295,9 +351,38 @@ class artikelkonten extends Component {
      {
        this.state.hits && this.state.hits.length > 0 ? (
       <div className="container">
+       <Helmet>
+                <meta charSet="utf-8" />
+                <title>{hits[0].artikel_title}</title>
+             </Helmet>
      <div class="row no-gutters">
   <div class="col-12 col-sm-6 col-md-8"><div className="ttls">{hits[0].artikel_title}<div className="xsa">{hits[0].tanggal}</div></div>{renderHTML(hits[0].artikel_konten)}</div>
-  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+  <div id="kolsa" class="col-6 col-md-4">
+
+  <div id="koriu">RELEATED CONTENT</div>
+
+
+
+{this.state.hitss.map(item =>
+
+<div  className="cll mb-4 mb-lg-4">
+                <div className="h-entry">
+    
+                   <div id="ola"  className="media-8" style={divStyle(item.image_url)}></div>
+                  <h2 className="font-size-regular"><a href={'https://micakucing.github.io/larvaseven/#/articles-data/' + item.id}>{item.artikel_title}</a></h2>
+                  <div className="meta mb-4">{item.tanggal}<span className="mx-2"></span></div>
+                  <p><TextTruncate
+    line={3}
+    truncateText="…"
+    text={item.clean}
+   
+/></p>
+                </div> 
+              </div>
+
+   )}
+
+  </div>
 </div>
       </div>
     ):(
