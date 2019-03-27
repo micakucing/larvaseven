@@ -43,6 +43,12 @@ const cssString = `
     font-family: Mor;
     border-top: 1px solid #B2A89F;
   }
+  .xsa{
+        font-size: 15px;
+    color: #B2A89F;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
   #pol{
     margin: 70px;
   }
@@ -290,7 +296,7 @@ class artikelkonten extends Component {
        this.state.hits && this.state.hits.length > 0 ? (
       <div className="container">
      <div class="row no-gutters">
-  <div class="col-12 col-sm-6 col-md-8"><div className="ttls">{hits[0].artikel_title}</div>{renderHTML(hits[0].artikel_konten)}</div>
+  <div class="col-12 col-sm-6 col-md-8"><div className="ttls">{hits[0].artikel_title}<div className="xsa">{hits[0].tanggal}</div></div>{renderHTML(hits[0].artikel_konten)}</div>
   <div class="col-6 col-md-4">.col-6 .col-md-4</div>
 </div>
       </div>
