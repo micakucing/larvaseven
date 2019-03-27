@@ -187,6 +187,7 @@ const cssString = `
   padding: 60px;
   padding-top: 0;
   padding-left: 80px;
+      padding-right: 0;
 }
    .site-blocks-cover.overlay:before{background-color:  #26327c}
    @media (max-width: 992px) {
