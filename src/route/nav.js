@@ -414,7 +414,7 @@ position: relative; top: 3px;
     <div className="container">
         <div className="row align-items-center">
             <div className="col-11 col-xl-2">
-                <h1 className="mb-0 site-logo"><a href="/larvaseven" id="logox" className="text-black h2 mb-0"></a></h1>
+                <h1 className="mb-0 site-logo"><a href="/" id="logox" className="text-black h2 mb-0"></a></h1>
             </div>
             <div className="col-12 col-md-10 d-none d-xl-block">
                 <nav className="site-navigation position-relative text-right" role="navigation">
