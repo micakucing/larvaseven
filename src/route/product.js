@@ -247,6 +247,11 @@ p .hg {
   marginBottom: 20px;
   marginTop: 30px;
 }
+.col-md-4 {
+    -webkit-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
     #lpsa{
  
   text-align: right;
