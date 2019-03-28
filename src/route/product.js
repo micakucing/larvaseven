@@ -8,6 +8,7 @@
   import { PhotoSwipeGallery } from 'react-photoswipe';
 import {Helmet} from "react-helmet";
 import renderHTML from 'react-render-html';
+import { default as minifyCssString } from 'minify-css-string'
 
   class product extends Component {
       constructor(props) {
@@ -42,58 +43,9 @@ this.setState({ isLoading: true })
       }
 
       render() {
- 
-          /*const items = [{
-                  src: 'images/ty.jpg',
-                  thumbnail: 'images/ty.jpg',
-                  w: 1200,
-                  h: 900,
-                  title: 'Image 1'
-              },
-              {
-                  src: 'images/l.jpg',
-                  thumbnail: 'images/l.jpg',
-                  w: 1400,
-                  h: 2338,
-                  title: 'Image 2'
-              },
-              {
-                  src: 'https://colorlib.com/preview/theme/chimper/images/img_3.jpg',
-                  thumbnail: 'https://colorlib.com/preview/theme/chimper/images/img_3.jpg',
-                  w: 1200,
-                  h: 900,
-                  title: 'Image 3'
-              }
-          ];*/
+ const cssString = `
 
-  const { text, isLoading } = this.state;
- 
-           const items = this.state.ddt
-          const options = {
-              //http://photoswi
-              bgOpacity: 1,
-              showHideOpacity: true,
-              closeOnScroll: false,
-              preloaderEl: true,
-              showAnimationDuration: 0,
-              hideAnimationDuration: 0
-          };
-
-          const getThumbnailContent = (item) => {
-              return (
-                  <div id="kkt">
-       <img src={item.thumbnail} isOpen="true"  itemprop="contentUrl"  className="img-fluid mb-4"/> 
-  
-  </div>
-              );
-          }
-          return (
-
-
-              <div>
-
-<style dangerouslySetInnerHTML={{__html: `
-   .site-blocks-cover.inner-page-cover, .site-blocks-cover.inner-page-cover>.container>.row {
+.site-blocks-cover.inner-page-cover, .site-blocks-cover.inner-page-cover>.container>.row {
       min-height: 280px;
     }
 .pswp--animated-in .pswp__bg, .pswp--animated-in .pswp__zoom-wrap {
@@ -104,10 +56,14 @@ this.setState({ isLoading: true })
      padding-left: 7.1%;
 }
 
-
+.col-md-4 {
+    -webkit-flex: 0 0 33.333333%;
+    flex: 0 0 60%;
+    max-width: 60%;
+}
 
 #pplx{
-    padding-right: 7.1%;
+    padding-right:0%;
 }
 #dior{
       font-size: 50px;
@@ -267,6 +223,11 @@ p .hg {
     display: block;
 
  }
+ .col-md-3 {
+    -webkit-flex: 0 0 35%;
+    flex: 0 0 35%;
+    max-width: 35%;
+}
    @media (min-width: 768px){
 
 .col-md-7 img{
@@ -334,7 +295,61 @@ p .hg {
 }
 
 }
-`}} /> 
+
+
+
+ `
+          /*const items = [{
+                  src: 'images/ty.jpg',
+                  thumbnail: 'images/ty.jpg',
+                  w: 1200,
+                  h: 900,
+                  title: 'Image 1'
+              },
+              {
+                  src: 'images/l.jpg',
+                  thumbnail: 'images/l.jpg',
+                  w: 1400,
+                  h: 2338,
+                  title: 'Image 2'
+              },
+              {
+                  src: 'https://colorlib.com/preview/theme/chimper/images/img_3.jpg',
+                  thumbnail: 'https://colorlib.com/preview/theme/chimper/images/img_3.jpg',
+                  w: 1200,
+                  h: 900,
+                  title: 'Image 3'
+              }
+          ];*/
+
+  const { text, isLoading } = this.state;
+ 
+           const items = this.state.ddt
+          const options = {
+              //http://photoswi
+              bgOpacity: 1,
+              showHideOpacity: true,
+              closeOnScroll: false,
+              preloaderEl: true,
+              showAnimationDuration: 0,
+              hideAnimationDuration: 0
+          };
+
+          const getThumbnailContent = (item) => {
+              return (
+                  <div id="kkt">
+       <img src={item.thumbnail} isOpen="true"  itemprop="contentUrl"  className="img-fluid mb-4"/> 
+  
+  </div>
+              );
+          }
+          return (
+
+
+              <div>
+  <style dangerouslySetInnerHTML={{__html: minifyCssString(cssString) }} /> 
+
+ 
 
             <Nav />
 
@@ -376,7 +391,7 @@ p .hg {
             <h3 className="mb-3">{text.title}</h3>
             <p>{renderHTML(text.deskrip)}</p>
           </div>
-          <div id="pplx" className="col-md-4">
+          <div id="pplx" className="col-md-3">
              <p id="lpsa">Client: {text.client}</p>
               <p id="lpsa">Year: {text.tahun}</p>
              <p id="lpsa">{text.kategori_name}</p>
