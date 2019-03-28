@@ -415,8 +415,8 @@ class artikelkonten extends Component {
                 <meta charSet="utf-8" />
                 <title>{hits[0].artikel_title}</title>
              </Helmet>
-     <div class="row no-gutters">
-  <div class="col-12 col-sm-6 col-md-8"><div className="ttls">{hits[0].artikel_title}<div className="xsa">{hits[0].tanggal}</div></div>{renderHTML(hits[0].artikel_konten)}</div>
+     <div className="row no-gutters">
+  <div className="col-12 col-sm-6 col-md-8"><div className="ttls">{hits[0].artikel_title}<div className="xsa">{hits[0].tanggal}</div></div>{renderHTML(hits[0].artikel_konten)}</div>
   <div id="kolsa" class="col-6 col-md-4">
 
   <div id="koriu">RELEATED CONTENT</div>

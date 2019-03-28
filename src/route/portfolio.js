@@ -238,11 +238,11 @@ class portfolio extends Component {
         <div className="row">
           {this.state.pageOfItems.map(item =>
             <div id="kkp" className="col-md-6 col-lg-4"  >
-            <div id="ola" data-uri={item.id} className="media-1" style={divStyle(item.thumnail)}>
+            <a  className="lnk" href={'#/workproduct/' + item.id}  ><div  data-uri={item.id} className="media-1" style={divStyle(item.thumnail)}>
                <div className="media-1-content">
                 <h2>{renderHTML(item.title)}</h2>
                 <span className="category">{item.kategori_name}</span>
-              </div>
+              </div></a>
             </div>
           </div>
                 )}

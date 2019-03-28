@@ -64,9 +64,9 @@ this.setState({ isLoading: true })
 
 #pplx{
     padding-right:0%;
-      -webkit-flex: 0 0 35%;
-    flex: 0 0 35%;
-    max-width: 35%;
+      -webkit-flex: 0 0 33%;
+    flex: 0 0 33%;
+    max-width: 33%;
 }
 #pplxz{
      padding-left: 7.1%;
