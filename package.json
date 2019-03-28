@@ -2,7 +2,7 @@
   "name": "larvaseven",
   "version": "0.1.0",
   "private": true,
-  "homepage": "lrvsvn.com",
+  "homepage": "https://lrvsvn.com",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gh-pages": "^2.0.1",

@@ -49,7 +49,7 @@ class navigasi extends Component {
         $('body').removeClass('offcanvas-menu')
 
 
-        history.push('/larvaseven/#/contact')
+        history.push('#/contact')
 
     }
     render() {
@@ -359,7 +359,7 @@ position: relative; top: 3px;
         if (c == "") {
             homes = <a className="activex"><li>&nbsp;&nbsp;Home &nbsp;&nbsp;</li> </a>
         } else {
-            homes = <a href="/larvaseven" id="ppl"><li>&nbsp;&nbsp;Home &nbsp;&nbsp;</li></a>
+            homes = <a href="/" id="ppl"><li>&nbsp;&nbsp;Home &nbsp;&nbsp;</li></a>
         }
         if (c == "about") {
             abouts = <a className="activex"><li>&nbsp;&nbsp;About &nbsp;&nbsp;</li> </a>
