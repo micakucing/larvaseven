@@ -109,7 +109,7 @@ fetch('https://larva7studio.herokuapp.com/randpic')
                  </div>
 </h1>
                 <p className="lead mb-5">We Make Beautiful Things</p>
-                <div><a href="/about" className="btn btn-primary btn-md">About Us</a></div>
+                <div><a href="#/about" className="btn btn-primary btn-md">About Us</a></div>
               </div>
             </div>
           </div>
