@@ -234,11 +234,8 @@ p .hg {
 
   width: 100%;
 }
-.col-md-4 {
-    -webkit-flex: 0 0 33.333333%;
-    flex: 0 0 50%;
-    max-width: 50%;
-}
+
+
 }
    @media (max-width: 992px) {
     .llx{
