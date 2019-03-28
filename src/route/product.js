@@ -65,6 +65,9 @@ this.setState({ isLoading: true })
 #pplx{
     padding-right:0%;
 }
+#pplxz{
+     padding-left: 7.1%;
+}
 #dior{
       font-size: 50px;
     background-color: #ffffff75;
@@ -414,7 +417,7 @@ p .hg {
             <h3 id="kokom" className="mb-3"></h3>
             <p id="kikim"></p>
           </div>
-          <div id="pplx" className="col-md-4">
+          <div id="pplxz" className="col-md-3">
              <p id="lpsa" className="kokom"><span className="hg">fgfghhgfhgf</span></p>
               <p id="lpsa" className="kokom"><span className="hg">fgfghhgffdfffgfggfghhghhhgf</span></p>
              <p id="lpsa" className="kokom"><span className="hg">fgfghhgfhhjhjgf</span></p>
