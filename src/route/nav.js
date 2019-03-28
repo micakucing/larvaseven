@@ -353,7 +353,7 @@ position: relative; top: 3px;
         let c, homes, abouts, works, shops, kontak, ati;
         c = window.location.hash.substr(2)
         var t = window.location.href
-        var o = t.split("/")[5]
+        var o = t.split("/")[4]
 
 
         if (c == "") {
