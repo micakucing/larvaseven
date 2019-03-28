@@ -84,7 +84,7 @@ fetch('https://larva7studio.herokuapp.com/randpic')
   <Nav />
   <Helmet>
                 <meta charSet="utf-8" />
-                <title>Welcome To LARVA7STUDIO</title>
+                <title>Welcome To Larva7 Studio</title>
                 
              </Helmet>
     <div className="site-blocks-cover overlay" style={divStyle(pc.image_uri)} data-aos="fade" data-stellar-background-ratio="0.5">
