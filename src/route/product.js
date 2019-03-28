@@ -64,6 +64,9 @@ this.setState({ isLoading: true })
 
 #pplx{
     padding-right:0%;
+      -webkit-flex: 0 0 35%;
+    flex: 0 0 35%;
+    max-width: 35%;
 }
 #pplxz{
      padding-left: 7.1%;
@@ -226,11 +229,7 @@ p .hg {
     display: block;
 
  }
- .col-md-3 {
-    -webkit-flex: 0 0 35%;
-    flex: 0 0 35%;
-    max-width: 35%;
-}
+ 
    @media (min-width: 768px){
 
 .col-md-7 img{

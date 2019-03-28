@@ -35,13 +35,13 @@ class notfound extends Component {
     border-bottom: 1px solid #dee2e6 !important;
     padding-bottom: 20px;
 }
-h1 {
+.wrapper h1 {
   margin: 0;
   font-size: 6em;
   font-weight: 100;
 }
 
-p {
+.wrapper p {
   width: 95%;
   font-size: 1.5em;
   line-height: 1.4;
@@ -52,7 +52,7 @@ p {
   display: inline-block;
 }
 
-span {
+.wrapper span {
   display: block;
   text-transform: uppercase;
   color: #B9DDFB;
@@ -167,7 +167,7 @@ span {
           <div className="col-md-12" data-aos="fade-up" data-aos-delay="400">
             <div className="row justify-content-center mb-4">
               <div className="col-md-8 text-center">
-               <h1>A Creative Studio Obsessed with <strong>Designing Better Brands.</strong></h1>
+               <h1 >A Creative Studio Obsessed with <strong>Designing Better Brands.</strong></h1>
               </div>
             </div>
           </div>
