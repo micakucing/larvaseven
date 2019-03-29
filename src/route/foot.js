@@ -89,7 +89,7 @@ color: #fff!important;
           <div className="col-md-12">
             <div className="border-top pt-5">
             <p> 
-            Copyright 2019 All rights reserved | This template is made with <i className="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a> 
+            Copyright 2019 All rights reserved | Larva7 Studio 
             </p>
             </div>
           </div>
