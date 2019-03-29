@@ -51,6 +51,7 @@ class portfolio extends Component {
         };
     }
     componentDidMount() {
+            $(window).scrollTop(0)
 
         //this.setState({ hits: dt })
         fetch('https://larva7studio.herokuapp.com/portls')

@@ -22,6 +22,8 @@ import { default as minifyCssString } from 'minify-css-string'
   }
       
       componentDidMount() {
+                    $(window).scrollTop(0)
+
 this.setState({ isLoading: true })
  fetch('https://larva7studio.herokuapp.com/d/'+this.props.match.params.id)
     .then(response => {

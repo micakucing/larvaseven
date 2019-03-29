@@ -64,6 +64,8 @@ const cssString = `
 class about extends Component {
 
     componentDidMount() {
+                  $(window).scrollTop(0)
+
     }
     render() {
          

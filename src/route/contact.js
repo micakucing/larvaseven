@@ -17,6 +17,8 @@ constructor(props) {
     };
   }
     componentDidMount() {
+                  $(window).scrollTop(0)
+
     fetch('https://larva7studio.herokuapp.com/infor')
     .then(response => {
       return response.json();
