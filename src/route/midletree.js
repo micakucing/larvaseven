@@ -140,7 +140,7 @@ $(document).on("click", "#ola", function(e) {
           </div>
    )}
           <div className="col-12 text-center mt-5">
-            <a href="#/portfolio" className="btn btn-primary btn-md">Show All Works</a>
+            <a href="#/work" className="btn btn-primary btn-md">Show All Works</a>
           </div>
 
           

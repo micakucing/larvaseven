@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Switch, HashRouter, DelayLink, Link, BrowserRouter as Router, Route, } from 'react-router-dom';
+import { Switch, HashRouter, DelayLink, Link, BrowserRouter as Router, Route } from 'react-router-dom';
+
 import { setDefaultTranslations, setDefaultLanguage, translate, setLanguage } from './translations/trs';
 import 'bootstrap/dist/css/bootstrap.css';
 import Headnav from "./route/home";
@@ -7,7 +8,6 @@ import About from "./route/about";
 import Port from "./route/portfolio";
 import Art from "./route/artikel";
 import Artk from "./route/artikelkonten";
-
 import Kontak from "./route/contact";
 import $ from "jquery";
 import DeviceOrientation from 'react-device-orientation';

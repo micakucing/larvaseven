@@ -78,6 +78,7 @@ class notfound extends Component {
  
 
  @media (min-width: 992px){
+
 .col-lg-4 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 50%;
@@ -119,6 +120,19 @@ class notfound extends Component {
  .text-center h1{
     font-size: 22px;
     line-height: 1.3;
+}
+  .wrapper {
+  width: 100%; 
+}
+.wrapper h1 {
+    margin: 0;
+    font-size: 4em;
+    font-weight: 100;
+}
+.wrapper p {
+    width: 95%;
+    font-size: 1em;
+    line-height: 1.4;
 }
 }
 
