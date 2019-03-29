@@ -89,7 +89,7 @@ color: #fff!important;
           <div className="col-md-12">
             <div className="border-top pt-5">
             <p> 
-            Copyright 2019 All rights reserved | Larva7 Studio 
+            Copyright 2019 | Larva7 Studio 
             </p>
             </div>
           </div>

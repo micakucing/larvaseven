@@ -196,6 +196,10 @@ const cssString = `
     flex: 0 0 100%;
     max-width: 100%;
 }
+.xsa {
+    font-size: 12px;
+    
+}
     .col-6{
       flex: 0 0 100%;
     max-width: 100%;
@@ -216,7 +220,7 @@ const cssString = `
       border-top: 1px solid #B2A89F;
 }
  .ttls{
-        font-size: 20px;
+        font-size: 30px;
     
   }
 .col-lg-6 {
