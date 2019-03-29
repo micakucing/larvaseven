@@ -322,36 +322,7 @@ class artikelkonten extends Component {
     {
 
 
-        //this.setState({ hits: dt })
-        fetch('https://larva7studio.herokuapp.com/art/' + this.props.match.params.id)
-            .then(response => {
-                return response.json();
-            })
-            .then((data) => {
-                this.setState({ hits: data, isLoading: false })
-
-
-                fetch('https://larva7studio.herokuapp.com/catart/' + data[0].cat + '/' + this.props.match.params.id)
-                    .then(response => {
-
-
-                        return response.json();
-                    })
-                    .then((datas) => {
-
-                        this.setState({ hitss: datas })
-                        console.log(datas)
-
-                    })
-
-
-
-
-
-
-            });
-
-
+      
 
 
 
