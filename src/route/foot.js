@@ -1,16 +1,13 @@
  import React, { Component } from "react";
  import { translate } from '../translations/trs';
  import $ from "jquery";
+ import { default as minifyCssString } from 'minify-css-string'
+
  class foot extends Component {
 
      componentDidMount() {}
      render() {
-
-
-             return (
-                     <div>
-  <style dangerouslySetInnerHTML={{__html: `
- svg .iconbawah{
+const cssString = `svg .iconbawah{
     fill: #999999;
    }
 #bbh{
@@ -41,7 +38,13 @@ color: #fff!important;
   margin-top: 30px;
 }
 }
-`}} /> 
+`
+
+             return (
+                     <div>
+ 
+  <style dangerouslySetInnerHTML={{__html: minifyCssString(cssString) }} /> 
+
 <footer className="site-footer">
       <div className="container">
         <div className="row">

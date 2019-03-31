@@ -1,5 +1,3 @@
-
-
 import React, { Component } from "react";
 import { translate } from '../translations/trs';
 import $ from "jquery";
@@ -10,7 +8,7 @@ import Midtree from "./midletree";
 import Testi from "./testi";
 import Foot from "./foot";
 import Nav from "./nav";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 
 import { default as minifyCssString } from 'minify-css-string'
 const cssString = `
@@ -37,38 +35,35 @@ const cssString = `
 `
 
 class home extends Component {
-constructor(props) {
-    super(props);
+    constructor(props) {
+        super(props);
 
-    this.state = {
-      pc: [],
-      isLoading: false,
-    };
-  }
+        this.state = {
+            pc: [],
+            isLoading: false,
+        };
+    }
     componentDidMount() {
 
 
-fetch('https://larva7studio.herokuapp.com/randpic')
-    .then(response => {
-      return response.json();
-    })
-    .then((data) => {
-      this.setState({ pc: data[0], isLoading: false })
-            
+        fetch('https://larva7studio.herokuapp.com/randpic')
+            .then(response => {
+                return response.json();
+            })
+            .then((data) => {
+                this.setState({ pc: data[0], isLoading: false })
 
-      });
 
- 
+            });
+
+
     }
     render() {
 
 
 
-          const { pc, isLoading } = this.state;
-
-
-
- const divStyle = (src) => ({
+        const { pc, isLoading } = this.state;
+        const divStyle = (src) => ({
             backgroundImage: 'url(' + src + ')',
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
@@ -76,7 +71,7 @@ fetch('https://larva7studio.herokuapp.com/randpic')
         })
 
         return (
-<div className="tengahx">
+            <div className="tengahx">
   <style dangerouslySetInnerHTML={{__html: minifyCssString(cssString) }} /> 
 
 
