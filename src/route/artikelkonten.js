@@ -40,7 +40,7 @@ const cssString = `
     display: block;
     height: 150px;
     overflow: hidden;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
   .ttls{
         font-size: 30px;
@@ -205,7 +205,8 @@ const cssString = `
     max-width: 100%;
     }
       .media-8 {
-     
+         margin-bottom: 30px;
+
     height: 250px;
      
 }
