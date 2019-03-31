@@ -186,7 +186,7 @@ const cssString = `
 #kolsa{
   padding: 60px;
   padding-top: 0;
-  padding-left: 80px;
+  padding-left: 100px;
       padding-right: 0;
 }
    .site-blocks-cover.overlay:before{background-color:  #26327c}
