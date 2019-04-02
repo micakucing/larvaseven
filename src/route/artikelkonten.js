@@ -13,6 +13,13 @@ import { default as minifyCssString } from 'minify-css-string'
 import renderHTML from 'react-render-html';
 import { Link } from 'react-router-dom';
 
+import { FaTwitter } from 'react-icons/fa';
+import { FaFacebook } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa';
+import { FaCalendar } from 'react-icons/fa'
+
+import { ShareButton } from 'react-custom-share';
+import { css } from 'emotion';
 
 const cssString = `
 
@@ -183,6 +190,18 @@ const cssString = `
     font-family: Mor;
     padding-bottom: 20px;
 }
+.wid{
+      text-align: right;
+}
+.rcs-button{
+border: none;
+background: none;
+}
+.rcs-button svg{
+  color: #B2A89F;
+  width: 20px;
+  height: 20px;
+}
 #kolsa{
   padding: 60px;
   padding-top: 0;
@@ -254,21 +273,7 @@ const propTypes = {
 
     initialPage: PropTypes.number
 }
-const customLabels = {
-
-    previous: <Icon
-  name='ios-arrow-round-back'
-  font='Ionicons'
-   size={50}
-  // style={{}}
-/>,
-    next: <Icon
-  name='ios-arrow-round-forward'
-  font='Ionicons'
-   size={50}
-  // style={{}}
-/>
-}
+ 
 
 
 class artikelkonten extends Component {
@@ -362,6 +367,24 @@ class artikelkonten extends Component {
             //history.push('/workproduct/' + t)
 
         })
+
+const  u = window.location
+const shareButtonProps = {
+  url: "https://github.com/greglobinski/react-custom-share",
+  network: "Facebook",
+  text: "Give it a try - react-custom-share component",
+  longtext:
+    "Social sharing buttons for React. Use one of the build-in themes or create a custom one from the scratch."
+};
+const fshareButtonProps = {
+  url: u,
+  network: "Facebook",
+  text: "Give it a try - react-custom-share component",
+  longtext:
+    "Social sharing buttons for React. Use one of the build-in themes or create a custom one from the scratch."
+};
+
+ 
         return (
             <div className="tengahx">
   <style dangerouslySetInnerHTML={{__html: minifyCssString(cssString) }} /> 
@@ -392,7 +415,20 @@ class artikelkonten extends Component {
                 <title>{hits[0].artikel_title}</title>
              </Helmet>
      <div className="row no-gutters">
-  <div className="col-12 col-sm-6 col-md-8"><div className="ttls">{hits[0].artikel_title}<div className="xsa">{hits[0].tanggal}</div></div>{renderHTML(hits[0].artikel_konten)}</div>
+    
+  <div className="col-12 col-sm-6 col-md-8">
+  <div className="wid">
+ <ShareButton {...fshareButtonProps}>
+  <FaFacebook />
+</ShareButton>
+ <ShareButton {...shareButtonProps}>
+  <FaTwitter />
+</ShareButton>
+ <ShareButton {...shareButtonProps}>
+  <FaEnvelope />
+</ShareButton>
+</div>
+  <div className="ttls">{hits[0].artikel_title}<div className="xsa">{hits[0].tanggal}</div></div>{renderHTML(hits[0].artikel_konten)}</div>
   <div id="kolsa" class="col-6 col-md-4">
 
   <div id="koriu">RELEATED CONTENT</div>
