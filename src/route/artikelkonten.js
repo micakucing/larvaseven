@@ -378,7 +378,7 @@ class artikelkonten extends Component {
             network: "Email",
             text: this.state.hits && this.state.hits.length > 0 ? hits[0].artikel_title : null,
             media: this.state.hitss && this.state.hitss.length > 0 ? hitss[0].image_url : null,
-            longtext: this.state.hits && this.state.hitss.length > 0 ? hits[0].artikel_konten : null
+            longtext: this.state.hitss && this.state.hitss.length > 0 ? hitss[0].clean : null
         };
 
         return (
