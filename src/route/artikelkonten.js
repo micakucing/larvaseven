@@ -369,12 +369,13 @@ class artikelkonten extends Component {
         })
 
 const  u = window.location
-const shareButtonProps = {
-  url: "https://github.com/greglobinski/react-custom-share",
-  network: "Facebook",
-  text: "Give it a try - react-custom-share component",
+const tshareButtonProps = {
+  url: u,
+  network: "Twitter",
+   text: this.state.hits && this.state.hits.length > 0 ? hits[0].artikel_title : null,
+  media: this.state.hitss &&  this.state.hitss.length > 0 ?  hitss[0].image_url: null,
   longtext:
-    "Social sharing buttons for React. Use one of the build-in themes or create a custom one from the scratch."
+    this.state.hits && this.state.hits.length > 0 ? hits[0].artikel_konten : null
 };
 const fshareButtonProps = {
   url: u,
@@ -382,9 +383,16 @@ const fshareButtonProps = {
   text: this.state.hits && this.state.hits.length > 0 ? hits[0].artikel_title : null,
   media: this.state.hitss &&  this.state.hitss.length > 0 ?  hitss[0].image_url: null,
   longtext:
-    "Social sharing buttons for React. Use one of the build-in themes or create a custom one from the scratch."
+    this.state.hits && this.state.hits.length > 0 ? hits[0].artikel_konten : null
 };
-
+const eshareButtonProps = {
+  url: u,
+  network: "Email",
+  text: this.state.hits && this.state.hits.length > 0 ? hits[0].artikel_title : null,
+  media: this.state.hitss &&  this.state.hitss.length > 0 ?  hitss[0].image_url: null,
+  longtext:
+    this.state.hits && this.state.hits.length > 0 ? hits[0].artikel_konten : null
+};
  
         return (
             <div className="tengahx">
@@ -422,10 +430,10 @@ const fshareButtonProps = {
  <ShareButton {...fshareButtonProps}>
   <FaFacebook />
 </ShareButton>
- <ShareButton {...shareButtonProps}>
+ <ShareButton {...tshareButtonProps}>
   <FaTwitter />
 </ShareButton>
- <ShareButton {...shareButtonProps}>
+ <ShareButton {...eshareButtonProps}>
   <FaEnvelope />
 </ShareButton>
 </div>
