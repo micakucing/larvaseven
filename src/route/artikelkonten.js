@@ -273,7 +273,7 @@ const propTypes = {
 
     initialPage: PropTypes.number
 }
- 
+
 
 
 class artikelkonten extends Component {
@@ -327,17 +327,7 @@ class artikelkonten extends Component {
     }
 
 
-    componentWillReceiveProps()
-
-    {
-
-
-      
-
-
-
-
-    }
+    componentWillReceiveProps(){}
 
     onChangePage(pageOfItems) {
         this.setState({ pageOfItems });
@@ -368,32 +358,29 @@ class artikelkonten extends Component {
 
         })
 
-const  u = window.location
-const tshareButtonProps = {
-  url: u,
-  network: "Twitter",
-   text: this.state.hits && this.state.hits.length > 0 ? hits[0].artikel_title : null,
-  media: this.state.hitss &&  this.state.hitss.length > 0 ?  hitss[0].image_url: null,
-  longtext:
-    this.state.hitss && this.state.hitss.length > 0 ? hitss[0].clean : null
-};
-const fshareButtonProps = {
-  url: u,
-  network: "Facebook",
-  text: this.state.hits && this.state.hits.length > 0 ? hits[0].artikel_title : null,
-  media: this.state.hitss &&  this.state.hitss.length > 0 ?  hitss[0].image_url: null,
-  longtext:
-    this.state.hitss && this.state.hitss.length > 0 ? hitss[0].clean : null
-};
-const eshareButtonProps = {
-  url: u,
-  network: "Email",
-  text: this.state.hits && this.state.hits.length > 0 ? hits[0].artikel_title : null,
-  media: this.state.hitss &&  this.state.hitss.length > 0 ?  hitss[0].image_url: null,
-  longtext:
-    this.state.hits && this.state.hitss.length > 0 ? hits[0].artikel_konten : null
-};
- 
+        const u = window.location
+        const tshareButtonProps = {
+            url: u,
+            network: "Twitter",
+            text: this.state.hits && this.state.hits.length > 0 ? hits[0].artikel_title : null,
+            media: this.state.hitss && this.state.hitss.length > 0 ? hitss[0].image_url : null,
+            longtext: this.state.hitss && this.state.hitss.length > 0 ? hitss[0].clean : null
+        };
+        const fshareButtonProps = {
+            url: u,
+            network: "Facebook",
+            text: this.state.hits && this.state.hits.length > 0 ? hits[0].artikel_title : null,
+            media: this.state.hitss && this.state.hitss.length > 0 ? hitss[0].image_url : null,
+            longtext: this.state.hitss && this.state.hitss.length > 0 ? hitss[0].clean : null
+        };
+        const eshareButtonProps = {
+            url: u,
+            network: "Email",
+            text: this.state.hits && this.state.hits.length > 0 ? hits[0].artikel_title : null,
+            media: this.state.hitss && this.state.hitss.length > 0 ? hitss[0].image_url : null,
+            longtext: this.state.hits && this.state.hitss.length > 0 ? hits[0].artikel_konten : null
+        };
+
         return (
             <div className="tengahx">
   <style dangerouslySetInnerHTML={{__html: minifyCssString(cssString) }} /> 
@@ -439,16 +426,10 @@ const eshareButtonProps = {
 </div>
   <div className="ttls">{hits[0].artikel_title}<div className="xsa">{hits[0].tanggal}</div></div>{renderHTML(hits[0].artikel_konten)}</div>
   <div id="kolsa" class="col-6 col-md-4">
-
   <div id="koriu">RELEATED CONTENT</div>
-
-
-
 {this.state.hitss.map(item =>
-
 <div  className="cll mb-4 mb-lg-4">
                 <div className="h-entry">
-    
                    <div id="ola"  className="media-8" style={divStyle(item.image_url)}></div>
                   <h2 className="font-size-regular"></h2>
                   <p><a  className="lnk" href={'#/articles-data/' + item.id}  ><TextTruncate

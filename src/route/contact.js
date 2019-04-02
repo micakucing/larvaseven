@@ -5,6 +5,9 @@ import Typed from 'react-typed';
 import Foot from "./foot";
 import Nav from "./nav";
 import {Helmet} from "react-helmet";
+import ReCAPTCHA from "react-google-recaptcha";
+
+const recaptchaRef = React.createRef();
 
 class kontak extends Component {
 constructor(props) {
@@ -16,6 +19,7 @@ constructor(props) {
       isLoading: false,
     };
   }
+
     componentDidMount() {
                   $(window).scrollTop(0)
 
@@ -28,7 +32,12 @@ constructor(props) {
       }); 
     }
 
+onSubmit = () =>{
+  const recaptchaValue = recaptchaRef.current.getValue();
+  this.props.onSubmit(recaptchaValue);
+}
     render() {
+
      const { hits, isLoading, text } = this.state;
      $('#kontakfr').submit(function () {
      $('.fai').hide() 
@@ -180,7 +189,7 @@ constructor(props) {
 
             
 
-            <form className="p-5 bg-white" id="kontakfr">
+            <form className="p-5 bg-white" id="kontakfr" onSubmit={this.onSubmit}>
               
               <h2 className="h4 text-black mb-5">Contact Form</h2> 
 
@@ -223,6 +232,13 @@ constructor(props) {
                   <input  type="submit" value="Send Message" className="btn btn-primary btn-md text-white" />
                 </div>
               </div>
+
+               <ReCAPTCHA
+        ref={recaptchaRef}
+        sitekey="6LcwtpsUAAAAAC0rUym6qnaNtJEhg7_wBReHXU0x"
+       
+      />
+
    <div className="fai"></div>
   
             </form>
