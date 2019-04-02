@@ -12,7 +12,8 @@ const recaptchaRef = React.createRef();
 class kontak extends Component {
 constructor(props) {
     super(props);
-
+ this.onLoadRecaptcha = this.onLoadRecaptcha.bind(this);
+    this.verifyCallback = this.verifyCallback.bind(this);
     this.state = {
       hits: [],
        text: [],
@@ -21,6 +22,10 @@ constructor(props) {
   }
 
     componentDidMount() {
+        if (this.captchaDemo) {
+        console.log("started, just a second...")
+        this.captchaDemo.reset();
+    }
                   $(window).scrollTop(0)
 
     fetch('https://larva7studio.herokuapp.com/infor')
@@ -57,6 +62,11 @@ onSubmit = () =>{
                  $('.lds-spinner').html('')
                  $('.fai').show()         
                  $('.fai').html('<i class="fas fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 2px;margin-bottom: 20px;display:  block;top: 8px;"></i>Format email salah')
+                 return
+                 }else if(response == 'capta'){
+                 $('.lds-spinner').html('')
+                 $('.fai').show()         
+                 $('.fai').html('<i class="fas fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 2px;margin-bottom: 20px;display:  block;top: 8px;"></i>Missed captcha')
                  return
                  }else if(response == 'ok'){
                  $('.lds-spinner').html('')
@@ -138,6 +148,7 @@ onSubmit = () =>{
     padding-left: 50px;
     background-size: cover;
     background-repeat: no-repeat;
+        margin-top: 20px;
     background-position: center;
   }
 .a{
