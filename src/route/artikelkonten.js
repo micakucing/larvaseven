@@ -379,7 +379,8 @@ const shareButtonProps = {
 const fshareButtonProps = {
   url: u,
   network: "Facebook",
-  text: "Give it a try - react-custom-share component",
+  text: this.state.hits && this.state.hits.length > 0 ? hits[0].artikel_title : null,
+  media: this.state.hitss &&  this.state.hitss.length > 0 ?  hitss[0].image_url: null,
   longtext:
     "Social sharing buttons for React. Use one of the build-in themes or create a custom one from the scratch."
 };
