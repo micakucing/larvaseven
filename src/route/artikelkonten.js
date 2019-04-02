@@ -375,7 +375,7 @@ const tshareButtonProps = {
    text: this.state.hits && this.state.hits.length > 0 ? hits[0].artikel_title : null,
   media: this.state.hitss &&  this.state.hitss.length > 0 ?  hitss[0].image_url: null,
   longtext:
-    this.state.hits && this.state.hits.length > 0 ? hits[0].artikel_konten : null
+    this.state.hitss && this.state.hitss.length > 0 ? hitss[0].clean : null
 };
 const fshareButtonProps = {
   url: u,
@@ -383,7 +383,7 @@ const fshareButtonProps = {
   text: this.state.hits && this.state.hits.length > 0 ? hits[0].artikel_title : null,
   media: this.state.hitss &&  this.state.hitss.length > 0 ?  hitss[0].image_url: null,
   longtext:
-    this.state.hits && this.state.hits.length > 0 ? hits[0].artikel_konten : null
+    this.state.hitss && this.state.hitss.length > 0 ? hitss[0].clean : null
 };
 const eshareButtonProps = {
   url: u,
@@ -391,7 +391,7 @@ const eshareButtonProps = {
   text: this.state.hits && this.state.hits.length > 0 ? hits[0].artikel_title : null,
   media: this.state.hitss &&  this.state.hitss.length > 0 ?  hitss[0].image_url: null,
   longtext:
-    this.state.hits && this.state.hits.length > 0 ? hits[0].artikel_konten : null
+    this.state.hits && this.state.hitss.length > 0 ? hits[0].artikel_konten : null
 };
  
         return (
