@@ -12,8 +12,7 @@ const recaptchaRef = React.createRef();
 class kontak extends Component {
 constructor(props) {
     super(props);
- this.onLoadRecaptcha = this.onLoadRecaptcha.bind(this);
-    this.verifyCallback = this.verifyCallback.bind(this);
+ 
     this.state = {
       hits: [],
        text: [],
@@ -22,10 +21,7 @@ constructor(props) {
   }
 
     componentDidMount() {
-        if (this.captchaDemo) {
-        console.log("started, just a second...")
-        this.captchaDemo.reset();
-    }
+    
                   $(window).scrollTop(0)
 
     fetch('https://larva7studio.herokuapp.com/infor')
