@@ -62,7 +62,7 @@ onSubmit = () =>{
                  }else if(response == 'capta'){
                  $('.lds-spinner').html('')
                  $('.fai').show()         
-                 $('.fai').html('<i class="fas fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 2px;margin-bottom: 20px;display:  block;top: 8px;"></i>Missed captcha')
+                 $('.fai').html('<i class="fas fa-exclamation-triangle" style="position: absolute;left: 10px;font-size: 20px;margin-bottom: 20px;display:  block;top: 8px;"></i>Missed captcha')
                  return
                  }else if(response == 'ok'){
                  $('.lds-spinner').html('')
