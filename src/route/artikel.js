@@ -38,6 +38,9 @@ const cssString = `
   #pol{
     margin: 70px;
   }
+  .py-4 bg-white"{
+    height: 90px;
+  }
   .site-section {
     padding: 5em 0;
 }
