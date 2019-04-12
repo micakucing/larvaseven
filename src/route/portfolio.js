@@ -245,7 +245,7 @@ class portfolio extends Component {
                 <h2>{renderHTML(item.title)}</h2>
                 <span className="category">{item.kategori_name}</span>
               </div>
-         
+           
             </div>
                </a>
           </div>
